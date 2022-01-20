@@ -95,7 +95,7 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
 {
     $params = array();
 
-    mdbcta__get_params( $id, $params );
+    mdbcta__get_params( $post_id, $params );
 
 
     switch( $column_name ) :
@@ -106,11 +106,13 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
         case 'url' :
 			if( isset( $params['cta_link'] ) ) :
 
-            echo sprintf(
-                '<a href="%1$s" target="_blank">%2$s</a>',
-                $params['cta_link'],
-                $params['cta_link'],  // todo: schema entfernen
-            );
+	            echo sprintf(
+	                '<a href="%1$s" target="_blank">%2$s</a>',
+	                $params['cta_link'],
+	                $params['cta_link'],  // todo: schema entfernen
+	            );
+
+			endif;
         break;
 
         case 'shortcode' :

@@ -35,7 +35,6 @@ require_once( PLUGIN_PATH . 'inc/core.php' );
 
 function mdbcta__plugin_activation()
 {
-    // Mache nichts
 }
 
 register_activation_hook( __FILE__, 'mdbcta__plugin_activation' );
