@@ -120,8 +120,20 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
                 '<code>[cta id="%1$s"]</code>',
                 $post_id,
             );
+			echo '<button class="button action" onclick="copyCode()">' . __( 'Kopieren', TEXTDOMAIN ) . '</button>';
         break;
     endswitch;
 }
 
 add_action( 'manage_cta_posts_custom_column', 'mdbcta__manage_posts_custom_column', 10, 2 );
+
+
+
+/*
+function(e) {
+  e.preventDefault();
+  e = a(this).parent().find("code");
+  e.focus(), e.select(), document.execCommand("copy"),
+}
+
+https://www.w3schools.com/howto/howto_js_copy_clipboard.asp */
