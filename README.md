@@ -5,7 +5,7 @@ Wichtig: Das Plugin setzt eine installierte und aktivierte Version des Plugins A
 
 __Contributors:__ Marco Di Bella (mdibella-dev)
 
-__Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready
+__Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, advanced custom fields, wordpress
 
 __Requires at least:__ 5.3  
 
