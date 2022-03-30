@@ -12,14 +12,14 @@ defined( 'ABSPATH' ) or exit;
 
 
 
-/* Konstanten */
+/** Konstanten */
 
 define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'TEXTDOMAIN', 'mdbcta' );
 
 
 
-/* Funktionsbibliothek einbinden */
+/** Funktionsbibliothek einbinden */
 
 require_once( PLUGIN_PATH . 'inc/post-types/post-type-cta.php' );
 require_once( PLUGIN_PATH . 'inc/shortcodes/shortcode-cta.php' );

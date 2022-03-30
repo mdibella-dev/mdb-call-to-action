@@ -12,9 +12,12 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Erzeugt eine Call-to-Action-Schaltfläche
+ * Erzeugt eine Call-to-Action-Schaltfläche.
  *
- * @since   1.0.0
+ * @since  1.0.0
+ * @param  array  $atts       Die mit dem Shortcode übergegebenden Attribute (Parameter).
+ * @param  string $content    Der vom Shortcode geklammerte Inhalt.
+ * @return string             Die gerenderte Call-to-Action-Schaltfläche.
  */
 
 function mdbcta__shortcode_cta( $atts, $content )

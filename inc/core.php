@@ -14,7 +14,9 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Gibt ein spezifisches Call-to-Action aus
  *
- * @since   1.0.0
+ * @since  1.0.0
+ * @param  int $id    Die ID des zu rendernden Call-to-Action.
+ * @return string     Das gerenderte Call-to-Action.
  */
 
 function mdbcta__render_cta( $id )
@@ -95,8 +97,9 @@ function mdbcta__render_cta( $id )
 /**
  * Ermittelt die zur Darstellung eines Call-to-Action notwendigen Parameter
  *
- * @since   1.0.0
- * @see     https://www.advancedcustomfields.com/resources/get_field_objects/
+ * @since 1.0.0
+ * @param int $id    Die ID des zu rendernden Call-to-Action.
+ * @see   https://www.advancedcustomfields.com/resources/get_field_objects/
  */
 
 function mdbcta__get_params( $id, &$params )

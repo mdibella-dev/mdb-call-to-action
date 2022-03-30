@@ -14,10 +14,11 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Installation der ACF-Felder
  *
- * @since   1.0.1
+ * @since 1.0.1
  */
 
-function mdbcta__add_acf_fields() {
+function mdbcta__add_acf_fields()
+{
 
     acf_add_local_field_group(array(
     	'key' => 'group_61e7f4a0aeac9',

@@ -12,9 +12,9 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Führt die Registrierung des Post Types aus
+ * Führt die Registrierung des Post Types 'Call-to-Action' aus.
  *
- * @since   1.0.0
+ * @since 1.0.0
  */
 
 function mdbcta__register_post_type()
@@ -86,9 +86,11 @@ add_filter( 'manage_cta_posts_columns', 'mdbcta__manage_posts_columns', 10 );
 
 
 /**
- * Erzeugt die Spaltenausgabe in der CTA-Liste
+ * Erzeugt die Spaltenausgabe in der CTA-Liste.
  *
- * @since   1.0.0
+ * @since 1.0.0
+ * @param string $column_name    Die anzuzeigende Spalte.
+ * @param int    $post_id        Die ID des Beitrags (Datensatz), der für den Spalteninhalt herangezogen werden soll.
  */
 
 function mdbcta__manage_posts_custom_column( $column_name, $post_id )
