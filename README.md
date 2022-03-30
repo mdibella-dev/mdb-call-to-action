@@ -16,7 +16,7 @@ __Tested up to:__ WordPress 5.9
 *Geändert/Entfernt/Hinzugefügt/Fixed*
 
 ### 1.1   
-**Geändert:** Kommentierung
+**Geändert:** Kommentierung  
 **Hinzugefügt:** Schaltfläche zum Kopieren des CTA-Shortcodes  
 **Hinzugefügt:** README  
 
