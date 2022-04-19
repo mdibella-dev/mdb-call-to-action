@@ -16,7 +16,9 @@ __Tested up to:__ WordPress 5.9
 *Geändert/Entfernt/Hinzugefügt/Fixed*
 
 ### 1.1   
+**Geändert:** Einzug  
 **Geändert:** Kommentierung  
+**Hinzugefügt:** Visuelle Rückmeldung nach erfolgtem Kopiervorgang    
 **Hinzugefügt:** Schaltfläche zum Kopieren des CTA-Shortcodes  
 **Hinzugefügt:** README  
 

@@ -24,6 +24,16 @@
         code {
             white-space: nowrap;
         }
+
+        * {
+            height: 28px !important;
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            color: #27ae60 ; // green
+        }
     }
 
 }
