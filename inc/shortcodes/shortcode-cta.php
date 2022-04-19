@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) or exit;
 
 function mdbcta__shortcode_cta( $atts, $content )
 {
-	// Parameter auslesen
+    // Parameter auslesen
     extract( shortcode_atts( array(
                 'id' => '',
             ),
@@ -37,8 +37,8 @@ function mdbcta__shortcode_cta( $atts, $content )
     if( ! empty( $id ) and ( 'publish' == get_post_status ( $id ) ) ) :
         $output = mdbcta__render_cta( $id );
     else :
-		$output = '';
-	endif;
+        $output = '';
+    endif;
 
     return $output;
 }
