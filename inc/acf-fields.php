@@ -225,4 +225,4 @@ function mdbcta__add_acf_fields()
 
 }
 
-add_action('acf/init', 'mdbcta__add_acf_fields');
+// add_action('acf/init', 'mdbcta__add_acf_fields');
