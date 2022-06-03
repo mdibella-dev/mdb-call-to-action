@@ -31,7 +31,7 @@ function mdbcta__render_cta( $id )
 
 
 ?>
-<aside class="cta-box<?php echo ( isset( $params['cta_css'] )? ' ' . $params['cta_css'] : '' ); ?>">
+<aside class="cta-box" style="<?php echo 'background-color:' . $params['cta_background_color'] . ' !important; color:' . $params['cta_text_color'] .' !important;'; ?>">
 
     <div class="cta-box-columns">
 

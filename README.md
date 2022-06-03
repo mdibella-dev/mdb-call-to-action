@@ -9,12 +9,18 @@ __Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, adv
 
 __Requires at least:__ 5.3  
 
-__Tested up to:__ WordPress 5.9  
+__Tested up to:__ WordPress 6.0  
 
 
 ## Changelog
 *Geändert/Entfernt/Hinzugefügt/Fixed*
 
+
+### 1.2
+**Hinzugefügt:** Support für Custom-Farben
+**Entfernt:** Support für Custom-Stile
+
+    
 ### 1.1   
 **Geändert:** Einzug  
 **Geändert:** Kommentierung  

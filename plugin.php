@@ -4,7 +4,7 @@ Plugin Name:     Marco Di Bella - Call to Action
 Author:          Marco Di Bella
 Author URI:      https://www.marcodibella.de
 Description:     Implementiert eine ACF-basierte Verwaltung für Call-to-Actions, die per Shortcode ausgegeben werden.
-Version:         1.1.0
+Version:         1.2.0
 */
 
 
