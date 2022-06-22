@@ -7,7 +7,7 @@ __Contributors:__ Marco Di Bella (mdibella-dev)
 
 __Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, advanced custom fields, wordpress
 
-__Requires at least:__ 5.3  
+__Requires at least:__ WordPress 5.3  
 
 __Tested up to:__ WordPress 6.0  
 
