@@ -2,7 +2,7 @@
 /**
  * Shortcode [cta]
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
+ * @author  Marco Di Bella
  * @package call-to-action
  */
 
