@@ -36,4 +36,5 @@ require_once( plugin_dir_path( __FILE__ ) ) . 'includes/post-types/post-type-cta
 require_once( plugin_dir_path( __FILE__ ) ) . 'includes/shortcodes/shortcode-cta.php' );
 require_once( plugin_dir_path( __FILE__ ) ) . 'includes/acf-fields.php' );
 require_once( plugin_dir_path( __FILE__ ) ) . 'includes/core.php' );
+require_once( plugin_dir_path( __FILE__ ) ) . 'includes/backend.php' );
 require_once( plugin_dir_path( __FILE__ ) ) . 'includes/setup.php' );
