@@ -6,6 +6,10 @@
  * @package mdb-call-to-action
  */
 
+namespace mdb_call_to_action;
+
+
+/** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
 
@@ -43,4 +47,4 @@ function mdbcta__shortcode_cta( $atts, $content )
     return $output;
 }
 
-add_shortcode( 'cta', 'mdbcta__shortcode_cta' );
+add_shortcode( 'cta', 'mdb_call_to_action\mdbcta__shortcode_cta' );

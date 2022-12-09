@@ -6,6 +6,10 @@
  * @package mdb-call-to-action
  */
 
+namespace mdb_call_to_action;
+
+
+/** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
 
@@ -22,7 +26,7 @@ function mdbcta__plugin_activation()
     mdbcta__add_acf_fields();
 }
 
-register_activation_hook( __FILE__, 'mdbcta__plugin_activation' );
+register_activation_hook( __FILE__, 'mdb_call_to_action\mdbcta__plugin_activation' );
 
 
 
@@ -34,7 +38,7 @@ register_activation_hook( __FILE__, 'mdbcta__plugin_activation' );
 
 function mdbcta__plugin_scripts()
 {
-    wp_enqueue_style( 
+    wp_enqueue_style(
         'mdbcta-style',
         plugins_url( 'assets/build/css/backend.min.css', __FILE__ )
     );
@@ -48,4 +52,4 @@ function mdbcta__plugin_scripts()
     );
 }
 
-add_action( 'admin_enqueue_scripts','mdbcta__plugin_scripts' );
+add_action( 'admin_enqueue_scripts','mdb_call_to_action\mdbcta__plugin_scripts' );

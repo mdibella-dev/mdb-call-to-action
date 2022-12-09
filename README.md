@@ -16,6 +16,7 @@ __Tested up to:__ WordPress 6.1
 *New/Improve/Bugfix*
 
 ### main
+* New: Add namespace mdb_call_to_action;
 * Improve: Style and language of the changelog.
 * Improve: Rearrange assets folder structure.
 * Improve: Rename /inc/ to /includes/.

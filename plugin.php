@@ -14,6 +14,11 @@
  */
 
 
+namespace mdb_call_to_action;
+
+
+/** Prevent direct access */
+
 defined( 'ABSPATH' ) or exit;
 
 

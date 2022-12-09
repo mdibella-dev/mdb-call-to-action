@@ -6,6 +6,10 @@
  * @package mdb-call-to-action
  */
 
+namespace mdb_call_to_action;
+
+
+/** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
 
@@ -59,7 +63,7 @@ function mdbcta__register_post_type()
     register_post_type( 'cta', $args );
 }
 
-add_action( 'init', 'mdbcta__register_post_type' );
+add_action( 'init', 'mdb_call_to_action\mdbcta__register_post_type' );
 
 
 
@@ -81,7 +85,7 @@ function mdbcta__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_cta_posts_columns', 'mdbcta__manage_posts_columns', 10 );
+add_filter( 'manage_cta_posts_columns', 'mdb_call_to_action\mdbcta__manage_posts_columns', 10 );
 
 
 
@@ -127,4 +131,4 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_cta_posts_custom_column', 'mdbcta__manage_posts_custom_column', 10, 2 );
+add_action( 'manage_cta_posts_custom_column', 'mdb_call_to_action\mdbcta__manage_posts_custom_column', 10, 2 );
