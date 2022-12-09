@@ -39,7 +39,7 @@ function shortcode_cta( $atts, $content )
     $output = '';
 
     if( ! empty( $id ) and ( 'publish' == get_post_status ( $id ) ) ) :
-        $output = cta_render( $id );
+        $output = api_render_cta( $id );
     else :
         $output = '';
     endif;

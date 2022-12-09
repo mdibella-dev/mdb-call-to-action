@@ -23,6 +23,7 @@ __Tested up to:__ WordPress 6.1
 * Improve: Rename /inc/ to /includes/.
 * Improve: Rename core.php to api.php.
 * Improve: Translate documentation.
+* Improve: Change function prefix cta_ to api_ in api.php.
 
 
 ### 1.2

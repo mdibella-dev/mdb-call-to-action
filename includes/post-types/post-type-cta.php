@@ -103,7 +103,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id )
 {
     $params = array();
 
-    cta_get_params( $post_id, $params );
+    api_get_cta_params( $post_id, $params );
 
 
     switch( $column_name ) :
