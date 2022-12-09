@@ -21,6 +21,7 @@ __Tested up to:__ WordPress 6.1
 * Improve: Style and language of the changelog.
 * Improve: Rearrange assets folder structure.
 * Improve: Rename /inc/ to /includes/.
+* Improve: Rename core.php to api.php.
 * Improve: Translate documentation.
 
 

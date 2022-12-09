@@ -1,6 +1,6 @@
 <?php
 /**
- * Core functions.
+ * API functions.
  *
  * @author  Marco Di Bella
  * @package mdb-call-to-action
@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) or exit;
  * @return string        The rendered call-to-action.
  */
 
-function cta_render( $id )
+function api_render_cta( $id )
 {
     $output = '';
     $params = array();
 
 
-    if( ! empty( $id ) and ( true === cta_get_params( $id, $params ) ) ) :
+    if( ! empty( $id ) and ( true === api_get_cta_params( $id, $params ) ) ) :
 
         ob_start();
 
@@ -103,11 +103,11 @@ function cta_render( $id )
  *
  * @since 1.0.0
  * @param int   $id        The ID of the call-to-action.
- * @param array $params    Reference to an array that takes over the determined parameters
+ * @param array $params    Reference to an array that takes over the determined parameters.
  * @see   https://www.advancedcustomfields.com/resources/get_field_objects/
  */
 
-function cta_get_params( $id, &$params )
+function api_get_cta_params( $id, &$params )
 {
     $result = false;
 
