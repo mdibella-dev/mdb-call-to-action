@@ -9,7 +9,7 @@ __Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, adv
 
 __Requires at least:__ WordPress 5.3  
 
-__Tested up to:__ WordPress 6.0  
+__Tested up to:__ WordPress 6.1  
 
 
 ## Changelog
@@ -19,6 +19,7 @@ __Tested up to:__ WordPress 6.0
 * Changed: Style and language of the changelog
 * Changed: assets folder structure
 * Changed: /inc/ to /includes/
+
 
 
 ### 1.2
