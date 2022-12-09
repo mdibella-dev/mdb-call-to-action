@@ -5,7 +5,7 @@
  * Description:     Implementiert eine ACF-basierte Verwaltung für Call-to-Actions, die per Shortcode ausgegeben werden.
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
- * Version:         1.2.0
+ * Version:         1.3.0
  * Text Domain:     mdbcta
  * Domain Path:     /languages
  *
@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) or exit;
 
 /** Konstanten */
 
-const PLUGIN_VERSION = '1.2.0';
+const PLUGIN_VERSION = '1.3.0';
 const PLUGIN_DOMAIN  = 'mdbcta';
 
 

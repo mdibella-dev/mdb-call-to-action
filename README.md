@@ -16,6 +16,9 @@ __Tested up to:__ WordPress 6.1
 *New/Improve/Bugfix*
 
 ### main
+
+
+### 1.3
 * New: Add namespace mdb_call_to_action;
 * Improve: Separate backend and frontend initation.
 * Improve: Style and language of the changelog.
