@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.1
  */
 
-function mdbcta__add_acf_fields()
+function add_acf_fields()
 {
 
     acf_add_local_field_group(array(
@@ -229,4 +229,4 @@ function mdbcta__add_acf_fields()
 
 }
 
-// add_action('acf/init', 'mdbcta__add_acf_fields');
+// add_action('acf/init', 'mdb_call_to_action\add_acf_fields');
