@@ -3,7 +3,7 @@
  * ACF-Feldgruppe
  *
  * @author  Marco Di Bella
- * @package call-to-action
+ * @package mdb-call-to-action
  */
 
 
