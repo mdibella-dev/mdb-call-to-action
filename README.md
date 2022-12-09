@@ -13,26 +13,26 @@ __Tested up to:__ WordPress 6.1
 
 
 ## Changelog
-*Added/Changed/Fixed/Removed*
+*New/Improve/Bugfix*
 
 ### main
-* Changed: Style and language of the changelog
-* Changed: assets folder structure
-* Changed: /inc/ to /includes/
+* Improve: Style and language of the changelog.
+* Improve: Rearrange assets folder structure.
+* Improve: Rename /inc/ to /includes/.
 
 
 
 ### 1.2
-* Added: Custom color support
-* Removed: Custom CSS class support
+* New: Add custom color support.
+* Improve: Remove custom CSS class support.
 
 
 ### 1.1   
-* Added: Visual feedback after copy is done    
-* Added: Button to copy a CTA-shortcode to the clipboard  
-* Added: README  
-* Changed: Indent  
-* Changed: Documentation  
+* New: Visual feedback after copy is done.    
+* New: Add Button to copy a CTA-shortcode to the clipboard.  
+* New: Create README.  
+* Improve: Indent of the CTA.  
+* Improve: Documentation  
 
 
 ### 1.0  
