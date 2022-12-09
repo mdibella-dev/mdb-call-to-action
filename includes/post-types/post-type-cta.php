@@ -1,6 +1,6 @@
 <?php
 /**
- * Post Type cta
+ * Post type 'cta'.
  *
  * @author  Marco Di Bella
  * @package mdb-call-to-action
@@ -16,12 +16,12 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Führt die Registrierung des Post Types 'Call-to-Action' aus.
+ * Performs the registration of the post type 'cta'.
  *
  * @since 1.0.0
  */
 
-function mdbcta__register_post_type()
+function cta__register_post_type()
 {
     $labels = array(
         'name'              => __( 'Call-to-Actions', PLUGIN_DOMAIN ),
@@ -63,17 +63,19 @@ function mdbcta__register_post_type()
     register_post_type( 'cta', $args );
 }
 
-add_action( 'init', 'mdb_call_to_action\mdbcta__register_post_type' );
+add_action( 'init', 'mdb_call_to_action\cta__register_post_type' );
 
 
 
 /**
- * Bestimmt die Spalten in der CTA-Liste
+ * Determines the columns in the CTA list.
  *
- * @since   1.0.0
+ * @since  1.0.0
+ * @param  array $default    The columns.
+ * @return array             The modified columns.
  */
 
-function mdbcta__manage_posts_columns( $default )
+function cta__manage_posts_columns( $default )
 {
     $columns['cb']          = $default[ 'cb' ];
     $columns['title']       = $default[ 'title' ];
@@ -85,23 +87,23 @@ function mdbcta__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_cta_posts_columns', 'mdb_call_to_action\mdbcta__manage_posts_columns', 10 );
+add_filter( 'manage_cta_posts_columns', 'mdb_call_to_action\cta__manage_posts_columns', 10 );
 
 
 
 /**
- * Erzeugt die Spaltenausgabe in der CTA-Liste.
+ * Generates the column output in the CTA list.
  *
  * @since 1.0.0
- * @param string $column_name    Die anzuzeigende Spalte.
- * @param int    $post_id        Die ID des Beitrags (Datensatz), der für den Spalteninhalt herangezogen werden soll.
+ * @param string $column_name    The column to be displayed.
+ * @param int    $post_id        The ID of the post (record) to be used for the column content.
  */
 
-function mdbcta__manage_posts_custom_column( $column_name, $post_id )
+function cta__manage_posts_custom_column( $column_name, $post_id )
 {
     $params = array();
 
-    mdbcta__get_params( $post_id, $params );
+    cta_get_params( $post_id, $params );
 
 
     switch( $column_name ) :
@@ -131,4 +133,4 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_cta_posts_custom_column', 'mdb_call_to_action\mdbcta__manage_posts_custom_column', 10, 2 );
+add_action( 'manage_cta_posts_custom_column', 'mdb_call_to_action\cta__manage_posts_custom_column', 10, 2 );

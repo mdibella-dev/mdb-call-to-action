@@ -16,17 +16,17 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Erzeugt eine Call-to-Action-Schaltfläche.
+ * Generates a call-to-action button.
  *
  * @since  1.0.0
- * @param  array  $atts       Die mit dem Shortcode übergegebenden Attribute (Parameter).
- * @param  string $content    Der vom Shortcode geklammerte Inhalt.
- * @return string             Die gerenderte Call-to-Action-Schaltfläche.
+ * @param  array  $atts       The attributes (parameters) passed with the shortcode.
+ * @param  string $content    The content bracketed by the shortcode.
+ * @return string             The rendered call-to-action button.
  */
 
-function mdbcta__shortcode_cta( $atts, $content )
+function shortcode_cta( $atts, $content )
 {
-    // Parameter auslesen
+    // Read out parameters
     extract( shortcode_atts( array(
                 'id' => '',
             ),
@@ -35,11 +35,11 @@ function mdbcta__shortcode_cta( $atts, $content )
     );
 
 
-    // Ausgabe durchführen
+    // Perform output
     $output = '';
 
     if( ! empty( $id ) and ( 'publish' == get_post_status ( $id ) ) ) :
-        $output = mdbcta__render_cta( $id );
+        $output = cta_render( $id );
     else :
         $output = '';
     endif;
@@ -47,4 +47,4 @@ function mdbcta__shortcode_cta( $atts, $content )
     return $output;
 }
 
-add_shortcode( 'cta', 'mdb_call_to_action\mdbcta__shortcode_cta' );
+add_shortcode( 'cta', 'mdb_call_to_action\shortcode_cta' );

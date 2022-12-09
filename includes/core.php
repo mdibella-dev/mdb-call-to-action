@@ -1,6 +1,6 @@
 <?php
 /**
- * Kernfunktionen
+ * Core functions.
  *
  * @author  Marco Di Bella
  * @package mdb-call-to-action
@@ -16,20 +16,20 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Gibt ein spezifisches Call-to-Action aus
+ * Outputs a specific call-to-action.
  *
  * @since  1.0.0
- * @param  int $id    Die ID des zu rendernden Call-to-Action.
- * @return string     Das gerenderte Call-to-Action.
+ * @param  int    $id    The ID of the call-to-action to render.
+ * @return string        The rendered call-to-action.
  */
 
-function mdbcta__render_cta( $id )
+function cta_render( $id )
 {
     $output = '';
     $params = array();
 
 
-    if( ! empty( $id ) and ( true === mdbcta__get_params( $id, $params ) ) ) :
+    if( ! empty( $id ) and ( true === cta_get_params( $id, $params ) ) ) :
 
         ob_start();
 
@@ -99,14 +99,15 @@ function mdbcta__render_cta( $id )
 
 
 /**
- * Ermittelt die zur Darstellung eines Call-to-Action notwendigen Parameter
+ * Determines the parameters necessary to display a call-to-action
  *
  * @since 1.0.0
- * @param int $id    Die ID des zu rendernden Call-to-Action.
+ * @param int   $id        The ID of the call-to-action.
+ * @param array $params    Reference to an array that takes over the determined parameters
  * @see   https://www.advancedcustomfields.com/resources/get_field_objects/
  */
 
-function mdbcta__get_params( $id, &$params )
+function cta_get_params( $id, &$params )
 {
     $result = false;
 
@@ -119,7 +120,7 @@ function mdbcta__get_params( $id, &$params )
 
             foreach( $fields as $field ) :
 
-                // Einfache Datenübertragung
+                // Simple data transfer
                 if( ! empty( $field['value'] ) ) :
                     $params[ $field['name'] ] = $field['value'];
                 endif;
