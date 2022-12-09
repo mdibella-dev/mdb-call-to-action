@@ -20,18 +20,18 @@ defined( 'ABSPATH' ) or exit;
 function mdbcta__register_post_type()
 {
     $labels = array(
-        'name'              => __( 'Call-to-Actions', TEXTDOMAIN ),
-        'singular_name'     => __( 'Call-to-Action', TEXTDOMAIN ),
-        'menu_name'         => __( 'Call-to-Action', TEXTDOMAIN ),
-        'all_items'         => __( 'Alle Call-to-Actions', TEXTDOMAIN ),
-        'add_new'           => __( 'Erstellen', TEXTDOMAIN ),
-        'add_new_item'      => __( 'Erstellen', TEXTDOMAIN ),
-        'edit_item'         => __( 'Call-to-Action bearbeiten', TEXTDOMAIN ),
-        'search_items'      => __( 'Call-to-Action durchsuchen', TEXTDOMAIN ),
+        'name'              => __( 'Call-to-Actions', PLUGIN_DOMAIN ),
+        'singular_name'     => __( 'Call-to-Action', PLUGIN_DOMAIN ),
+        'menu_name'         => __( 'Call-to-Action', PLUGIN_DOMAIN ),
+        'all_items'         => __( 'Alle Call-to-Actions', PLUGIN_DOMAIN ),
+        'add_new'           => __( 'Erstellen', PLUGIN_DOMAIN ),
+        'add_new_item'      => __( 'Erstellen', PLUGIN_DOMAIN ),
+        'edit_item'         => __( 'Call-to-Action bearbeiten', PLUGIN_DOMAIN ),
+        'search_items'      => __( 'Call-to-Action durchsuchen', PLUGIN_DOMAIN ),
     );
 
     $args = array(
-        'label'                   => __( 'Call-to-Actions', TEXTDOMAIN ),
+        'label'                   => __( 'Call-to-Actions', PLUGIN_DOMAIN ),
         'labels'                  => $labels,
         'description'             => '',
         'public'                  => true,
@@ -73,9 +73,9 @@ function mdbcta__manage_posts_columns( $default )
 {
     $columns['cb']          = $default[ 'cb' ];
     $columns['title']       = $default[ 'title' ];
-    $columns['id']          = __( 'ID', TEXTDOMAIN );
-    $columns['url']         = __( 'Link', TEXTDOMAIN );
-    $columns['shortcode']   = __( 'Shortcode', TEXTDOMAIN );
+    $columns['id']          = __( 'ID', PLUGIN_DOMAIN );
+    $columns['url']         = __( 'Link', PLUGIN_DOMAIN );
+    $columns['shortcode']   = __( 'Shortcode', PLUGIN_DOMAIN );
     $columns['date']        = $default[ 'date' ];
 
     return $columns;
@@ -122,7 +122,7 @@ function mdbcta__manage_posts_custom_column( $column_name, $post_id )
                 '<code>[cta id="%1$s"]</code>',
                 $post_id,
             );
-            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Kopieren', TEXTDOMAIN ) . '</button>';
+            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Kopieren', PLUGIN_DOMAIN ) . '</button>';
         break;
     endswitch;
 }
