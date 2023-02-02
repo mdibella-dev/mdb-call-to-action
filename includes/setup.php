@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
 function plugin_init()
 {
     // Load text domain
-    load_plugin_textdomain( 'mdb-call-to-action', false, PLUGIN_DIR . '/languages' );
+    load_plugin_textdomain( 'mdb-call-to-action', false, plugin_basename( PLUGIN_DIR ) . '/languages/' );
 }
 
 add_action( 'init', 'mdb_call_to_action\plugin_init' );
