@@ -19,9 +19,11 @@ defined( 'ABSPATH' ) or exit;
  * Generates a call-to-action button.
  *
  * @since  1.0.0
+ *
  * @param  array  $atts       The attributes (parameters) passed with the shortcode.
  * @param  string $content    The content bracketed by the shortcode.
- * @return string             The rendered call-to-action button.
+ *
+ * @return string The rendered call-to-action button.
  */
 
 function shortcode_cta( $atts, $content )

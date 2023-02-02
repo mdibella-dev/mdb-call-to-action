@@ -7,15 +7,16 @@ __Contributors:__ Marco Di Bella (mdibella-dev)
 
 __Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, advanced custom fields, wordpress
 
-__Requires at least:__ WordPress 5.3  
+__Requires at least:__ WordPress 5.3
 
-__Tested up to:__ WordPress 6.1  
+__Tested up to:__ WordPress 6.1
 
 
 ## Changelog
 *New/Improve/Bugfix*
 
 ### main
+* Improve: Remove PLUGIN_DOMAIN.
 
 
 ### 1.3
@@ -34,13 +35,13 @@ __Tested up to:__ WordPress 6.1
 * Improve: Remove custom CSS class support.
 
 
-### 1.1   
-* New: Visual feedback after copy is done.    
-* New: Add Button to copy a CTA-shortcode to the clipboard.  
-* New: Create README.  
-* Improve: Indent of the CTA.  
-* Improve: Documentation  
+### 1.1
+* New: Visual feedback after copy is done.
+* New: Add Button to copy a CTA-shortcode to the clipboard.
+* New: Create README.
+* Improve: Indent of the CTA.
+* Improve: Documentation
 
 
-### 1.0  
+### 1.0
 Initial commit
