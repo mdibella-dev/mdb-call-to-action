@@ -6,7 +6,7 @@
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Version:         1.3.0
- * Text Domain:     mdbcta
+ * Text Domain:     mdb-call-to-action
  * Domain Path:     /languages
  *
  * @author  Marco Di Bella
@@ -25,16 +25,17 @@ defined( 'ABSPATH' ) or exit;
 
 /** Konstanten */
 
-const PLUGIN_VERSION = '1.3.0';
-const PLUGIN_DOMAIN  = 'mdbcta';
+define( __NAMESPACE__ . '\PLUGIN_VERSION', '<PLUGIN-VERSION>' );
+define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 
 
 /** Funktionsbibliothek einbinden */
 
-require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types/post-type-cta.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/shortcodes/shortcode-cta.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/acf-fields.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/api.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/backend.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/setup.php' );
+require_once( PLUGIN_DIR . 'includes/post-types/post-type-cta.php' );
+require_once( PLUGIN_DIR . 'includes/shortcodes/shortcode-cta.php' );
+require_once( PLUGIN_DIR . 'includes/acf-fields.php' );
+require_once( PLUGIN_DIR . 'includes/api.php' );
+require_once( PLUGIN_DIR . 'includes/backend.php' );
+require_once( PLUGIN_DIR . 'includes/setup.php' );
