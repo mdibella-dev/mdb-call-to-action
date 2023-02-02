@@ -24,18 +24,18 @@ defined( 'ABSPATH' ) or exit;
 function cta__register_post_type()
 {
     $labels = array(
-        'name'              => __( 'Call-to-Actions', PLUGIN_DOMAIN ),
-        'singular_name'     => __( 'Call-to-Action', PLUGIN_DOMAIN ),
-        'menu_name'         => __( 'Call-to-Action', PLUGIN_DOMAIN ),
-        'all_items'         => __( 'Alle Call-to-Actions', PLUGIN_DOMAIN ),
-        'add_new'           => __( 'Erstellen', PLUGIN_DOMAIN ),
-        'add_new_item'      => __( 'Erstellen', PLUGIN_DOMAIN ),
-        'edit_item'         => __( 'Call-to-Action bearbeiten', PLUGIN_DOMAIN ),
-        'search_items'      => __( 'Call-to-Action durchsuchen', PLUGIN_DOMAIN ),
+        'name'              => __( 'Call-to-Actions', 'mdb-call-to-action' ),
+        'singular_name'     => __( 'Call-to-Action', 'mdb-call-to-action' ),
+        'menu_name'         => __( 'Call-to-Action', 'mdb-call-to-action' ),
+        'all_items'         => __( 'Alle Call-to-Actions', 'mdb-call-to-action' ),
+        'add_new'           => __( 'Erstellen', 'mdb-call-to-action' ),
+        'add_new_item'      => __( 'Erstellen', 'mdb-call-to-action' ),
+        'edit_item'         => __( 'Call-to-Action bearbeiten', 'mdb-call-to-action' ),
+        'search_items'      => __( 'Call-to-Action durchsuchen', 'mdb-call-to-action' ),
     );
 
     $args = array(
-        'label'                   => __( 'Call-to-Actions', PLUGIN_DOMAIN ),
+        'label'                   => __( 'Call-to-Actions', 'mdb-call-to-action' ),
         'labels'                  => $labels,
         'description'             => '',
         'public'                  => true,
@@ -79,9 +79,9 @@ function cta__manage_posts_columns( $default )
 {
     $columns['cb']          = $default[ 'cb' ];
     $columns['title']       = $default[ 'title' ];
-    $columns['id']          = __( 'ID', PLUGIN_DOMAIN );
-    $columns['url']         = __( 'Link', PLUGIN_DOMAIN );
-    $columns['shortcode']   = __( 'Shortcode', PLUGIN_DOMAIN );
+    $columns['id']          = __( 'ID', 'mdb-call-to-action' );
+    $columns['url']         = __( 'Link', 'mdb-call-to-action' );
+    $columns['shortcode']   = __( 'Shortcode', 'mdb-call-to-action' );
     $columns['date']        = $default[ 'date' ];
 
     return $columns;
@@ -128,7 +128,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id )
                 '<code>[cta id="%1$s"]</code>',
                 $post_id,
             );
-            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Kopieren', PLUGIN_DOMAIN ) . '</button>';
+            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Kopieren', 'mdb-call-to-action' ) . '</button>';
         break;
     endswitch;
 }
