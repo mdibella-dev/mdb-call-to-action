@@ -40,7 +40,6 @@ add_action( 'init', 'mdb_call_to_action\plugin_init' );
 function plugin_activation()
 {
     // Do something!
-    mdbcta__add_acf_fields();
 }
 
 register_activation_hook( __FILE__, 'mdb_call_to_action\plugin_activation' );
