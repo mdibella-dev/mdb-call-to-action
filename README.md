@@ -15,8 +15,12 @@ __Tested up to:__ WordPress 6.1
 ## Changelog
 *New/Improve/Bugfix*
 
+
 ### main
 * Improve: Remove PLUGIN_DOMAIN.
+* Improve: Remove obsolete code.
+* Improve: Update setup.php to match the plugin_template package.
+* Improve: Update documentation style.
 
 
 ### 1.3

@@ -2,7 +2,7 @@
 /*
  * Plugin Name:     Marco Di Bella - Call to Action
  * Plugin URI:      https://github.com/mdibella-dev/mdb-call-to-action
- * Description:     Implementiert eine ACF-basierte Verwaltung für Call-to-Actions, die per Shortcode ausgegeben werden.
+ * Description:     This plugin provides a custom post type for managing and displaying so-called call-to-actions (CTA).
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Version:         1.3.0
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
 
 
 
-/** Konstanten */
+/** Variables and definitions */
 
 define( __NAMESPACE__ . '\PLUGIN_VERSION', '<PLUGIN-VERSION>' );
 define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
@@ -31,7 +31,7 @@ define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 
 
-/** Funktionsbibliothek einbinden */
+/** Include files */
 
 require_once( PLUGIN_DIR . 'includes/post-types/post-type-cta.php' );
 require_once( PLUGIN_DIR . 'includes/shortcodes/shortcode-cta.php' );

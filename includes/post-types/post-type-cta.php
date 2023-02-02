@@ -70,9 +70,11 @@ add_action( 'init', 'mdb_call_to_action\cta__register_post_type' );
 /**
  * Determines the columns in the CTA list.
  *
- * @since  1.0.0
- * @param  array $default    The columns.
- * @return array             The modified columns.
+ * @since 1.0.0
+ *
+ * @param array $default The columns.
+ *
+ * @return array The modified columns.
  */
 
 function cta__manage_posts_columns( $default )
@@ -95,8 +97,10 @@ add_filter( 'manage_cta_posts_columns', 'mdb_call_to_action\cta__manage_posts_co
  * Generates the column output in the CTA list.
  *
  * @since 1.0.0
- * @param string $column_name    The column to be displayed.
- * @param int    $post_id        The ID of the post (record) to be used for the column content.
+ *
+ * @param string $column_name The column to be displayed.
+ * @param int    $post_id     The ID of the post (record) to be used for the column content.
+ *
  */
 
 function cta__manage_posts_custom_column( $column_name, $post_id )
@@ -117,7 +121,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id )
 	            echo sprintf(
 	                '<a href="%1$s" target="_blank">%2$s</a>',
 	                $params['cta_link'],
-	                $params['cta_link'],  // todo: schema entfernen
+	                $params['cta_link'],  // todo: remove scheme
 	            );
 
             endif;

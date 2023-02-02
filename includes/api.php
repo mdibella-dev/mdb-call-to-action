@@ -18,9 +18,11 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Outputs a specific call-to-action.
  *
- * @since  1.0.0
- * @param  int    $id    The ID of the call-to-action to render.
- * @return string        The rendered call-to-action.
+ * @since 1.0.0
+ *
+ * @param int $id The ID of the call-to-action to render.
+ *
+ * @return string The rendered call-to-action.
  */
 
 function api_render_cta( $id )
@@ -102,9 +104,13 @@ function api_render_cta( $id )
  * Determines the parameters necessary to display a call-to-action
  *
  * @since 1.0.0
- * @param int   $id        The ID of the call-to-action.
- * @param array $params    Reference to an array that takes over the determined parameters.
- * @see   https://www.advancedcustomfields.com/resources/get_field_objects/
+ *
+ * @see https://www.advancedcustomfields.com/resources/get_field_objects/
+ *
+ * @param int   $id     The ID of the call-to-action.
+ * @param array $params Reference to an array that takes over the determined parameters.
+ *
+ * @return bool The outcome of the function call: true on success, otherwise false
  */
 
 function api_get_cta_params( $id, &$params )
