@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name:     Marco Di Bella - Call to Action
+ * Plugin Name:     Marco Di Bella - Call to Action (CTA)
  * Plugin URI:      https://github.com/mdibella-dev/mdb-call-to-action
- * Description:     This plugin provides a custom post type for managing and displaying so-called call-to-actions (CTA).
+ * Description:     This plugin provides a custom post type for managing and displaying so-called Call to Actions (CTA).
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Version:         1.3.0

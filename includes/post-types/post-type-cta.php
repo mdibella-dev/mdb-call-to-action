@@ -24,18 +24,18 @@ defined( 'ABSPATH' ) or exit;
 function cta__register_post_type()
 {
     $labels = array(
-        'name'              => __( 'Call-to-Actions', 'mdb-call-to-action' ),
-        'singular_name'     => __( 'Call-to-Action', 'mdb-call-to-action' ),
-        'menu_name'         => __( 'Call-to-Action', 'mdb-call-to-action' ),
-        'all_items'         => __( 'Alle Call-to-Actions', 'mdb-call-to-action' ),
-        'add_new'           => __( 'Erstellen', 'mdb-call-to-action' ),
-        'add_new_item'      => __( 'Erstellen', 'mdb-call-to-action' ),
-        'edit_item'         => __( 'Call-to-Action bearbeiten', 'mdb-call-to-action' ),
-        'search_items'      => __( 'Call-to-Action durchsuchen', 'mdb-call-to-action' ),
+        'name'              => __( 'Call to Actions', 'mdb-call-to-action' ),
+        'singular_name'     => __( 'Call to Action', 'mdb-call-to-action' ),
+        'menu_name'         => __( 'Call to Action (CTA)', 'mdb-call-to-action' ),
+        'all_items'         => __( 'All Call to Actions', 'mdb-call-to-action' ),
+        'add_new'           => __( 'Add new', 'mdb-call-to-action' ),
+        'add_new_item'      => __( 'Add new', 'mdb-call-to-action' ),
+        'edit_item'         => __( 'Edit Call to Action', 'mdb-call-to-action' ),
+        'search_items'      => __( 'Search Call to Actions', 'mdb-call-to-action' ),
     );
 
     $args = array(
-        'label'                   => __( 'Call-to-Actions', 'mdb-call-to-action' ),
+        'label'                   => __( 'Call to Actions', 'mdb-call-to-action' ),
         'labels'                  => $labels,
         'description'             => '',
         'public'                  => true,
@@ -52,11 +52,14 @@ function cta__register_post_type()
         'capability_type'         => 'post',
         'map_meta_cap'            => true,
         'hierarchical'            => false,
-        'rewrite'                 => ['slug' => 'cta', 'with_front' => true],
+        'rewrite'                 => array(
+            'slug'       => 'cta',
+            'with_front' => true
+        ),
         'query_var'               => true,
         'menu_position'           => 10,
         'menu_icon'               => 'dashicons-align-center',
-        'supports'                => ['title'],
+        'supports'                => array( 'title' ),
         'show_in_graphql'         => false,
     );
 
@@ -79,12 +82,12 @@ add_action( 'init', 'mdb_call_to_action\cta__register_post_type' );
 
 function cta__manage_posts_columns( $default )
 {
-    $columns['cb']          = $default[ 'cb' ];
-    $columns['title']       = $default[ 'title' ];
-    $columns['id']          = __( 'ID', 'mdb-call-to-action' );
-    $columns['url']         = __( 'Link', 'mdb-call-to-action' );
-    $columns['shortcode']   = __( 'Shortcode', 'mdb-call-to-action' );
-    $columns['date']        = $default[ 'date' ];
+    $columns['cb']        = $default[ 'cb' ];
+    $columns['title']     = $default[ 'title' ];
+    $columns['id']        = __( 'ID', 'mdb-call-to-action' );
+    $columns['url']       = __( 'Link', 'mdb-call-to-action' );
+    $columns['shortcode'] = __( 'Shortcode', 'mdb-call-to-action' );
+    $columns['date']      = $default[ 'date' ];
 
     return $columns;
 }
@@ -132,7 +135,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id )
                 '<code>[cta id="%1$s"]</code>',
                 $post_id,
             );
-            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Kopieren', 'mdb-call-to-action' ) . '</button>';
+            echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
         break;
     endswitch;
 }
