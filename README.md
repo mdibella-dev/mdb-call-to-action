@@ -1,4 +1,4 @@
-# mdb-call-to-action
+# Marco Di Bella &mdash; Call to Action (CTA)
 This plugin provides a custom post type for managing and displaying so-called Call to Actions (CTA).
 The actual retrieval of the CTA is realized via a shortcode.
 Important: The plugin requires an installed and activated version of the ACF plugin.
@@ -13,7 +13,7 @@ __Tested up to:__ WordPress 6.1
 
 
 ## Changelog
-*New/Improve/Bugfix*
+*New / Improve / Bugfix*
 
 
 ### main
@@ -49,4 +49,4 @@ __Tested up to:__ WordPress 6.1
 
 
 ### 1.0
-Initial commit
+* Initial commit

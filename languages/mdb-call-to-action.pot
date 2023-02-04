@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-02-02 16:22+0100\n"
+"POT-Creation-Date: 2023-02-04 17:20+0100\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,9 +18,9 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Domain: mdb-call-to-action\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Domain: mdb-call-to-action\n"
 
 #: includes/post-types/post-type-cta.php:27
 #: includes/post-types/post-type-cta.php:38
@@ -69,7 +69,7 @@ msgid "Copy"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Marco Di Bella - Call to Action (CTA)"
+msgid "Marco Di Bella &mdash; Call to Action (CTA)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
