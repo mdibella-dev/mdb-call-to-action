@@ -13,7 +13,6 @@
  * @package mdb-call-to-action
  */
 
-
 namespace mdb_call_to_action;
 
 
