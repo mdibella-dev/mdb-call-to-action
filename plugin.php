@@ -5,6 +5,7 @@
  * Description:     This plugin provides a custom post type for managing and displaying so-called Call to Actions (CTA).
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
+ * License:         MIT License
  * Version:         1.3.0
  * Text Domain:     mdb-call-to-action
  * Domain Path:     /languages

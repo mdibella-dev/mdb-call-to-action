@@ -5,11 +5,13 @@ Important: The plugin requires an installed and activated version of the ACF plu
 
 __Contributors:__ Marco Di Bella (mdibella-dev)
 
-__Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, advanced custom fields, wordpress
+__Tags:__  shortcodes, custom-post-types, call-to-action, translation-ready, advanced-custom-fields, wordpress
 
 __Requires at least:__ WordPress 5.3
 
 __Tested up to:__ WordPress 6.1
+
+__License:__ MIT License
 
 
 ## Changelog
@@ -18,6 +20,7 @@ __Tested up to:__ WordPress 6.1
 
 ### main
 * New: German translation.
+* New: MIT license.
 * Improve: Remove PLUGIN_DOMAIN.
 * Improve: Remove obsolete code.
 * Improve: Update setup.php to match the plugin_template package.
