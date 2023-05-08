@@ -29,6 +29,7 @@ function api_render_cta( $id )
 {
     $output = '';
     $params = array();
+    $style  = '';
 
 
     if( ! empty( $id ) and ( true === api_get_cta_params( $id, $params ) ) ) :
@@ -36,8 +37,15 @@ function api_render_cta( $id )
         ob_start();
 
 
+        if( isset( $params['cta_background_color'] ) and isset( $params['cta_text_color'] ) ) :
+            $style = sprintf(
+                'style="background-color:%1$s !important; color: %2$s !important;"',
+                $params['cta_background_color'],
+                $params['cta_text_color']
+            );
+        endif;
 ?>
-<aside class="cta-box" style="<?php echo 'background-color:' . $params['cta_background_color'] . ' !important; color:' . $params['cta_text_color'] .' !important;'; ?>">
+<aside class="cta-box" <?php echo $style; ?>>
 
     <div class="cta-box-columns">
 
