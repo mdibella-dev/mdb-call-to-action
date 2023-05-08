@@ -21,7 +21,7 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 
 ### Tested up to
 
-* WordPress 6.2 RC2
+* WordPress 6.2
 
 <br>
 
@@ -29,13 +29,6 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 
 ### Latest changes to the main branch
 
-* New: Extract changelog from README.md
-* New: German translation
-* New: MIT license
-* Improve: Remove PLUGIN_DOMAIN
-* Improve: Remove obsolete code
-* Improve: Update setup.php to match the plugin_template package
-* Improve: Update documentation style
 
 ### Previous changes
 

@@ -4,6 +4,19 @@
 
 <br>
 
+### 1.4
+Released; 08-05-2023
+
+* New: Extract changelog from README.md
+* New: German translation
+* New: MIT license
+* Improve: Remove PLUGIN_DOMAIN
+* Improve: Remove obsolete code
+* Improve: Update setup.php to match the plugin_template package
+* Improve: Update documentation style
+* Bugfix: Remove warnings due undefined array keys in api.php
+
+
 ### 1.3
 Released: 09-12-2022
 
