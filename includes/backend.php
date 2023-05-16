@@ -25,12 +25,12 @@ function plugin_backend_scripts()
 {
     wp_enqueue_style(
         'mdbcta-style',
-        PLUGIN_DIR . 'assets/build/css/backend.min.css'
+        PLUGIN_URL . 'assets/build/css/backend.min.css'
     );
 
     wp_enqueue_script(
         'mdbcta-script',
-        PLUGIN_DIR . 'assets/build/js/backend.js',
+        PLUGIN_URL . 'assets/build/js/backend.js',
         'jquery',
         PLUGIN_VERSION,
         true

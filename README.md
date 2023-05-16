@@ -29,6 +29,8 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 
 ### Latest changes to the main branch
 
+* Bugfix: Fix wrong path var in backend.php
+
 
 ### Previous changes
 
