@@ -39,4 +39,4 @@ function plugin_backend_scripts()
     );
 }
 
-add_action( 'admin_enqueue_scripts','mdb_call_to_action\plugin_backend_scripts' );
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\plugin_backend_scripts' );
