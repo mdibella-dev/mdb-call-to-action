@@ -31,7 +31,9 @@ function plugin_backend_scripts()
     wp_enqueue_script(
         'mdbcta-script',
         PLUGIN_URL . 'assets/build/js/backend.js',
-        'jquery',
+        [
+            'jquery'
+        ]
         PLUGIN_VERSION,
         true
     );
