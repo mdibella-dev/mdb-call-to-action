@@ -23,18 +23,18 @@ defined( 'ABSPATH' ) or exit;
 
 function cta__register_post_type()
 {
-    $labels = array(
-        'name'              => __( 'Call to Actions', 'mdb-call-to-action' ),
-        'singular_name'     => __( 'Call to Action', 'mdb-call-to-action' ),
-        'menu_name'         => __( 'Call to Action (CTA)', 'mdb-call-to-action' ),
-        'all_items'         => __( 'All Call to Actions', 'mdb-call-to-action' ),
-        'add_new'           => __( 'Add new', 'mdb-call-to-action' ),
-        'add_new_item'      => __( 'Add new', 'mdb-call-to-action' ),
-        'edit_item'         => __( 'Edit Call to Action', 'mdb-call-to-action' ),
-        'search_items'      => __( 'Search Call to Actions', 'mdb-call-to-action' ),
-    );
+    $labels = [
+        'name'          => __( 'Call to Actions', 'mdb-call-to-action' ),
+        'singular_name' => __( 'Call to Action', 'mdb-call-to-action' ),
+        'menu_name'     => __( 'Call to Action (CTA)', 'mdb-call-to-action' ),
+        'all_items'     => __( 'All Call to Actions', 'mdb-call-to-action' ),
+        'add_new'       => __( 'Add new', 'mdb-call-to-action' ),
+        'add_new_item'  => __( 'Add new', 'mdb-call-to-action' ),
+        'edit_item'     => __( 'Edit Call to Action', 'mdb-call-to-action' ),
+        'search_items'  => __( 'Search Call to Actions', 'mdb-call-to-action' ),
+    ];
 
-    $args = array(
+    $args = [
         'label'                   => __( 'Call to Actions', 'mdb-call-to-action' ),
         'labels'                  => $labels,
         'description'             => '',
@@ -52,16 +52,18 @@ function cta__register_post_type()
         'capability_type'         => 'post',
         'map_meta_cap'            => true,
         'hierarchical'            => false,
-        'rewrite'                 => array(
+        'rewrite'                 => [
             'slug'       => 'cta',
             'with_front' => true
-        ),
+        ],
         'query_var'               => true,
         'menu_position'           => 10,
         'menu_icon'               => 'dashicons-align-center',
-        'supports'                => array( 'title' ),
+        'supports'                => [
+            'title'
+        ],
         'show_in_graphql'         => false,
-    );
+    ];
 
     register_post_type( 'cta', $args );
 }
@@ -82,12 +84,12 @@ add_action( 'init', __NAMESPACE__ . '\cta__register_post_type' );
 
 function cta__manage_posts_columns( $default )
 {
-    $columns['cb']        = $default[ 'cb' ];
-    $columns['title']     = $default[ 'title' ];
+    $columns['cb']        = $default['cb'];
+    $columns['title']     = $default['title'];
     $columns['id']        = __( 'ID', 'mdb-call-to-action' );
     $columns['url']       = __( 'Link', 'mdb-call-to-action' );
     $columns['shortcode'] = __( 'Shortcode', 'mdb-call-to-action' );
-    $columns['date']      = $default[ 'date' ];
+    $columns['date']      = $default['date'];
 
     return $columns;
 }
