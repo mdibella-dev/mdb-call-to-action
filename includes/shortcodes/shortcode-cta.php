@@ -49,4 +49,4 @@ function shortcode_cta( $atts, $content )
     return $output;
 }
 
-add_shortcode( 'cta', 'mdb_call_to_action\shortcode_cta' );
+add_shortcode( 'cta', __NAMESPACE__ . '\shortcode_cta' );
