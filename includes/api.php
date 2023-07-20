@@ -126,7 +126,7 @@ function api_get_cta_params( $id, &$params )
     $result = false;
 
 
-    if( !empty( $id ) ) :
+    if( ! empty( $id ) ) :
 
         $fields = get_field_objects( $id );
 
