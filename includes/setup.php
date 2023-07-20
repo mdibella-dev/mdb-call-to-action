@@ -27,7 +27,7 @@ function plugin_init()
     load_plugin_textdomain( 'mdb-call-to-action', false, plugin_basename( PLUGIN_DIR ) . '/languages' );
 }
 
-add_action( 'init', 'mdb_call_to_action\plugin_init', 9 );
+add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
 
 
 
@@ -42,7 +42,7 @@ function plugin_activation()
     // Do something!
 }
 
-register_activation_hook( __FILE__, 'mdb_call_to_action\plugin_activation' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
 
 
 
@@ -57,7 +57,7 @@ function plugin_deactivation()
     // Do something!
 }
 
-register_deactivation_hook( __FILE__, 'mdb_call_to_action\plugin_deactivation' );
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
 
 
 
@@ -74,4 +74,4 @@ function plugin_uninstall()
     // Delete custom tables!
 }
 
-register_uninstall_hook( __FILE__, 'mdb_call_to_action\plugin_uninstall' );
+register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
