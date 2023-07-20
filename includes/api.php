@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) or exit;
 function api_render_cta( $id )
 {
     $output = '';
-    $params = array();
+    $params = [];
     $style  = '';
 
 
