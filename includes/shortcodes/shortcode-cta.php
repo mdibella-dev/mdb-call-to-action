@@ -29,9 +29,9 @@ defined( 'ABSPATH' ) or exit;
 function shortcode_cta( $atts, $content )
 {
     // Read out parameters
-    extract( shortcode_atts( array(
+    extract( shortcode_atts( [
                 'id' => '',
-            ),
+            ],
             $atts
         )
     );
