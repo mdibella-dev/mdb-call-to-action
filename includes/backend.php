@@ -25,7 +25,9 @@ function plugin_backend_scripts()
 {
     wp_enqueue_style(
         'mdbcta-style',
-        PLUGIN_URL . 'assets/build/css/backend.min.css'
+        PLUGIN_URL . 'assets/build/css/backend.min.css',
+        [],
+        PLUGIN_VERSION
     );
 
     wp_enqueue_script(
@@ -33,7 +35,7 @@ function plugin_backend_scripts()
         PLUGIN_URL . 'assets/build/js/backend.js',
         [
             'jquery'
-        ]
+        ],
         PLUGIN_VERSION,
         true
     );
