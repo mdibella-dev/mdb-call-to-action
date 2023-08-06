@@ -24,14 +24,14 @@ defined( 'ABSPATH' ) or exit;
 function plugin_backend_scripts()
 {
     wp_enqueue_style(
-        'mdbcta-style',
+        'mdb-cta-backend-style',
         PLUGIN_URL . 'assets/build/css/backend.min.css',
         [],
         PLUGIN_VERSION
     );
 
     wp_enqueue_script(
-        'mdbcta-script',
+        'mdb-cta-backend-script',
         PLUGIN_URL . 'assets/build/js/backend.js',
         [
             'jquery'
