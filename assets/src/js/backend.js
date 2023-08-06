@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ ) {
 
-    $( '.copyCTAToClipboard').click( function( e ) {
+    $( '.copyCTAToClipboard').on( 'click', function( e ) {
         e.preventDefault();
 
         var theButton = $( this );
@@ -16,8 +16,5 @@ jQuery( document ).ready( function( $ ) {
             theButton.next( 'span').remove();
         }, 2000 );
     } );
-
-
-
 
 } );

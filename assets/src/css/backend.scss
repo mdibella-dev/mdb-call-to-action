@@ -1,0 +1,39 @@
+/**
+ * Backend-Style für dieses Plugin
+ *
+* @author  Marco Di Bella
+* @package call-to-action
+*/
+
+
+.post-type-cta .wp-list-table {
+
+    .column-id {
+        width: 5%;
+    }
+
+    .column-shortcode {
+        width: 20%;
+    }
+
+
+    td.column-shortcode {
+        display: flex;
+        gap: 1rem;
+
+        code {
+            white-space: nowrap;
+        }
+
+        * {
+            height: 28px !important;
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            color: #27ae60 ; // green
+        }
+    }
+
+}
