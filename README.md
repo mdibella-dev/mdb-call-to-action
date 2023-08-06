@@ -31,6 +31,7 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 
 * Improve: Add namespace var to hook
 * Improve: Change array notation
+* Improve: Change script and style handler
 * Bugfix: Fix wrong path var in backend.php
 
 
