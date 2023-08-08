@@ -21,8 +21,9 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function cta__register_post_type()
-{
+
+function cta__register_post_type() {
+
     $labels = [
         'name'          => __( 'Call to Actions', 'mdb-call-to-action' ),
         'singular_name' => __( 'Call to Action', 'mdb-call-to-action' ),
@@ -82,8 +83,7 @@ add_action( 'init', __NAMESPACE__ . '\cta__register_post_type' );
  * @return array The modified columns.
  */
 
-function cta__manage_posts_columns( $default )
-{
+function cta__manage_posts_columns( $default ) {
     $columns['cb']        = $default['cb'];
     $columns['title']     = $default['title'];
     $columns['id']        = __( 'ID', 'mdb-call-to-action' );
@@ -108,9 +108,8 @@ add_filter( 'manage_cta_posts_columns', __NAMESPACE__ . '\cta__manage_posts_colu
  *
  */
 
-function cta__manage_posts_custom_column( $column_name, $post_id )
-{
-    $params = array();
+function cta__manage_posts_custom_column( $column_name, $post_id ) {
+    $params = [];
 
     api_get_cta_params( $post_id, $params );
 
