@@ -26,8 +26,8 @@ defined( 'ABSPATH' ) or exit;
  * @return string The rendered call-to-action button.
  */
 
-function shortcode_cta( $atts, $content )
-{
+function shortcode_cta( $atts, $content ) {
+    
     // Read out parameters
     extract( shortcode_atts( [
                 'id' => '',

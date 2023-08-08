@@ -25,8 +25,7 @@ defined( 'ABSPATH' ) or exit;
  * @return string The rendered call-to-action.
  */
 
-function api_render_cta( $id )
-{
+function api_render_cta( $id ) {
     $output = '';
     $params = [];
     $style  = '';
@@ -121,8 +120,7 @@ function api_render_cta( $id )
  * @return bool The outcome of the function call: true on success, otherwise false
  */
 
-function api_get_cta_params( $id, &$params )
-{
+function api_get_cta_params( $id, &$params ) {
     $result = false;
 
 

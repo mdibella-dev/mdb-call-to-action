@@ -21,8 +21,8 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.1.0
  */
 
-function plugin_backend_scripts()
-{
+function plugin_backend_scripts() {
+    
     wp_enqueue_style(
         'mdb-cta-backend-style',
         PLUGIN_URL . 'assets/build/css/backend.min.css',
