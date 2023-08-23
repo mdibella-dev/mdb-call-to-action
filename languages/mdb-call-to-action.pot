@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-02-04 17:20+0100\n"
+"POT-Creation-Date: 2023-08-23 17:14+0200\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -22,13 +22,64 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
+#: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
+msgid "Call to Action"
+msgstr ""
+
+#: includes/metabox.php:43
+msgid "This is an expressive headline"
+msgstr ""
+
+#: includes/metabox.php:44
+msgid ""
+"This text should inform the reader why they should follow the call-to-"
+"action"
+msgstr ""
+
+#: includes/metabox.php:45
+msgid "Click here!"
+msgstr ""
+
+#. Author URI of the plugin/theme
+#: includes/metabox.php:46
+msgid "https://www.marcodibella.de"
+msgstr ""
+
+#: includes/metabox.php:51
+msgid "Headline"
+msgstr ""
+
+#: includes/metabox.php:55
+msgid "We recommend that you limit the headline to 100 characters."
+msgstr ""
+
+#: includes/metabox.php:61
+msgid "Text"
+msgstr ""
+
+#: includes/metabox.php:65
+msgid "We recommend that you limit the text to 160 characters."
+msgstr ""
+
+#: includes/metabox.php:71
+msgid "Button"
+msgstr ""
+
+#: includes/metabox.php:75
+msgid "We recommend that you limit the text to 50 characters."
+msgstr ""
+
+#: includes/metabox.php:81 includes/post-types/post-type-cta.php:90
+msgid "Link"
+msgstr ""
+
+#: includes/metabox.php:85
+msgid "The link to which the call-to-action should point."
+msgstr ""
+
 #: includes/post-types/post-type-cta.php:27
 #: includes/post-types/post-type-cta.php:38
 msgid "Call to Actions"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:28
-msgid "Call to Action"
 msgstr ""
 
 #: includes/post-types/post-type-cta.php:29
@@ -52,19 +103,15 @@ msgstr ""
 msgid "Search Call to Actions"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:87
+#: includes/post-types/post-type-cta.php:89
 msgid "ID"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:88
-msgid "Link"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:89
+#: includes/post-types/post-type-cta.php:91
 msgid "Shortcode"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:138
+#: includes/post-types/post-type-cta.php:140
 msgid "Copy"
 msgstr ""
 
@@ -84,8 +131,4 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Marco Di Bella"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://www.marcodibella.de"
 msgstr ""
