@@ -29,6 +29,7 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 
 ### Latest changes to the main branch
 
+* New: Add package.json
 * Improve: Add namespace var to hook
 * Improve: Change array notation
 * Improve: Change script and style handler
