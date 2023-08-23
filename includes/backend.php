@@ -22,7 +22,14 @@ defined( 'ABSPATH' ) or exit;
  */
 
 function plugin_backend_scripts() {
-    
+
+    wp_enqueue_style(
+        'mdb-cta-metabox-style',
+        PLUGIN_URL . 'assets/build/css/metabox.min.css',
+        [],
+        PLUGIN_VERSION
+    );
+
     wp_enqueue_style(
         'mdb-cta-backend-style',
         PLUGIN_URL . 'assets/build/css/backend.min.css',

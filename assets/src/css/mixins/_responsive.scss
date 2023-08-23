@@ -1,0 +1,46 @@
+/**
+ * Mixins for the realization of responsive websites.
+ *
+ * @author  Marco Di Bella
+ * @package mdb-theme-fse
+ */
+
+
+
+/**
+ *  Media breakpoints.
+ *
+ * @source https://developer.wordpress.org/block-editor/packages/packages-viewport/
+ */
+
+$breakpoints: (
+    mobile: 460px,
+    small:  600px,
+    medium: 782px,
+    large:  960px,
+    wide:   1280px,
+    huge:   1440px,
+) !default;
+
+
+
+/**
+ * Creates a media breakpoint.
+ *
+ * @source https://davidwalsh.name/write-media-queries-sass
+ * @source https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844
+ * @source https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184
+ *
+ * @param $breakpoint one of the following values: mobile, small, medium, large, wide, huge
+ */
+
+@mixin breakpoint( $breakpoint) {
+
+    @if map-has-key( $breakpoints, $breakpoint ) {
+        $value: map-get( $breakpoints, $breakpoint );
+
+        @media screen and (min-width: #{$value}) {
+            @content;
+        }
+    }
+}

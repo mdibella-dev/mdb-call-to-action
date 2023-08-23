@@ -1,0 +1,73 @@
+/**
+ * Styles for the CTA metabox
+ *
+* @author  Marco Di Bella
+* @package call-to-action
+*/
+
+
+/** Mixins */
+
+@import "mixins/_responsive";
+
+
+
+
+#cta-metabox .inside {
+    background: #f9f9f9;
+    margin: 0;
+}
+
+
+.cta-metabox-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    //border-top: 1px solid #e1e1e1;
+
+    @include breakpoint(medium) {
+        flex-wrap: nowrap;
+    }
+}
+
+
+.cta-metabox-col-label,
+.cta-metabox-col-input {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 0;
+    width: 100%;
+}
+
+
+.cta-metabox-col-label {
+    margin-bottom: 6px;
+
+    @include breakpoint(medium) {
+        width: 20%;
+    }
+}
+
+
+.cta-metabox-col-input {
+    @include breakpoint(medium) {
+        width: 80%;
+    }
+}
+
+
+.cta-metabox-col-label label {
+    font-weight: 500;
+}
+
+
+.cta-metabox-col-input input {
+    width: 100%;
+}
+
+
+.cta-metabox-col-input *:last-child {
+    margin-bottom: 0;
+}

@@ -38,4 +38,5 @@ require_once( PLUGIN_DIR . 'includes/shortcodes/shortcode-cta.php' );
 require_once( PLUGIN_DIR . 'includes/api.php' );
 
 require_once( PLUGIN_DIR . 'includes/backend.php' );
+require_once( PLUGIN_DIR . 'includes/metabox.php' );
 require_once( PLUGIN_DIR . 'includes/setup.php' );
