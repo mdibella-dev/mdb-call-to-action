@@ -34,6 +34,11 @@ add_action( 'add_meta_boxes', __NAMESPACE__ . '\register_metabox' );
 
 
 /**
+ * Gets the CTA
+ */
+
+
+/**
  * Displays the CTA metabox
  */
 
