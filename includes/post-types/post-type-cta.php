@@ -60,7 +60,8 @@ function cta__register_post_type() {
         'menu_position'           => 10,
         'menu_icon'               => 'dashicons-align-center',
         'supports'                => [
-            'title'
+            'title',
+            'custom-fields'
         ],
         'show_in_graphql'         => false,
     ];
