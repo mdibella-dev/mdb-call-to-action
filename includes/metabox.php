@@ -76,6 +76,24 @@ function render_metabox( $post ) {
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
+            <label for="cta-data-background-color"><?php echo __( 'Background color', 'mdb-call-to-action' ); ?></label>
+        </div>
+        <div class="cta-metabox-col-input">
+            <input class="cta-metabox-color-picker" type="hidden" name="cta-data-background-color" value="<?php esc_attr_e( $params['background-color'] ); ?>"/>
+        </div>
+    </div>
+
+    <div class="cta-metabox-row">
+        <div class="cta-metabox-col-label">
+            <label for="cta-data-text-color"><?php echo __( 'Text color', 'mdb-call-to-action' ); ?></label>
+        </div>
+        <div class="cta-metabox-col-input">
+            <input class="cta-metabox-color-picker" type="hidden" name="cta-data-text-color" value="<?php esc_attr_e( $params['text-color'] ); ?>"/>
+        </div>
+    </div>
+
+    <div class="cta-metabox-row">
+        <div class="cta-metabox-col-label">
             <label for="cta-data-button-text"><?php echo __( 'Button', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
@@ -131,4 +149,5 @@ function save_metabox( $post_id ) {
         );
     endif;
 }
+
 add_action( 'save_post', __NAMESPACE__ . '\save_metabox' );
