@@ -23,6 +23,9 @@ defined( 'ABSPATH' ) or exit;
 
 function plugin_backend_scripts() {
 
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'wp-color-picker' );
+
     wp_enqueue_style(
         'mdb-cta-metabox-style',
         PLUGIN_URL . 'assets/build/css/metabox.min.css',
@@ -46,6 +49,7 @@ function plugin_backend_scripts() {
         PLUGIN_VERSION,
         true
     );
+
 }
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\plugin_backend_scripts' );
