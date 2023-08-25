@@ -93,14 +93,14 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
         $params = get_params( $this->get_id() );
         $style  = '';
 
-    /*    if( isset( $params['cta_background_color'] ) and isset( $params['cta_text_color'] ) ) :
+        if( isset( $params['background-color'] ) and isset( $params['text-color'] ) ) :
             $style = sprintf(
                 'style="background-color:%1$s !important; color: %2$s !important;"',
-                $params['cta_background_color'],
-                $params['cta_text_color']
+                $params['background-color'],
+                $params['text-color']
             );
         endif;
-    */
+
         ?>
         <aside class="cta-box" <?php echo $style; ?>>
 

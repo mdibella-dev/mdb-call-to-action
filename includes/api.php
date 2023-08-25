@@ -23,10 +23,12 @@ defined( 'ABSPATH' ) or exit;
 
 function get_default_params() {
     return [
-        'headline'    => __( 'This is an expressive headline', 'mdb-call-to-action' ),
-        'summary'     => __( 'This text should inform the reader why they should follow the call-to-action', 'mdb-call-to-action' ),
-        'button-text' => __( 'Click here!', 'mdb-call-to-action' ),
-        'link'        => __( 'https://www.marcodibella.de' ),
+        'headline'         => __( 'This is an expressive headline', 'mdb-call-to-action' ),
+        'summary'          => __( 'This text should inform the reader why they should follow the call-to-action', 'mdb-call-to-action' ),
+        'button-text'      => __( 'Click here!', 'mdb-call-to-action' ),
+        'link'             => __( 'https://www.marcodibella.de' ),
+        'background-color' => '#0e589a',        // dark blue
+        'text-color'       => '#ffffff',        // white
     ];
 }
 
