@@ -42,11 +42,18 @@ function render_metabox( $post ) {
 
     $params = get_params( $post->ID );
 
-    if( 0 == count( $params) ) :
+    if( 0 === count( $params) ) :
         $params = get_default_params();
     endif;
 
     ?>
+    <script>
+    jQuery(document).ready(function($){
+        $('.cta-metabox-color-picker').each(function(){
+            $(this).wpColorPicker();
+        });
+    });
+    </script>
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
             <label for="cta-data-headline"><?php echo __( 'Headline', 'mdb-call-to-action' ); ?></label>
