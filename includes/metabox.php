@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Registers the CTA metabox
+ * Registers the CTA metabox.
  */
 
 function register_metabox() {
@@ -27,6 +27,7 @@ function register_metabox() {
         __NAMESPACE__ . '\render_metabox',
         'cta'
     );
+
 }
 
 add_action( 'add_meta_boxes', __NAMESPACE__ . '\register_metabox' );
@@ -34,62 +35,93 @@ add_action( 'add_meta_boxes', __NAMESPACE__ . '\register_metabox' );
 
 
 /**
- * Gets the CTA
+ * Displays the CTA metabox.
  */
 
+function render_metabox( $post ) {
 
-/**
- * Displays the CTA metabox
- */
+    $params = get_params( $post->ID );
 
-function render_metabox() {
-
-    $cta_component = [];
-    $cta_component['headline'] = __( 'This is an expressive headline', 'mdb-call-to-action' );
-    $cta_component['text']     = __( 'This text should inform the reader why they should follow the call-to-action', 'mdb-call-to-action' );
-    $cta_component['btn-text'] = __( 'Click here!', 'mdb-call-to-action' );
-    $cta_component['url']      = __( 'https://www.marcodibella.de' );
+    if( 0 == count( $params) ) :
+        $params = get_default_params();
+    endif;
 
     ?>
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-mb-headline"><?php echo __( 'Headline', 'mdb-call-to-action' ); ?></label>
+            <label for="cta-data-headline"><?php echo __( 'Headline', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-mb-headline" value="<?php echo $cta_component['headline']; ?>" maxlength="100">
+            <input type="text" id="cta-data-headline" name="cta-data-headline" value="<?php echo $params['headline']; ?>" maxlength="100">
             <p><?php echo __( 'We recommend that you limit the headline to 100 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-mb-text"><?php echo __( 'Text', 'mdb-call-to-action' ); ?></label>
+            <label for="cta-data-summary"><?php echo __( 'Text', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-mb-text" value="<?php echo $cta_component['text']; ?>" maxlength="160">
+            <input type="text" id="cta-data-summary" name="cta-data-summary" value="<?php echo $params['summary']; ?>" maxlength="160">
             <p><?php echo __( 'We recommend that you limit the text to 160 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-mb-btn-text"><?php echo __( 'Button', 'mdb-call-to-action' ); ?></label>
+            <label for="cta-data-button-text"><?php echo __( 'Button', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-mb-btn-text" value="<?php echo $cta_component['btn-text']; ?>" maxlength="50">
+            <input type="text" id="cta-data-button-text" name="cta-data-button-text" value="<?php echo $params['button-text']; ?>" maxlength="50">
             <p><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-mb-url"><?php echo __( 'Link', 'mdb-call-to-action' ); ?></label>
+            <label for="cta-data-link"><?php echo __( 'Link', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="url" id="cta-mb-url" value="<?php echo $cta_component['url']; ?>" maxlength="255">
+            <input type="url" id="cta-data-link" name="cta-data-link" value="<?php echo $params['link']; ?>" maxlength="255">
             <p><?php echo __( 'The link to which the call-to-action should point.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
-
     <?php
 }
+
+
+
+/**
+ * Saves the CTA metabox.
+ */
+
+function save_metabox( $post_id ) {
+
+    $params = [];
+
+
+    // Detect and copy all posted params
+    $keys = [
+        'cta-data-headline'    => 'headline',
+        'cta-data-summary'     => 'summary',
+        'cta-data-button-text' => 'button-text',
+        'cta-data-link'        => 'link',
+    ];
+
+    foreach( $keys as $post_key => $param_key ):
+        if( isset( $_POST[$post_key] ) ) :
+            $params[$param_key] = $_POST[$post_key];
+        endif;
+    endforeach;
+
+
+    // Encode (to JSON) and store params
+    if( 0 !== count( $params ) ) :
+        update_post_meta(
+            $post_id,
+            CTA_DATA_METAKEY,
+            $params
+        );
+    endif;
+}
+add_action( 'save_post', __NAMESPACE__ . '\save_metabox' );
