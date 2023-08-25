@@ -17,16 +17,13 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Generates a table with the schedule of a specific event.
+ * Generates a call-to-action button.
  *
  * @since 2.0.0
  *
  * The attributes (parameters) of the shorcode:
  *
- * - set            The selected setlist.
- * - event          The identification number of the event.
- * - speaker        The identification number of a speaker; is used to filter the contributions of this speaker.
- * - show_details   Allow details to be displayed (TRUE, FALSE).
+ * - id     The post_id of the desired CTA
  */
 
 class Shortcode_CTA extends \wordpress_helper\Shortcode {
