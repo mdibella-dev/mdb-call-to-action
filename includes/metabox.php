@@ -99,7 +99,7 @@ function render_metabox( $post ) {
             <label for="cta-data-background-color"><?php echo __( 'Background color', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input class="cta-metabox-color-picker" type="hidden" name="cta-data-background-color" value="<?php echo esc_attr( $params['background-color'] ); ?>"/>
+            <input type="text" class="cta-metabox-color-picker" name="cta-data-background-color" value="<?php echo $params['background-color']; ?>"/>
         </div>
     </div>
 
@@ -108,7 +108,7 @@ function render_metabox( $post ) {
             <label for="cta-data-text-color"><?php echo __( 'Text color', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input class="cta-metabox-color-picker" type="hidden" name="cta-data-text-color" value="<?php echo esc_attr( $params['text-color'] ); ?>"/>
+            <input type="text" class="cta-metabox-color-picker" name="cta-data-text-color" value="<?php echo $params['text-color']; ?>"/>
         </div>
     </div>
 
@@ -128,10 +128,12 @@ function save_metabox( $post_id ) {
 
     // Detect and copy all posted params
     $keys = [
-        'cta-data-headline'    => 'headline',
-        'cta-data-summary'     => 'summary',
-        'cta-data-button-text' => 'button-text',
-        'cta-data-link'        => 'link',
+        'cta-data-headline'         => 'headline',
+        'cta-data-summary'          => 'summary',
+        'cta-data-button-text'      => 'button-text',
+        'cta-data-link'             => 'link',
+        'cta-data-background-color' => 'background-color',
+        'cta-data-text-color'       => 'text-color',
     ];
 
     foreach( $keys as $post_key => $param_key ):
