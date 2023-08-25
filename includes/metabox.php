@@ -115,7 +115,7 @@ function save_metabox( $post_id ) {
     endforeach;
 
 
-    // Encode (to JSON) and store params
+    // Store params
     if( 0 !== count( $params ) ) :
         update_post_meta(
             $post_id,
