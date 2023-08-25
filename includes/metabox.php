@@ -59,7 +59,7 @@ function render_metabox( $post ) {
             <label for="cta-data-headline"><?php echo __( 'Headline', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-data-headline" name="cta-data-headline" value="<?php echo $params['headline']; ?>" maxlength="100">
+            <input type="text" id="cta-data-headline" name="cta-data-headline" value="<?php esc_attr_e( $params['headline'] ); ?>" maxlength="100">
             <p><?php echo __( 'We recommend that you limit the headline to 100 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
@@ -69,7 +69,7 @@ function render_metabox( $post ) {
             <label for="cta-data-summary"><?php echo __( 'Text', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-data-summary" name="cta-data-summary" value="<?php echo $params['summary']; ?>" maxlength="160">
+            <input type="text" id="cta-data-summary" name="cta-data-summary" value="<?php esc_attr_e( $params['summary'] ); ?>" maxlength="160">
             <p><?php echo __( 'We recommend that you limit the text to 160 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
@@ -79,7 +79,7 @@ function render_metabox( $post ) {
             <label for="cta-data-button-text"><?php echo __( 'Button', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="text" id="cta-data-button-text" name="cta-data-button-text" value="<?php echo $params['button-text']; ?>" maxlength="50">
+            <input type="text" id="cta-data-button-text" name="cta-data-button-text" value="<?php esc_attr_e( $params['button-text'] ); ?>" maxlength="50">
             <p><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
@@ -89,7 +89,7 @@ function render_metabox( $post ) {
             <label for="cta-data-link"><?php echo __( 'Link', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
-            <input type="url" id="cta-data-link" name="cta-data-link" value="<?php echo $params['link']; ?>" maxlength="255">
+            <input type="url" id="cta-data-link" name="cta-data-link" value="<?php esc_url_e( $params['link'] ); ?>" maxlength="255">
             <p><?php echo __( 'The link to which the call-to-action should point.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>

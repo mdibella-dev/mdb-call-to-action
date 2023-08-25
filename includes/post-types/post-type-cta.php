@@ -124,7 +124,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
 
 	            echo sprintf(
 	                '<a href="%1$s" target="_blank">%2$s</a>',
-	                $params['link'],
+	                esc_url( $params['link'] ),
 	                $params['link'],  // todo: remove scheme
 	            );
 
@@ -134,7 +134,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
         case 'shortcode' :
             echo sprintf(
                 '<code>[cta id="%1$s"]</code>',
-                $post_id,
+                esc_attr( $post_id ),
             );
             echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
         break;
