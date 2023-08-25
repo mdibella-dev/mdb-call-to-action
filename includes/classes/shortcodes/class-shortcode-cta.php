@@ -90,7 +90,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
     function render() {
 
-        $params = get_cta_metadata( $this->get_id() );
+        $params = get_params( $this->get_id() );
         $style  = '';
 
     /*    if( isset( $params['cta_background_color'] ) and isset( $params['cta_text_color'] ) ) :
@@ -107,43 +107,41 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
             <div class="cta-box-columns">
 
                 <?php
-
-                    if( isset( $params['cta_add_image'] ) and ( true === (bool) $params['cta_add_image'] ) ) :
+                if( isset( $params['cta_add_image'] ) and ( true === (bool) $params['cta_add_image'] ) ) :
                 ?>
-
                 <div class="cta-box-column cta-box-column-image">
                     <img src="<?php echo wp_get_attachment_url( $params['cta_image_id'] ); ?>" alt="<?php echo ( isset( $params['cta_image_alt_title'] )? $params['cta_image_alt_title'] : '' ); ?>">
                 </div>
                 <?php
-                    endif;
+                endif;
                 ?>
 
                 <div class="cta-box-column">
 
                     <?php
-                        if( isset( $params['headline'] ) ) :
+                    if( isset( $params['headline'] ) ) :
                     ?>
                     <div class="cta-headline"><?php echo $params['headline']; ?></div>
                     <?php
-                        endif;
+                    endif;
                     ?>
 
                     <?php
-                        if( isset( $params['summary'] ) ) :
+                    if( isset( $params['summary'] ) ) :
                     ?>
                     <div class="cta-summary"><?php echo $params['summary']; ?></div>
                     <?php
-                        endif;
+                    endif;
                     ?>
 
                     <?php
-                        if( isset( $params['button-text'] ) ) :
+                    if( isset( $params['button-text'] ) ) :
                     ?>
                     <div class="cta-button">
                         <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank"><?php echo $params['button-text']; ?></a>
                     </div>
                     <?php
-                        endif;
+                    endif;
                     ?>
 
                 </div>
