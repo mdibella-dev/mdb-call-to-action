@@ -44,7 +44,7 @@ function get_params( $post_id ) {
     $data   = [];
     $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
 
-    error_log(print_r( $stored, true));
+    //error_log(print_r( $stored, true));
 
     if( false !== $stored ) :
         $data = $stored; //json_decode( $stored, true );
