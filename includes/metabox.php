@@ -105,6 +105,26 @@ function render_metabox( $post ) {
         </div>
     </div>
 
+    <div class="cta-metabox-row">
+        <div class="cta-metabox-col-label">
+            <label for="cta-data-image"><?php echo __( 'Image', 'mdb-call-to-action' ); ?></label>
+        </div>
+        <div class="cta-metabox-col-input">
+            <p><?php echo __( 'The image should not be larger than 240 pixels (width/height).', 'mdb-call-to-action' ); ?></p>
+            <p><?php echo __( 'Note: Images are only displayed from a screen resolution > 800 px.', 'mdb-call-to-action' ); ?></p>
+        </div>
+    </div>
+
+    <div class="cta-metabox-row">
+        <div class="cta-metabox-col-label">
+            <label for="cta-data-image-alt-text"><?php echo __( 'ALT text of the image', 'mdb-call-to-action' ); ?></label>
+        </div>
+        <div class="cta-metabox-col-input">
+            <input type="text" id="cta-data-image-alt-text" name="cta-data-image-alt-text" value="<?php echo esc_attr( $params['image-alt-text'] ); ?>" maxlength="50">
+            <p><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
+        </div>
+    </div>
+
     <?php
 }
 
@@ -127,6 +147,7 @@ function save_metabox( $post_id ) {
         'cta-data-link'             => 'link',
         'cta-data-background-color' => 'background-color',
         'cta-data-text-color'       => 'text-color',
+        'cta-data-image-alt-text'   => 'image-alt-text',
     ];
 
     foreach( $keys as $post_key => $param_key ):
