@@ -110,7 +110,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                 if( isset( $params['cta_add_image'] ) and ( true === (bool) $params['cta_add_image'] ) ) :
                 ?>
                 <div class="cta-box-column cta-box-column-image">
-                    <img src="<?php echo wp_get_attachment_url( $params['cta_image_id'] ); ?>" alt="<?php echo ( isset( $params['cta_image_alt_title'] )? $params['cta_image_alt_title'] : '' ); ?>">
+                    <img src="<?php echo wp_get_attachment_url( $params['cta_image_id'] ); ?>" alt="<?php echo ( isset( $params['image-alt-text'] )? $params['image-alt-text'] : '' ); ?>">
                 </div>
                 <?php
                 endif;

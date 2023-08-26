@@ -29,6 +29,7 @@ function get_default_params() {
         'link'             => __( 'https://www.marcodibella.de' ),
         'background-color' => '#0e589a',        // dark blue
         'text-color'       => '#ffffff',        // white
+        'image-alt-text'   => __( 'This text is a short description of the image', 'mdb-call-to-action' )
     ];
 }
 
@@ -47,7 +48,7 @@ function get_params( $post_id ) {
     $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
 
     if( is_array( $stored ) and ( 0 !== count( $stored ) ) ) :
-        $data = $stored; 
+        $data = $stored;
     endif;
 
     return $data;
