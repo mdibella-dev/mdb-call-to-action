@@ -47,13 +47,6 @@ function render_metabox( $post ) {
     endif;
 
     ?>
-    <script>
-    jQuery(document).ready(function($){
-        $('.cta-metabox-color-picker').each(function(){
-            $(this).wpColorPicker();
-        });
-    });
-    </script>
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
             <label for="cta-data-headline"><?php echo __( 'Headline', 'mdb-call-to-action' ); ?></label>

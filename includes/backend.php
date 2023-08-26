@@ -23,47 +23,52 @@ defined( 'ABSPATH' ) or exit;
 
 function plugin_backend_scripts() {
 
-    $screen = get_current_screen();
+    /**
+     * metabox related scripts and styles
+     */
 
-    if( 'cta' == $screen->post_type ) :
+    // Add WordPress color picker
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'wp-color-picker' );
 
-        if( 'edit' == $screen->base ) :
+    wp_enqueue_style(
+        'mdb-cta-metabox-style',
+        PLUGIN_URL . 'assets/build/css/metabox.min.css',
+        [],
+        PLUGIN_VERSION
+    );
 
-            // Add WordPress color picker
-            wp_enqueue_style( 'wp-color-picker' );
-            wp_enqueue_script( 'wp-color-picker' );
+    wp_enqueue_script(
+        'mdb-cta-metabox-script',
+        PLUGIN_URL . 'assets/build/js/metabox.min.js',
+        [
+            'jquery'
+        ],
+        PLUGIN_VERSION,
+        true
+    );
 
-            wp_enqueue_style(
-                'mdb-cta-metabox-style',
-                PLUGIN_URL . 'assets/build/css/metabox.min.css',
-                [],
-                PLUGIN_VERSION
-            );
 
-        endif;
+    /**
+     * post type related scripts and styles
+     */
 
-        if( 'post' == $screen->base ) :
+    wp_enqueue_style(
+        'mdb-cta-backend-style',
+        PLUGIN_URL . 'assets/build/css/post-type.min.css',
+        [],
+        PLUGIN_VERSION
+    );
 
-            wp_enqueue_style(
-                'mdb-cta-backend-style',
-                PLUGIN_URL . 'assets/build/css/backend.min.css',
-                [],
-                PLUGIN_VERSION
-            );
-
-            wp_enqueue_script(
-                'mdb-cta-backend-script',
-                PLUGIN_URL . 'assets/build/js/backend.js',
-                [
-                    'jquery'
-                ],
-                PLUGIN_VERSION,
-                true
-            );
-
-        endif;
-
-    endif;
+    wp_enqueue_script(
+        'mdb-cta-backend-script',
+        PLUGIN_URL . 'assets/build/js/post-type.min.js',
+        [
+            'jquery'
+        ],
+        PLUGIN_VERSION,
+        true
+    );
 
 }
 
