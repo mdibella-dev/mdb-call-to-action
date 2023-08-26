@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-23 17:14+0200\n"
-"PO-Revision-Date: 2023-08-23 17:16+0200\n"
+"POT-Creation-Date: 2023-08-26 16:00+0200\n"
+"PO-Revision-Date: 2023-08-26 16:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,67 +16,75 @@ msgstr ""
 "X-Poedit-WPHeader: plugin.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Domain: mdb-call-to-action\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/api.php:26
+msgid "This is an expressive headline"
+msgstr "Dies ist eine ausdrucksstarke Überschrift"
+
+#: includes/api.php:27
+msgid ""
+"This text should inform the reader why they should follow the call-to-action"
+msgstr ""
+"Dieser Text soll den Nutzer darüber informieren, warum er dem Call-to-Action "
+"folgen sollte"
+
+#: includes/api.php:28
+msgid "Click here!"
+msgstr "Klicke hier!"
+
+#. Author URI of the plugin/theme
+#: includes/api.php:29
+msgid "https://www.marcodibella.de"
+msgstr "https://www.marcodibella.de"
 
 #: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
 msgid "Call to Action"
 msgstr "Call-to-Action"
 
-#: includes/metabox.php:43
-msgid "This is an expressive headline"
-msgstr "Dies ist eine ausdrucksstarke Überschrift"
-
-#: includes/metabox.php:44
-msgid ""
-"This text should inform the reader why they should follow the call-to-action"
-msgstr ""
-"Dieser Text soll den Nutzer darüber informieren, warum er dem Call-to-"
-"Action folgen sollte"
-
-#: includes/metabox.php:45
-msgid "Click here!"
-msgstr "Klicke hier!"
-
-#. Author URI of the plugin/theme
-#: includes/metabox.php:46
-msgid "https://www.marcodibella.de"
-msgstr "https://www.marcodibella.de"
-
-#: includes/metabox.php:51
+#: includes/metabox.php:59
 msgid "Headline"
 msgstr "Überschrift"
 
-#: includes/metabox.php:55
+#: includes/metabox.php:63
 msgid "We recommend that you limit the headline to 100 characters."
 msgstr "Wir empfehlen, die Überschrift auf 100 Zeichen zu beschränken."
 
-#: includes/metabox.php:61
+#: includes/metabox.php:69
 msgid "Text"
 msgstr "Text"
 
-#: includes/metabox.php:65
+#: includes/metabox.php:73
 msgid "We recommend that you limit the text to 160 characters."
 msgstr "Wir empfehlen, den Text auf 160 Zeichen zu beschränken."
 
-#: includes/metabox.php:71
+#: includes/metabox.php:79
 msgid "Button"
 msgstr "Schaltfläche"
 
-#: includes/metabox.php:75
+#: includes/metabox.php:83
 msgid "We recommend that you limit the text to 50 characters."
 msgstr "Wir empfehlen, den Text auf 50 Zeichen zu beschränken."
 
-#: includes/metabox.php:81 includes/post-types/post-type-cta.php:90
+#: includes/metabox.php:89 includes/post-types/post-type-cta.php:91
 msgid "Link"
 msgstr "Link"
 
-#: includes/metabox.php:85
+#: includes/metabox.php:93
 msgid "The link to which the call-to-action should point."
 msgstr "Der Link, auf den der Call-to-Action verweisen soll."
+
+#: includes/metabox.php:99
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: includes/metabox.php:108
+msgid "Text color"
+msgstr "Textfarbe"
 
 #: includes/post-types/post-type-cta.php:27
 #: includes/post-types/post-type-cta.php:38
@@ -104,15 +112,15 @@ msgstr "Call-to-Action bearbeiten"
 msgid "Search Call to Actions"
 msgstr "Call to Actions durchsuchen"
 
-#: includes/post-types/post-type-cta.php:89
+#: includes/post-types/post-type-cta.php:90
 msgid "ID"
 msgstr "ID"
 
-#: includes/post-types/post-type-cta.php:91
+#: includes/post-types/post-type-cta.php:92
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: includes/post-types/post-type-cta.php:140
+#: includes/post-types/post-type-cta.php:139
 msgid "Copy"
 msgstr "Kopieren"
 
