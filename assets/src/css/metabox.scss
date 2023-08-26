@@ -63,7 +63,8 @@
 }
 
 
-.cta-metabox-col-input input {
+.cta-metabox-col-input input[type="text"],
+.cta-metabox-col-input input[type="url"], {
     width: 100%;
 }
 
