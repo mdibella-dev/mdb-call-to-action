@@ -23,32 +23,46 @@ defined( 'ABSPATH' ) or exit;
 
 function plugin_backend_scripts() {
 
-    wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker' );
+    $screen = get_current_screen();
 
-    wp_enqueue_style(
-        'mdb-cta-metabox-style',
-        PLUGIN_URL . 'assets/build/css/metabox.min.css',
-        [],
-        PLUGIN_VERSION
-    );
+    if( 'cta' == $screen->post_type ) :
 
-    wp_enqueue_style(
-        'mdb-cta-backend-style',
-        PLUGIN_URL . 'assets/build/css/backend.min.css',
-        [],
-        PLUGIN_VERSION
-    );
+        if( 'edit' == $screen->base ) :
 
-    wp_enqueue_script(
-        'mdb-cta-backend-script',
-        PLUGIN_URL . 'assets/build/js/backend.js',
-        [
-            'jquery'
-        ],
-        PLUGIN_VERSION,
-        true
-    );
+            wp_enqueue_style( 'wp-color-picker' );
+            wp_enqueue_script( 'wp-color-picker' );
+
+            wp_enqueue_style(
+                'mdb-cta-metabox-style',
+                PLUGIN_URL . 'assets/build/css/metabox.min.css',
+                [],
+                PLUGIN_VERSION
+            );
+
+        endif;
+
+        if( 'post' == $screen->base ) :
+
+            wp_enqueue_style(
+                'mdb-cta-backend-style',
+                PLUGIN_URL . 'assets/build/css/backend.min.css',
+                [],
+                PLUGIN_VERSION
+            );
+
+            wp_enqueue_script(
+                'mdb-cta-backend-script',
+                PLUGIN_URL . 'assets/build/js/backend.js',
+                [
+                    'jquery'
+                ],
+                PLUGIN_VERSION,
+                true
+            );
+
+        endif;
+
+    endif;
 
 }
 
