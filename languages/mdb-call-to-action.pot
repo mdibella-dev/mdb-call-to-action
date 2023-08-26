@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-26 16:00+0200\n"
+"POT-Creation-Date: 2023-08-26 18:12+0200\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -41,48 +41,68 @@ msgstr ""
 msgid "https://www.marcodibella.de"
 msgstr ""
 
+#: includes/api.php:32
+msgid "This text is a short description of the image"
+msgstr ""
+
 #: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
 msgid "Call to Action"
 msgstr ""
 
-#: includes/metabox.php:59
+#: includes/metabox.php:52
 msgid "Headline"
 msgstr ""
 
-#: includes/metabox.php:63
+#: includes/metabox.php:56
 msgid "We recommend that you limit the headline to 100 characters."
 msgstr ""
 
-#: includes/metabox.php:69
+#: includes/metabox.php:62
 msgid "Text"
 msgstr ""
 
-#: includes/metabox.php:73
+#: includes/metabox.php:66
 msgid "We recommend that you limit the text to 160 characters."
 msgstr ""
 
-#: includes/metabox.php:79
+#: includes/metabox.php:72
 msgid "Button"
 msgstr ""
 
-#: includes/metabox.php:83
+#: includes/metabox.php:76 includes/metabox.php:124
 msgid "We recommend that you limit the text to 50 characters."
 msgstr ""
 
-#: includes/metabox.php:89 includes/post-types/post-type-cta.php:91
+#: includes/metabox.php:82 includes/post-types/post-type-cta.php:91
 msgid "Link"
 msgstr ""
 
-#: includes/metabox.php:93
+#: includes/metabox.php:86
 msgid "The link to which the call-to-action should point."
 msgstr ""
 
-#: includes/metabox.php:99
+#: includes/metabox.php:92
 msgid "Background color"
 msgstr ""
 
-#: includes/metabox.php:108
+#: includes/metabox.php:101
 msgid "Text color"
+msgstr ""
+
+#: includes/metabox.php:110
+msgid "Image"
+msgstr ""
+
+#: includes/metabox.php:113
+msgid "The image should not be larger than 240 pixels (width/height)."
+msgstr ""
+
+#: includes/metabox.php:114
+msgid "Note: Images are only displayed from a screen resolution > 800 px."
+msgstr ""
+
+#: includes/metabox.php:120
+msgid "ALT text of the image"
 msgstr ""
 
 #: includes/post-types/post-type-cta.php:27

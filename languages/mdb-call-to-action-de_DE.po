@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-26 16:00+0200\n"
-"PO-Revision-Date: 2023-08-26 16:01+0200\n"
+"POT-Creation-Date: 2023-08-26 18:12+0200\n"
+"PO-Revision-Date: 2023-08-26 18:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -42,49 +42,70 @@ msgstr "Klicke hier!"
 msgid "https://www.marcodibella.de"
 msgstr "https://www.marcodibella.de"
 
+#: includes/api.php:32
+msgid "This text is a short description of the image"
+msgstr "Dieser Text ist eine Kurzbeschreibung des Bildes"
+
 #: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
 msgid "Call to Action"
 msgstr "Call-to-Action"
 
-#: includes/metabox.php:59
+#: includes/metabox.php:52
 msgid "Headline"
 msgstr "Überschrift"
 
-#: includes/metabox.php:63
+#: includes/metabox.php:56
 msgid "We recommend that you limit the headline to 100 characters."
 msgstr "Wir empfehlen, die Überschrift auf 100 Zeichen zu beschränken."
 
-#: includes/metabox.php:69
+#: includes/metabox.php:62
 msgid "Text"
 msgstr "Text"
 
-#: includes/metabox.php:73
+#: includes/metabox.php:66
 msgid "We recommend that you limit the text to 160 characters."
 msgstr "Wir empfehlen, den Text auf 160 Zeichen zu beschränken."
 
-#: includes/metabox.php:79
+#: includes/metabox.php:72
 msgid "Button"
 msgstr "Schaltfläche"
 
-#: includes/metabox.php:83
+#: includes/metabox.php:76 includes/metabox.php:124
 msgid "We recommend that you limit the text to 50 characters."
 msgstr "Wir empfehlen, den Text auf 50 Zeichen zu beschränken."
 
-#: includes/metabox.php:89 includes/post-types/post-type-cta.php:91
+#: includes/metabox.php:82 includes/post-types/post-type-cta.php:91
 msgid "Link"
 msgstr "Link"
 
-#: includes/metabox.php:93
+#: includes/metabox.php:86
 msgid "The link to which the call-to-action should point."
 msgstr "Der Link, auf den der Call-to-Action verweisen soll."
 
-#: includes/metabox.php:99
+#: includes/metabox.php:92
 msgid "Background color"
 msgstr "Hintergrundfarbe"
 
-#: includes/metabox.php:108
+#: includes/metabox.php:101
 msgid "Text color"
 msgstr "Textfarbe"
+
+#: includes/metabox.php:110
+msgid "Image"
+msgstr "Bild"
+
+#: includes/metabox.php:113
+msgid "The image should not be larger than 240 pixels (width/height)."
+msgstr "Das Bild sollte nicht größer als 240px (Breite/Höhe) sein."
+
+#: includes/metabox.php:114
+msgid "Note: Images are only displayed from a screen resolution > 800 px."
+msgstr ""
+"Hinweis: Bilder werden erst ab einer Bildschirmauflösung > 800 px angezeigt."
+
+#: includes/metabox.php:120
+msgid "ALT text of the image"
+msgstr "ALT-Text des Bildes"
 
 #: includes/post-types/post-type-cta.php:27
 #: includes/post-types/post-type-cta.php:38
