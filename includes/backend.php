@@ -29,6 +29,7 @@ function plugin_backend_scripts() {
 
         if( 'edit' == $screen->base ) :
 
+            // Add WordPress color picker
             wp_enqueue_style( 'wp-color-picker' );
             wp_enqueue_script( 'wp-color-picker' );
 
