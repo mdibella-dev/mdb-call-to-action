@@ -47,7 +47,7 @@ function get_params( $post_id ) {
     $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
 
     if( is_array( $stored ) and ( 0 !== count( $stored ) ) ) :
-        $data = $stored; //json_decode( $stored, true );
+        $data = $stored; 
     endif;
 
     return $data;
