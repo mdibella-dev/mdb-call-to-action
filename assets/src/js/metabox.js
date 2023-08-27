@@ -27,13 +27,12 @@ jQuery( document ).ready( function( $ ) {
 
             id.on( 'change', function( e ) {
                 if( '' == id.val() ) {
-                    $( '.cta-metabox-image-notice' ).show();
-                    $( '.cta-metabox-image-preview' ).hide();
-                    $( '.cta-metabox-image-remove' ).hide();
+                    $( '.cta-metabox-with-image' ).hide();
+                    $( '.cta-metabox-without-image' ).show();
                 } else {
-                    $( '.cta-metabox-image-preview' ).attr( 'src', wp.media.attachment( id.val() ).get( 'url' ) ).show();
-                    $( '.cta-metabox-image-notice' ).hide();
-                    $( '.cta-metabox-image-remove' ).show();
+                    $( '.cta-metabox-image-preview' ).attr( 'src', wp.media.attachment( id.val() ).get( 'url' ) );
+                    $( '.cta-metabox-with-image' ).show();
+                    $( '.cta-metabox-without-image' ).hide();
                 }
 
             } );
