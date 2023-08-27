@@ -5,4 +5,39 @@ jQuery( document ).ready( function( $ ) {
         $( this ).wpColorPicker();
     } );
 
+
+    if( $( '.cta-metabox-image-add' ).length > 0 ) {
+        if( typeof wp !== 'undefined' && wp.media && wp.media.editor) {
+            let id = $( 'input[name="cta-data-image-id"]' );
+
+            $( '.cta-metabox-image-add' ).on( 'click', function( e ) {
+                e.preventDefault();
+                let theButton = $( this );
+                wp.media.editor.send.attachment = function( props, attachment ) {
+                    id.val( attachment.id ).change();
+                };
+                wp.media.editor.open( theButton );
+                return false;
+            } );
+
+            $( '.cta-metabox-image-remove' ).on( 'click', function( e ) {
+                e.preventDefault();
+                id.val( '' ).change();
+            } );
+
+            id.on( 'change', function( e ) {
+                if( '' == id.val() ) {
+                    $( '.cta-metabox-image-notice' ).show();
+                    $( '.cta-metabox-image-preview' ).hide();
+                    $( '.cta-metabox-image-remove' ).hide();
+                } else {
+                    $( '.cta-metabox-image-preview' ).attr( 'src', wp.media.attachment( id.val() ).get( 'url' ) ).show();
+                    $( '.cta-metabox-image-notice' ).hide();
+                    $( '.cta-metabox-image-remove' ).show();
+                }
+
+            } );
+        }
+    }
+
 } );

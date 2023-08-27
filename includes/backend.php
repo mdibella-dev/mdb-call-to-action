@@ -27,10 +27,14 @@ function plugin_backend_scripts() {
      * metabox related scripts and styles
      */
 
-    // Add WordPress color picker
+     // From WordPress: Adds scripts & styles to use media JS APIs
+    wp_enqueue_media();
+
+    // From WordPress: Add color picker
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script( 'wp-color-picker' );
 
+    // The metabox scripts & styles
     wp_enqueue_style(
         'mdb-cta-metabox-style',
         PLUGIN_URL . 'assets/build/css/metabox.min.css',

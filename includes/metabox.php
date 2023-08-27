@@ -89,7 +89,7 @@ function render_metabox( $post ) {
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-data-background-color"><?php echo __( 'Background color', 'mdb-call-to-action' ); ?></label>
+            <label><?php echo __( 'Background color', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" class="cta-metabox-color-picker" name="cta-data-background-color" value="<?php echo $params['background-color']; ?>"/>
@@ -98,7 +98,7 @@ function render_metabox( $post ) {
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-data-text-color"><?php echo __( 'Text color', 'mdb-call-to-action' ); ?></label>
+            <label><?php echo __( 'Text color', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" class="cta-metabox-color-picker" name="cta-data-text-color" value="<?php echo $params['text-color']; ?>"/>
@@ -107,9 +107,26 @@ function render_metabox( $post ) {
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
-            <label for="cta-data-image"><?php echo __( 'Image', 'mdb-call-to-action' ); ?></label>
+            <label><?php echo __( 'Image', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
+            <?php
+            if( ! empty( $params['image-id'] ) ) :
+                $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
+            ?>
+            <img class="cta-metabox-image-preview" src="<?= $image[0]; ?>" width="80px">
+            <?php
+            else :
+            ?>
+            <p class="cta-metabox-image-notice"><?php echo __( 'No image selected.', 'mdb-call-to-action' ); ?></p>
+            <?php
+            endif;
+            ?>
+
+            <button class="cta-metabox-image-add button"><?php echo ( true == $has_image )? __( 'Replace image', 'mdb-call-to-action' ) : __( 'Add image', 'mdb-call-to-action' ); ?></button>
+            <button class="cta-metabox-image-remove button"><?php echo __( 'Remove image', 'mdb-call-to-action' ); ?></button>
+
+            <input type="hidden" value="<?php echo $params['image-id']; ?>" name="cta-data-image-id" >
             <p><?php echo __( 'The image should not be larger than 240 pixels (width/height).', 'mdb-call-to-action' ); ?></p>
             <p><?php echo __( 'Note: Images are only displayed from a screen resolution > 800 px.', 'mdb-call-to-action' ); ?></p>
         </div>
@@ -148,6 +165,7 @@ function save_metabox( $post_id ) {
         'cta-data-background-color' => 'background-color',
         'cta-data-text-color'       => 'text-color',
         'cta-data-image-alt-text'   => 'image-alt-text',
+        'cta-data-image-id'         => 'image-id',
     ];
 
     foreach( $keys as $post_key => $param_key ):
