@@ -16,16 +16,16 @@
 #cta-metabox .inside {
     background: #f9f9f9;
     margin: 0;
+    padding: 12px 0;
 }
 
 
 .cta-metabox-row {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: calc( 100% - 24px);
     padding-top: 18px;
-    padding-bottom: 18px;
-    //border-top: 1px solid #e1e1e1;
+    padding: 18px 12px;
 
     @include breakpoint(medium) {
         flex-wrap: nowrap;
@@ -71,4 +71,12 @@
 
 .cta-metabox-col-input *:last-child {
     margin-bottom: 0;
+}
+
+
+.cta-metabox-ruler {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #ccc;
+    border-bottom: none;
 }
