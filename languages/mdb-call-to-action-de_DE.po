@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-26 18:12+0200\n"
-"PO-Revision-Date: 2023-08-26 18:13+0200\n"
+"POT-Creation-Date: 2023-08-27 19:34+0200\n"
+"PO-Revision-Date: 2023-08-27 19:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -70,7 +70,7 @@ msgstr "Wir empfehlen, den Text auf 160 Zeichen zu beschränken."
 msgid "Button"
 msgstr "Schaltfläche"
 
-#: includes/metabox.php:76 includes/metabox.php:124
+#: includes/metabox.php:76 includes/metabox.php:141
 msgid "We recommend that you limit the text to 50 characters."
 msgstr "Wir empfehlen, den Text auf 50 Zeichen zu beschränken."
 
@@ -94,16 +94,32 @@ msgstr "Textfarbe"
 msgid "Image"
 msgstr "Bild"
 
-#: includes/metabox.php:113
+#: includes/metabox.php:121
+msgid "No image selected."
+msgstr "Kein Bild ausgewählt."
+
+#: includes/metabox.php:126
+msgid "Replace image"
+msgstr "Bild ersetzen"
+
+#: includes/metabox.php:126
+msgid "Add image"
+msgstr "Bild hinzufügen"
+
+#: includes/metabox.php:127
+msgid "Remove image"
+msgstr "Bild entfernen"
+
+#: includes/metabox.php:130
 msgid "The image should not be larger than 240 pixels (width/height)."
 msgstr "Das Bild sollte nicht größer als 240px (Breite/Höhe) sein."
 
-#: includes/metabox.php:114
+#: includes/metabox.php:131
 msgid "Note: Images are only displayed from a screen resolution > 800 px."
 msgstr ""
 "Hinweis: Bilder werden erst ab einer Bildschirmauflösung > 800 px angezeigt."
 
-#: includes/metabox.php:120
+#: includes/metabox.php:137
 msgid "ALT text of the image"
 msgstr "ALT-Text des Bildes"
 

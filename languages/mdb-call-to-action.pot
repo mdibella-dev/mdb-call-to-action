@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-26 18:12+0200\n"
+"POT-Creation-Date: 2023-08-27 19:34+0200\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: includes/metabox.php:76 includes/metabox.php:124
+#: includes/metabox.php:76 includes/metabox.php:141
 msgid "We recommend that you limit the text to 50 characters."
 msgstr ""
 
@@ -93,15 +93,31 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: includes/metabox.php:113
+#: includes/metabox.php:121
+msgid "No image selected."
+msgstr ""
+
+#: includes/metabox.php:126
+msgid "Replace image"
+msgstr ""
+
+#: includes/metabox.php:126
+msgid "Add image"
+msgstr ""
+
+#: includes/metabox.php:127
+msgid "Remove image"
+msgstr ""
+
+#: includes/metabox.php:130
 msgid "The image should not be larger than 240 pixels (width/height)."
 msgstr ""
 
-#: includes/metabox.php:114
+#: includes/metabox.php:131
 msgid "Note: Images are only displayed from a screen resolution > 800 px."
 msgstr ""
 
-#: includes/metabox.php:120
+#: includes/metabox.php:137
 msgid "ALT text of the image"
 msgstr ""
 
