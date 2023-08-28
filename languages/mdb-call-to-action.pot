@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-02-04 17:20+0100\n"
+"POT-Creation-Date: 2023-08-27 20:58+0200\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -22,13 +22,100 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
+#: includes/api.php:26
+msgid "This is an expressive headline"
+msgstr ""
+
+#: includes/api.php:27
+msgid ""
+"This text should inform the reader why they should follow the call-to-"
+"action"
+msgstr ""
+
+#: includes/api.php:28
+msgid "Click here!"
+msgstr ""
+
+#. Author URI of the plugin/theme
+#: includes/api.php:29
+msgid "https://www.marcodibella.de"
+msgstr ""
+
+#: includes/api.php:32
+msgid "This text is a short description of the image"
+msgstr ""
+
+#: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
+msgid "Call to Action"
+msgstr ""
+
+#: includes/metabox.php:52
+msgid "Headline"
+msgstr ""
+
+#: includes/metabox.php:56
+msgid "We recommend that you limit the headline to 100 characters."
+msgstr ""
+
+#: includes/metabox.php:62
+msgid "Text"
+msgstr ""
+
+#: includes/metabox.php:66
+msgid "We recommend that you limit the text to 160 characters."
+msgstr ""
+
+#: includes/metabox.php:72
+msgid "Button"
+msgstr ""
+
+#: includes/metabox.php:76 includes/metabox.php:146
+msgid "We recommend that you limit the text to 50 characters."
+msgstr ""
+
+#: includes/metabox.php:82 includes/post-types/post-type-cta.php:91
+msgid "Link"
+msgstr ""
+
+#: includes/metabox.php:86
+msgid "The link to which the call-to-action should point."
+msgstr ""
+
+#: includes/metabox.php:94
+msgid "Background color"
+msgstr ""
+
+#: includes/metabox.php:103
+msgid "Text color"
+msgstr ""
+
+#: includes/metabox.php:114
+msgid "Image"
+msgstr ""
+
+#: includes/metabox.php:129
+msgid "Replace image"
+msgstr ""
+
+#: includes/metabox.php:130
+msgid "Remove image"
+msgstr ""
+
+#: includes/metabox.php:133
+msgid "Add image"
+msgstr ""
+
+#: includes/metabox.php:136
+msgid "Note: Images are only displayed from a screen resolution > 800 px."
+msgstr ""
+
+#: includes/metabox.php:142
+msgid "ALT text"
+msgstr ""
+
 #: includes/post-types/post-type-cta.php:27
 #: includes/post-types/post-type-cta.php:38
 msgid "Call to Actions"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:28
-msgid "Call to Action"
 msgstr ""
 
 #: includes/post-types/post-type-cta.php:29
@@ -52,19 +139,15 @@ msgstr ""
 msgid "Search Call to Actions"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:87
+#: includes/post-types/post-type-cta.php:90
 msgid "ID"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:88
-msgid "Link"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:89
+#: includes/post-types/post-type-cta.php:92
 msgid "Shortcode"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:138
+#: includes/post-types/post-type-cta.php:139
 msgid "Copy"
 msgstr ""
 
@@ -84,8 +167,4 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Marco Di Bella"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://www.marcodibella.de"
 msgstr ""

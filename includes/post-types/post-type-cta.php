@@ -60,7 +60,8 @@ function cta__register_post_type() {
         'menu_position'           => 10,
         'menu_icon'               => 'dashicons-align-center',
         'supports'                => [
-            'title'
+            'title',
+            'custom-fields'
         ],
         'show_in_graphql'         => false,
     ];
@@ -87,7 +88,7 @@ function cta__manage_posts_columns( $default ) {
     $columns['cb']        = $default['cb'];
     $columns['title']     = $default['title'];
     $columns['id']        = __( 'ID', 'mdb-call-to-action' );
-    $columns['url']       = __( 'Link', 'mdb-call-to-action' );
+    $columns['link']      = __( 'Link', 'mdb-call-to-action' );
     $columns['shortcode'] = __( 'Shortcode', 'mdb-call-to-action' );
     $columns['date']      = $default['date'];
 
@@ -109,9 +110,8 @@ add_filter( 'manage_cta_posts_columns', __NAMESPACE__ . '\cta__manage_posts_colu
  */
 
 function cta__manage_posts_custom_column( $column_name, $post_id ) {
-    $params = [];
 
-    api_get_cta_params( $post_id, $params );
+    $params = get_params( $post_id );
 
 
     switch( $column_name ) :
@@ -119,13 +119,13 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
             echo $post_id;
         break;
 
-        case 'url' :
-            if( isset( $params['cta_link'] ) ) :
+        case 'link' :
+            if( isset( $params['link'] ) ) :
 
 	            echo sprintf(
 	                '<a href="%1$s" target="_blank">%2$s</a>',
-	                $params['cta_link'],
-	                $params['cta_link'],  // todo: remove scheme
+	                esc_url( $params['link'] ),
+	                $params['link'],  // todo: remove scheme
 	            );
 
             endif;
@@ -134,7 +134,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
         case 'shortcode' :
             echo sprintf(
                 '<code>[cta id="%1$s"]</code>',
-                $post_id,
+                esc_attr( $post_id ),
             );
             echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
         break;

@@ -15,135 +15,43 @@ defined( 'ABSPATH' ) or exit;
 
 
 
+
 /**
- * Outputs a specific call-to-action.
+ * Returns a default set of CTA parameters.
  *
- * @since 1.0.0
- *
- * @param int $id The ID of the call-to-action to render.
- *
- * @return string The rendered call-to-action.
+ * @return array The array with default parameters
  */
 
-function api_render_cta( $id ) {
-    $output = '';
-    $params = [];
-    $style  = '';
-
-
-    if( ! empty( $id ) and ( true === api_get_cta_params( $id, $params ) ) ) :
-
-        ob_start();
-
-
-        if( isset( $params['cta_background_color'] ) and isset( $params['cta_text_color'] ) ) :
-            $style = sprintf(
-                'style="background-color:%1$s !important; color: %2$s !important;"',
-                $params['cta_background_color'],
-                $params['cta_text_color']
-            );
-        endif;
-?>
-<aside class="cta-box" <?php echo $style; ?>>
-
-    <div class="cta-box-columns">
-
-        <?php
-
-            if( isset( $params['cta_add_image'] ) and ( true === (bool) $params['cta_add_image'] ) ) :
-        ?>
-
-        <div class="cta-box-column cta-box-column-image">
-            <img src="<?php echo wp_get_attachment_url( $params['cta_image_id'] ); ?>" alt="<?php echo ( isset( $params['cta_image_alt_title'] )? $params['cta_image_alt_title'] : '' ); ?>">
-        </div>
-        <?php
-            endif;
-        ?>
-
-        <div class="cta-box-column">
-
-            <?php
-                if( isset( $params['cta_headline'] ) ) :
-            ?>
-            <div class="cta-headline"><?php echo $params['cta_headline']; ?></div>
-            <?php
-                endif;
-            ?>
-
-            <?php
-                if( isset( $params['cta_summary'] ) ) :
-            ?>
-            <div class="cta-summary"><?php echo $params['cta_summary']; ?></div>
-            <?php
-                endif;
-            ?>
-
-            <?php
-                if( isset( $params['cta_button'] ) ) :
-            ?>
-            <div class="cta-button">
-                <a href="<?php echo ( isset( $params['cta_link'] )? $params['cta_link'] : '' ); ?>" target="_blank">
-                    <?php echo $params['cta_button']; ?>
-                </a>
-            </div>
-            <?php
-                endif;
-            ?>
-
-        </div>
-
-    </div>
-
-</aside>
-<?php
-
-        $output = ob_get_contents();
-        ob_end_clean();
-
-    endif;
-
-    return $output;
+function get_default_params() {
+    return [
+        'headline'         => __( 'This is an expressive headline', 'mdb-call-to-action' ),
+        'summary'          => __( 'This text should inform the reader why they should follow the call-to-action', 'mdb-call-to-action' ),
+        'button-text'      => __( 'Click here!', 'mdb-call-to-action' ),
+        'link'             => __( 'https://www.marcodibella.de' ),
+        'background-color' => '#0e589a',        // dark blue
+        'text-color'       => '#ffffff',        // white
+        'image-alt-text'   => __( 'This text is a short description of the image', 'mdb-call-to-action' )
+    ];
 }
 
 
 
 /**
- * Determines the parameters necessary to display a call-to-action
+ * Returns the set of CTA parameters stored in the post metadata by the key CTA_DATA_METAKEY.
+ * Replacement for api_get_cta_params().
  *
- * @since 1.0.0
- *
- * @see https://www.advancedcustomfields.com/resources/get_field_objects/
- *
- * @param int   $id     The ID of the call-to-action.
- * @param array $params Reference to an array that takes over the determined parameters.
- *
- * @return bool The outcome of the function call: true on success, otherwise false
+ * @return array The array with CTA parameters
  */
 
-function api_get_cta_params( $id, &$params ) {
-    $result = false;
+function get_params( $post_id ) {
 
+    $data   = [];
+    $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
 
-    if( ! empty( $id ) ) :
-
-        $fields = get_field_objects( $id );
-
-        if( $fields ):
-
-            foreach( $fields as $field ) :
-
-                // Simple data transfer
-                if( ! empty( $field['value'] ) ) :
-                    $params[ $field['name'] ] = $field['value'];
-                endif;
-
-            endforeach;
-
-            $result = true;
-
-        endif;
-
+    if( is_array( $stored ) and ( 0 !== count( $stored ) ) ) :
+        $data = $stored;
     endif;
 
-    return $result;
+    return $data;
+
 }
