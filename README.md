@@ -2,8 +2,6 @@
 This plugin provides a custom post type for managing and displaying so-called Call to Actions (CTA) in WordPress.
 The actual retrieval of the CTA is realized via a shortcode.
 
-Important: The plugin requires an installed and activated version of the ACF plugin.
-
 <br>
 
 ## Development Info
@@ -12,12 +10,11 @@ Important: The plugin requires an installed and activated version of the ACF plu
 [Marco Di Bella ](https://github.com/mdibella-dev)
 
 ### Tags
-custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpress, call-to-action
+custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
 
 ### Requires at least
 
 * WordPress 6.0
-* ACF 5.0
 
 ### Tested up to
 
@@ -30,6 +27,7 @@ custom-post-types, advanced-custom-fields, shortcodes, translation-ready, wordpr
 ### Latest changes to the main branch
 
 * New: Add package.json
+* Improve: Remove ACF dependency [#4](https://github.com/mdibella-dev/mdb-call-to-action/issues/4))
 * Improve: Add namespace var to hook
 * Improve: Change array notation
 * Improve: Change script and style handler
