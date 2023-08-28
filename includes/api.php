@@ -15,6 +15,7 @@ defined( 'ABSPATH' ) or exit;
 
 
 
+
 /**
  * Returns a default set of CTA parameters.
  *
