@@ -4,8 +4,22 @@
 
 <br>
 
+### 2.0
+Released: 28-08-2023
+
+* New: Add package.json
+* Improve: Remove ACF dependency [#4](https://github.com/mdibella-dev/mdb-call-to-action/issues/4))
+* Improve: Add namespace var to hook
+* Improve: Change array notation
+* Improve: Change script and style handler
+* Improve: Change location of SCSS files
+* Improve: Change clamping style
+* Bugfix: Fix jQuery deprecated event handler shorthand warning
+* Bugfix: Fix wrong path var in backend.php
+
+
 ### 1.4
-Released; 08-05-2023
+Released: 08-05-2023
 
 * New: Extract changelog from README.md
 * New: German translation
