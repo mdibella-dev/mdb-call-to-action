@@ -2,7 +2,7 @@
 This plugin provides a custom post type for managing and displaying so-called Call to Actions (CTA) in WordPress.
 The actual retrieval of the CTA is realized via a shortcode.
 
-<br>
+<br> 
 
 ## Development Info
 
