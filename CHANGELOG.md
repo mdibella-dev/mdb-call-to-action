@@ -8,7 +8,7 @@
 Released: 28-08-2023
 
 * New: Add package.json
-* Improve: Remove ACF dependency [#4](https://github.com/mdibella-dev/mdb-call-to-action/issues/4))
+* Improve: Remove ACF dependency ([#4](https://github.com/mdibella-dev/mdb-call-to-action/issues/4))
 * Improve: Add namespace var to hook
 * Improve: Change array notation
 * Improve: Change script and style handler
