@@ -38,7 +38,7 @@ function cta__register_post_type() {
         'label'                   => __( 'Call to Actions', 'mdb-call-to-action' ),
         'labels'                  => $labels,
         'description'             => '',
-        'public'                  => true,
+        'public'                  => false,
         'publicly_queryable'      => true,
         'show_ui'                 => true,
         'show_in_rest'            => true,
