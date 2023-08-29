@@ -63,7 +63,6 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
 
 
-
     /**
      * Prepares the shortcode (the shortcode logic).
      *
