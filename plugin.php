@@ -36,10 +36,10 @@ define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 /** Include files */
 
-require_once( PLUGIN_DIR . 'includes/post-types/post-type-cta.php' );
-require_once( PLUGIN_DIR . 'includes/classes/index.php' );
-require_once( PLUGIN_DIR . 'includes/api.php' );
+require_once PLUGIN_DIR . 'includes/classes/index.php';
 
-require_once( PLUGIN_DIR . 'includes/backend.php' );
-require_once( PLUGIN_DIR . 'includes/metabox.php' );
-require_once( PLUGIN_DIR . 'includes/setup.php' );
+require_once PLUGIN_DIR . 'includes/api.php';
+require_once PLUGIN_DIR . 'includes/post-type-cta.php';
+require_once PLUGIN_DIR . 'includes/metabox.php';
+require_once PLUGIN_DIR . 'includes/backend.php';
+require_once PLUGIN_DIR . 'includes/setup.php';
