@@ -117,7 +117,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
     switch( $column_name ) :
         case 'id' :
             echo $post_id;
-        break;
+            break;
 
         case 'link' :
             if( isset( $params['link'] ) ) :
@@ -129,7 +129,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
 	            );
 
             endif;
-        break;
+            break;
 
         case 'shortcode' :
             echo sprintf(
@@ -137,7 +137,7 @@ function cta__manage_posts_custom_column( $column_name, $post_id ) {
                 esc_attr( $post_id ),
             );
             echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
-        break;
+            break;
     endswitch;
 }
 
