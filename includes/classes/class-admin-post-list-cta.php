@@ -34,8 +34,8 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
     public function manage_columns( $default ) {
 
         $columns['cb']        = $default['cb'];
-        $columns['title']     = $default['title'];
         $columns['id']        = __( 'ID', 'mdb-call-to-action' );
+        $columns['title']     = $default['title'];
         $columns['link']      = __( 'Link', 'mdb-call-to-action' );
         $columns['shortcode'] = __( 'Shortcode', 'mdb-call-to-action' );
         $columns['date']      = $default['date'];
