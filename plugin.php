@@ -38,6 +38,8 @@ define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 require_once PLUGIN_DIR . 'includes/classes/index.php';
 
+require_once PLUGIN_DIR . 'includes/integrations/rankmath.php';
+
 require_once PLUGIN_DIR . 'includes/api.php';
 require_once PLUGIN_DIR . 'includes/post-type-cta.php';
 require_once PLUGIN_DIR . 'includes/metabox.php';

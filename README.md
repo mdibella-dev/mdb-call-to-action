@@ -26,6 +26,8 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
 
 ### Latest changes to the main branch
 
+* New: Prevent Rank Math adding metabox and columns ([#6](https://github.com/mdibella-dev/mdb-call-to-action/issues/6))
+
 
 ### Previous changes
 
