@@ -30,7 +30,9 @@ jQuery( document ).ready( function( $ ) {
                     $( '.cta-metabox-with-image' ).hide();
                     $( '.cta-metabox-without-image' ).show();
                 } else {
-                    $( '.cta-metabox-image-preview' ).attr( 'src', wp.media.attachment( id.val() ).get( 'url' ) );
+                    let theURL = 'url(' + wp.media.attachment( id.val() ).get( 'url' ) + ')';
+
+                    $( '.cta-metabox-image-preview' ).css( 'background-image', theURL );
                     $( '.cta-metabox-with-image' ).show();
                     $( '.cta-metabox-without-image' ).hide();
                 }
