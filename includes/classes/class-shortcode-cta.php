@@ -51,6 +51,36 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
 
     /**
+     * Constructor: Adds the shortcode to the WordPress ecosystem.
+     */
+
+    function __construct() {
+
+        if( ! empty( $this->tag ) ) :
+            add_shortcode( $this->tag, [$this, 'callback'] );
+            add_action( 'wp_enqueue_scripts', [$this, 'register_styles_and_scripts'] );
+        endif;
+    }
+
+
+
+    /**
+     * Registers the frontend stylesheet for the shortcode.
+     */
+
+    function register_styles_and_scripts() {
+
+        wp_register_style(
+            'mdb-cta-style',
+            PLUGIN_URL . 'assets/build/css/frontend.min.css',
+            [],
+            PLUGIN_VERSION
+        );
+    }
+
+
+
+    /**
      * Gets the selected set.
      *
      * @return int The setlist number.
@@ -100,16 +130,19 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
             );
         endif;
 
+        wp_enqueue_style( 'mdb-cta-style' );
         ?>
         <aside class="cta-box" <?php echo $style; ?>>
 
             <div class="cta-box-columns">
 
                 <?php
-                if( isset( $params['image-id'] ) /*and ( true === (bool) $params['cta_add_image'] ) */ ) : // check existance of image
+                if( isset( $params['image-id'] ) and ! empty( $params['image-id'] ) ) :
+                    $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
+                    $url   = $image[0];
                 ?>
-                <div class="cta-box-column cta-box-column-image">
-                    <img src="<?php echo wp_get_attachment_url( $params['image-id'] ); ?>" alt="<?php echo ( isset( $params['image-alt-text'] )? $params['image-alt-text'] : '' ); ?>">
+                <div class="cta-box-column cta-box-column-with-image">
+                    <div class="cta-image" style="background-image:url(<?php echo $url; ?>);"></div>
                 </div>
                 <?php
                 endif;

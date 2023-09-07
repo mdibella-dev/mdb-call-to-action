@@ -27,6 +27,8 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
 ### Latest changes to the main branch
 
 * New: Prevent Rank Math adding metabox and columns ([#6](https://github.com/mdibella-dev/mdb-call-to-action/issues/6))
+* New: Register and enqueue a frontend style script
+* Improve: Add a new image handling
 * Improve: Change order of the ID field
 
 

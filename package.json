@@ -10,7 +10,8 @@
     "scripts": {
         "sass:metabox": "sass --style=compressed --no-source-map $npm_package_config_SASS_SRC/metabox.scss $npm_package_config_SASS_BLD/metabox.min.css",
         "sass:post-type": "sass --style=compressed --no-source-map $npm_package_config_SASS_SRC/post-type.scss $npm_package_config_SASS_BLD/post-type.min.css",
-        "sass:all": "npm run sass:metabox && npm run sass:back",
+        "sass:frontend": "sass --style=compressed --no-source-map $npm_package_config_SASS_SRC/frontend.scss $npm_package_config_SASS_BLD/frontend.min.css",
+        "sass:all": "npm run sass:metabox && npm run sass:post-type && npm run sass:frontend",
         "make:pot": "wp i18n make-pot . ./languages/$npm_package_config_PLUGIN_NAME.pot"
     },
     "devDependecies": {
