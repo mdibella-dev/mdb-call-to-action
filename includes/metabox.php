@@ -125,9 +125,11 @@ function render_metabox( $post ) {
             endif;
             ?>
             <div class="cta-metabox-with-image" style="display:<?php echo ( true == $has_image )? 'block' : 'none';?>">
-                <img class="cta-metabox-image-preview" src="<?php echo $url; ?>" width="80px">
-                <button class="cta-metabox-image-add button"><?php echo __( 'Replace image', 'mdb-call-to-action' ); ?></button>
-                <button class="cta-metabox-image-remove button"><?php echo __( 'Remove image', 'mdb-call-to-action' ); ?></button>
+                <div class="cta-metabox-image-preview" style="background-image:url(<?php echo $url; ?>);"></div>
+                <div class="cta-metabox-image-buttons">
+                    <button class="cta-metabox-image-add button"><?php echo __( 'Replace image', 'mdb-call-to-action' ); ?></button>
+                    <button class="cta-metabox-image-remove button"><?php echo __( 'Remove image', 'mdb-call-to-action' ); ?></button>
+                </div>
             </div>
             <div class="cta-metabox-without-image" style="display:<?php echo ( false == $has_image )? 'block' : 'none';?>">
                 <button class="cta-metabox-image-add button"><?php echo __( 'Add image', 'mdb-call-to-action' ); ?></button>
