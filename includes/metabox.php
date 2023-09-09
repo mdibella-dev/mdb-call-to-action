@@ -53,7 +53,7 @@ function render_metabox( $post ) {
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" id="cta-data-headline" name="cta-data-headline" value="<?php echo esc_attr( $params['headline'] ); ?>" maxlength="100">
-            <p><?php echo __( 'We recommend that you limit the headline to 100 characters.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'We recommend that you limit the headline to 100 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
@@ -63,7 +63,7 @@ function render_metabox( $post ) {
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" id="cta-data-summary" name="cta-data-summary" value="<?php echo esc_attr( $params['summary'] ); ?>" maxlength="160">
-            <p><?php echo __( 'We recommend that you limit the text to 160 characters.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'We recommend that you limit the text to 160 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
@@ -73,7 +73,7 @@ function render_metabox( $post ) {
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" id="cta-data-button-text" name="cta-data-button-text" value="<?php echo esc_attr( $params['button-text'] ); ?>" maxlength="50">
-            <p><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
@@ -83,11 +83,9 @@ function render_metabox( $post ) {
         </div>
         <div class="cta-metabox-col-input">
             <input type="url" id="cta-data-link" name="cta-data-link" value="<?php echo esc_url( $params['link'] ); ?>" maxlength="255">
-            <p><?php echo __( 'The link to which the call-to-action should point.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'The link to which the call-to-action should point.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
-
-    <hr class="cta-metabox-ruler">
 
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
@@ -107,15 +105,12 @@ function render_metabox( $post ) {
         </div>
     </div>
 
-    <hr class="cta-metabox-ruler">
-
     <div class="cta-metabox-row">
         <div class="cta-metabox-col-label">
             <label><?php echo __( 'Image', 'mdb-call-to-action' ); ?></label>
         </div>
         <div class="cta-metabox-col-input">
             <?php
-            error_log( $params['image-id'] );
             $has_image = ! empty( $params['image-id'] );
             $url       = '';
 
@@ -135,7 +130,7 @@ function render_metabox( $post ) {
                 <button class="cta-metabox-image-add button"><?php echo __( 'Add image', 'mdb-call-to-action' ); ?></button>
             </div>
             <input type="hidden" value="<?php echo $params['image-id']; ?>" name="cta-data-image-id" >
-            <p><?php echo __( 'Note: Images are only displayed from a screen resolution > 800 px.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'Note: Images are only displayed from a screen resolution > 800 px.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 
@@ -145,7 +140,7 @@ function render_metabox( $post ) {
         </div>
         <div class="cta-metabox-col-input">
             <input type="text" id="cta-data-image-alt-text" name="cta-data-image-alt-text" value="<?php echo esc_attr( $params['image-alt-text'] ); ?>" maxlength="50">
-            <p><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
+            <p class="cta-metabox-description"><?php echo __( 'We recommend that you limit the text to 50 characters.', 'mdb-call-to-action' ); ?></p>
         </div>
     </div>
 

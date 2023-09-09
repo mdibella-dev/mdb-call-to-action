@@ -14,18 +14,17 @@
 
 
 #cta-metabox .inside {
-    background: #f9f9f9;
+    //background: #f9f9f9;
     margin: 0;
-    padding: 12px 0;
+    padding: 0;
 }
+
 
 
 .cta-metabox-row {
     display: flex;
     flex-wrap: wrap;
-    width: calc( 100% - 24px);
-    padding-top: 18px;
-    padding: 18px 12px;
+    width: 100%;
 
     @include breakpoint(medium) {
         flex-wrap: nowrap;
@@ -33,20 +32,26 @@
 }
 
 
+.cta-metabox-row + .cta-metabox-row {
+    border-top: 1px solid #e1e1e1;
+}
+
+
 .cta-metabox-col-label,
 .cta-metabox-col-input {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding: 18px 12px;
     margin: 0;
     width: 100%;
 }
 
 
 .cta-metabox-col-label {
-    margin-bottom: 6px;
+    padding-bottom: 0;
 
     @include breakpoint(medium) {
+        padding-bottom: 18px;
         width: 20%;
+        background: #f9f9f9;
     }
 }
 
@@ -54,6 +59,7 @@
 .cta-metabox-col-input {
     @include breakpoint(medium) {
         width: 80%;
+        border-left: 1px solid #e1e1e1;
     }
 }
 
@@ -71,14 +77,6 @@
 
 .cta-metabox-col-input *:last-child {
     margin-bottom: 0;
-}
-
-
-.cta-metabox-ruler {
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px solid #e1e1e1;
-    border-bottom: none;
 }
 
 
@@ -106,4 +104,11 @@
     justify-content: center;
     flex-direction: column;
     gap: 12px;
+}
+
+
+.cta-metabox-description {
+    display: block;
+    margin-top: 6px;
+    color: #667085;
 }
