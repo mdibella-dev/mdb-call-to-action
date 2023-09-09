@@ -28,8 +28,8 @@ function get_default_params() {
         'summary'          => __( 'This text should inform the reader why they should follow the call-to-action', 'mdb-call-to-action' ),
         'button-text'      => __( 'Click here!', 'mdb-call-to-action' ),
         'link'             => __( 'https://www.marcodibella.de' ),
-        'background-color' => '#0e589a',        // dark blue
-        'text-color'       => '#ffffff',        // white
+        'background-color' => '#f9f9f9',        // light gray
+        'text-color'       => '#1e73be',        // blue
         'image-alt-text'   => __( 'This text is a short description of the image', 'mdb-call-to-action' )
     ];
 }
