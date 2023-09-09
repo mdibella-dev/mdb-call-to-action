@@ -80,10 +80,28 @@
 }
 
 
-.cta-metabox-with-image {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 36px;
+.cta-metabox-col-input.has-image {
+    & > .cta-metabox-with-image {
+        display: flex;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 36px;
+    }
+
+    & > .cta-metabox-without-image {
+        display: none;
+    }
+}
+
+
+.cta-metabox-col-input:not(.has-image) {
+    & > .cta-metabox-with-image {
+        display: none;
+    }
+
+    & > .cta-metabox-without-image {
+        display: block;
+    }
 }
 
 

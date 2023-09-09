@@ -109,24 +109,24 @@ function render_metabox( $post ) {
         <div class="cta-metabox-col-label">
             <label><?php echo __( 'Image', 'mdb-call-to-action' ); ?></label>
         </div>
-        <div class="cta-metabox-col-input">
-            <?php
-            $has_image = ! empty( $params['image-id'] );
-            $url       = '';
+        <?php
+        $has_image = ! empty( $params['image-id'] );
+        $url       = '';
 
-            if( true == $has_image ) :
-                $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
-                $url   = $image[0];
-            endif;
-            ?>
-            <div class="cta-metabox-with-image" style="display:<?php echo ( true == $has_image )? 'block' : 'none';?>">
+        if( true == $has_image ) :
+            $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
+            $url   = $image[0];
+        endif;
+        ?>
+        <div class="cta-metabox-col-input <?php echo ( true == $has_image )? 'has-image' : '';?>">
+            <div class="cta-metabox-with-image">
                 <div class="cta-metabox-image-preview" style="background-image:url(<?php echo $url; ?>);"></div>
                 <div class="cta-metabox-image-buttons">
                     <button class="cta-metabox-image-add button"><?php echo __( 'Replace image', 'mdb-call-to-action' ); ?></button>
                     <button class="cta-metabox-image-remove button"><?php echo __( 'Remove image', 'mdb-call-to-action' ); ?></button>
                 </div>
             </div>
-            <div class="cta-metabox-without-image" style="display:<?php echo ( false == $has_image )? 'block' : 'none';?>">
+            <div class="cta-metabox-without-image">
                 <button class="cta-metabox-image-add button"><?php echo __( 'Add image', 'mdb-call-to-action' ); ?></button>
             </div>
             <input type="hidden" value="<?php echo $params['image-id']; ?>" name="cta-data-image-id" >
