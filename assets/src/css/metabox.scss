@@ -11,6 +11,8 @@
 @import "mixins/_responsive";
 
 
+$border-style: 1px solid #e1e1e1;
+
 
 
 #cta-metabox .inside {
@@ -32,7 +34,7 @@
 
 
 .cta-metabox-row + .cta-metabox-row {
-    border-top: 1px solid #e1e1e1;
+    border-top: $border-style;
 }
 
 
@@ -58,7 +60,7 @@
 .cta-metabox-col-input {
     @include breakpoint(medium) {
         width: 80%;
-        border-left: 1px solid #e1e1e1;
+        border-left: $border-style;
     }
 }
 
@@ -110,7 +112,7 @@
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
-    box-shadow: 2px 2px 20px -10px #ccc;
+    border: $border-style;
 }
 
 
