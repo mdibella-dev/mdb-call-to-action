@@ -48,9 +48,9 @@ function get_params( $post_id ) {
     $data   = [];
     $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
 
-    if( is_array( $stored ) and ( 0 !== count( $stored ) ) ) :
+    if ( is_array( $stored ) and ( 0 !== count( $stored ) ) ) {
         $data = $stored;
-    endif;
+    }
 
     return $data;
 

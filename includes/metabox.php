@@ -42,9 +42,9 @@ function render_metabox( $post ) {
 
     $params = get_params( $post->ID );
 
-    if( 0 === count( $params) ) :
+    if ( 0 === count( $params) ) {
         $params = get_default_params();
-    endif;
+    }
 
     ?>
     <div class="cta-metabox-row">
@@ -113,10 +113,10 @@ function render_metabox( $post ) {
         $has_image = ! empty( $params['image-id'] );
         $url       = '';
 
-        if( true == $has_image ) :
+        if ( true == $has_image ) {
             $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
             $url   = $image[0];
-        endif;
+        }
         ?>
         <div class="cta-metabox-col-input <?php echo ( true == $has_image )? 'has-image' : '';?>">
             <div class="cta-metabox-with-image">
@@ -170,21 +170,21 @@ function save_metabox( $post_id ) {
         'cta-data-image-id'         => 'image-id',
     ];
 
-    foreach( $keys as $post_key => $param_key ):
-        if( isset( $_POST[$post_key] ) ) :
+    foreach ( $keys as $post_key => $param_key ) {
+        if ( isset( $_POST[$post_key] ) ) {
             $params[$param_key] = $_POST[$post_key];
-        endif;
-    endforeach;
+        }
+    }
 
 
     // Store params
-    if( 0 !== count( $params ) ) :
+    if ( 0 !== count( $params ) ) {
         update_post_meta(
             $post_id,
             CTA_DATA_METAKEY,
             $params
         );
-    endif;
+    }
 }
 
 add_action( 'save_post', __NAMESPACE__ . '\save_metabox' );

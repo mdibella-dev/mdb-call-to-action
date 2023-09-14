@@ -56,21 +56,19 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
 
         $params = get_params( $post_id );
 
-        switch( $column_name ) :
+        switch ( $column_name ) {
             case 'id' :
                 echo $post_id;
                 break;
 
             case 'link' :
-                if( isset( $params['link'] ) ) :
-
+                if ( isset( $params['link'] ) ) {
                     echo sprintf(
                         '<a href="%1$s" target="_blank">%2$s</a>',
                         esc_url( $params['link'] ),
                         $params['link'],  // todo: remove scheme
                     );
-
-                endif;
+                }
                 break;
 
             case 'shortcode' :
@@ -80,7 +78,7 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
                 );
                 echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
                 break;
-        endswitch;
+        }
     }
 
 }

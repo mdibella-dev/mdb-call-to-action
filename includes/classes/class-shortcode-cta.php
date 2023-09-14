@@ -56,10 +56,10 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
     function __construct() {
 
-        if( ! empty( $this->tag ) ) :
+        if ( ! empty( $this->tag ) ) {
             add_shortcode( $this->tag, [$this, 'callback'] );
             add_action( 'wp_enqueue_scripts', [$this, 'register_styles_and_scripts'] );
-        endif;
+        }
     }
 
 
@@ -102,11 +102,11 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
     function prepare() {
         $ready = false;
 
-        if( ! empty( $this->get_id() ) and ( 'publish' == get_post_status ( $this->get_id() ) ) ) :
+        if ( ! empty( $this->get_id() ) and ( 'publish' == get_post_status ( $this->get_id() ) ) ) {
             $ready = true;
 
             // get params?
-        endif;
+        }
 
         return $ready;
     }
@@ -122,13 +122,13 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
         $params = get_params( $this->get_id() );
         $style  = '';
 
-        if( isset( $params['background-color'] ) and isset( $params['text-color'] ) ) :
+        if ( isset( $params['background-color'] ) and isset( $params['text-color'] ) ) {
             $style = sprintf(
                 'style="background-color:%1$s !important; color: %2$s !important;"',
                 $params['background-color'],
                 $params['text-color']
             );
-        endif;
+        }
 
         wp_enqueue_style( 'mdb-cta-style' );
         ?>
@@ -137,7 +137,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
             <div class="cta-box-columns">
 
                 <?php
-                if( isset( $params['image-id'] ) and ! empty( $params['image-id'] ) ) :
+                if ( isset( $params['image-id'] ) and ! empty( $params['image-id'] ) ) {
                     $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
                     $url   = $image[0];
                 ?>
@@ -145,35 +145,35 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     <div class="cta-image" style="background-image:url(<?php echo $url; ?>);"></div>
                 </div>
                 <?php
-                endif;
+                }
                 ?>
 
                 <div class="cta-box-column">
 
                     <?php
-                    if( isset( $params['headline'] ) ) :
+                    if ( isset( $params['headline'] ) ) {
                     ?>
                     <div class="cta-headline"><?php echo $params['headline']; ?></div>
                     <?php
-                    endif;
+                    }
                     ?>
 
                     <?php
-                    if( isset( $params['summary'] ) ) :
+                    if ( isset( $params['summary'] ) ) {
                     ?>
                     <div class="cta-summary"><?php echo $params['summary']; ?></div>
                     <?php
-                    endif;
+                    }
                     ?>
 
                     <?php
-                    if( isset( $params['button-text'] ) ) :
+                    if ( isset( $params['button-text'] ) ) {
                     ?>
                     <div class="cta-button">
                         <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank"><?php echo $params['button-text']; ?></a>
                     </div>
                     <?php
-                    endif;
+                    }
                     ?>
 
                 </div>
