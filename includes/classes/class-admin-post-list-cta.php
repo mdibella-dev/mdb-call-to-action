@@ -24,6 +24,16 @@ defined( 'ABSPATH' ) or exit;
 class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
 
     /**
+     * The post type.
+     *
+     * @var string
+     */
+
+    protected $post_type = 'cta';
+
+
+
+    /**
      * Determines the columns of the admin post list.
      *
      * @param array $default The defaults for columns
@@ -84,4 +94,4 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
 }
 
 
-$apl_cta = new Admin_Post_List_CTA( 'cta' );
+$apl_cta = new Admin_Post_List_CTA();

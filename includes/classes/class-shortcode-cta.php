@@ -39,23 +39,10 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
 
     /**
-     * The default shortcode attributes (parameters).
-     *
-     * @var array
-     */
-
-    protected $default_atts = [
-        'id' => ''
-    ];
-
-
-
-    /**
      * Constructor: Adds the shortcode to the WordPress ecosystem.
      */
 
     function __construct() {
-
         if ( ! empty( $this->tag ) ) {
             add_shortcode( $this->tag, [$this, 'callback'] );
             add_action( 'wp_enqueue_scripts', [$this, 'register_styles_and_scripts'] );
@@ -81,6 +68,20 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 
 
     /**
+     * Gets the The default attributes of this shortcode.
+     *
+     * @return array The default attributes
+     */
+
+    protected function get_default_atts() {
+        return [
+            'id' => ''
+        ];
+    }
+
+
+
+    /**
      * Gets the selected set.
      *
      * @return int The setlist number.
@@ -99,7 +100,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
      * @return bool true|false The outcome of the preparation process
      */
 
-    function prepare() {
+    public function prepare() {
         $ready = false;
 
         if ( ! empty( $this->get_id() ) and ( 'publish' == get_post_status ( $this->get_id() ) ) ) {
@@ -117,7 +118,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
      * Renders the shortcode (the shortcode output).
      */
 
-    function render() {
+    public function render() {
 
         $params = get_params( $this->get_id() );
         $style  = '';
@@ -141,9 +142,9 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     $image = wp_get_attachment_image_src( $params['image-id'], 'thumbnail' );
                     $url   = $image[0];
                 ?>
-                <div class="cta-box-column cta-box-column-with-image">
-                    <div class="cta-image" style="background-image:url(<?php echo $url; ?>);"></div>
-                </div>
+                    <div class="cta-box-column cta-box-column-with-image">
+                        <div class="cta-image" style="background-image:url(<?php echo $url; ?>);"></div>
+                    </div>
                 <?php
                 }
                 ?>
@@ -153,7 +154,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     <?php
                     if ( isset( $params['headline'] ) ) {
                     ?>
-                    <div class="cta-headline"><?php echo $params['headline']; ?></div>
+                        <div class="cta-headline"><?php echo $params['headline']; ?></div>
                     <?php
                     }
                     ?>
@@ -161,7 +162,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     <?php
                     if ( isset( $params['summary'] ) ) {
                     ?>
-                    <div class="cta-summary"><?php echo $params['summary']; ?></div>
+                        <div class="cta-summary"><?php echo $params['summary']; ?></div>
                     <?php
                     }
                     ?>
@@ -169,17 +170,14 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     <?php
                     if ( isset( $params['button-text'] ) ) {
                     ?>
-                    <div class="cta-button">
-                        <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank"><?php echo $params['button-text']; ?></a>
-                    </div>
+                        <div class="cta-button">
+                            <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank"><?php echo $params['button-text']; ?></a>
+                        </div>
                     <?php
                     }
                     ?>
-
                 </div>
-
             </div>
-
         </aside>
 
         <?php
@@ -187,4 +185,4 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 }
 
 
-$shortcode_cta_object = new Shortcode_CTA;
+$shortcode_cta_object = new Shortcode_CTA();
