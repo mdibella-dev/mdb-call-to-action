@@ -94,4 +94,4 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
 }
 
 
-$apl_cta = new Admin_Post_List_CTA();
+new Admin_Post_List_CTA();

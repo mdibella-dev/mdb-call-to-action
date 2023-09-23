@@ -185,4 +185,4 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
 }
 
 
-$shortcode_cta_object = new Shortcode_CTA();
+new Shortcode_CTA();
