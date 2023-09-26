@@ -67,11 +67,11 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
         $params = get_params( $post_id );
 
         switch ( $column_name ) {
-            case 'id' :
+            case 'id':
                 echo $post_id;
                 break;
 
-            case 'link' :
+            case 'link':
                 if ( isset( $params['link'] ) ) {
                     echo sprintf(
                         '<a href="%1$s" target="_blank">%2$s</a>',
@@ -81,7 +81,7 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
                 }
                 break;
 
-            case 'shortcode' :
+            case 'shortcode':
                 echo sprintf(
                     '<code>[cta id="%1$s"]</code>',
                     esc_attr( $post_id ),
