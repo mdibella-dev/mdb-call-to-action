@@ -18,13 +18,15 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
 
 ### Tested up to
 
-- WordPress 6.2
+- WordPress 6.3
 
 <br>
 
 ## Changelog
 
 ### Latest changes to the main branch
+
+* Bugfix: Prevent the rendering of CTA if the content is empty
 
 
 ### Previous changes

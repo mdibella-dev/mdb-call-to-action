@@ -123,6 +123,15 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
         $params = get_params( $this->get_id() );
         $style  = '';
 
+        // Exit early when there's nothing to show
+        if ( ! isset( $params['headline'] ) and ! isset( $params['summary'] ) and ! isset( $params['button-text'] ) ) {
+            return;
+        }
+
+
+        // Go on, modify styling if necessary
+        wp_enqueue_style( 'mdb-cta-style' );
+
         if ( isset( $params['background-color'] ) and isset( $params['text-color'] ) ) {
             $style = sprintf(
                 'style="background-color:%1$s !important; color: %2$s !important;"',
@@ -131,7 +140,8 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
             );
         }
 
-        wp_enqueue_style( 'mdb-cta-style' );
+        
+        // Render the CTA box
         ?>
         <aside class="cta-box" <?php echo $style; ?>>
 
