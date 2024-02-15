@@ -30,9 +30,11 @@ function plugin_backend_scripts() {
      // From WordPress: Adds scripts & styles to use media JS APIs
     wp_enqueue_media();
 
+
     // From WordPress: Add color picker
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script( 'wp-color-picker' );
+
 
     // The metabox scripts & styles
     wp_enqueue_style(
@@ -54,7 +56,7 @@ function plugin_backend_scripts() {
 
 
     /**
-     * post type related scripts and styles
+     * post-type related scripts and styles
      */
 
     wp_enqueue_style(
