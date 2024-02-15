@@ -1,6 +1,6 @@
 {
     "name": "Marco Di Bella - Call to Action (CTA)",
-    "version": "1.0.0",
+    "version": "2.1.3",
     "description": "Development Scripts",
     "config" : {
         "SASS_SRC": "./assets/src/css",
