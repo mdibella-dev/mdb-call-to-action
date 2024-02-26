@@ -26,6 +26,7 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
 
 ### Latest changes to the main branch
 
+* Improve: Remove jQuery dependancy from post-type.js
 * Bugfix: Prevent the rendering of CTA if the content is empty
 
 

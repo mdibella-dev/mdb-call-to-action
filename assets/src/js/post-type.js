@@ -1,20 +1,23 @@
-jQuery( document ).ready( function( $ ) {
+document.querySelectorAll( '.copyCTAToClipboard' ).forEach( singleButton => {
 
-    $( '.copyCTAToClipboard').on( 'click', function( e ) {
+    singleButton.addEventListener( 'click', function( e ) {
+
         e.preventDefault();
 
-        var theButton = $( this );
-        var theCode   = theButton.prev( 'code' ).text();
+        const theButton = this;
+        var   theCode   = theButton.previousElementSibling.textContent;
 
         navigator.clipboard.writeText( theCode );
 
-        theButton.after( '<span class="dashicons dashicons-saved"></span>' );
-        theButton.hide();
+        // Creates a checkmark symbol next to the button
+        const theCheckMark = document.createElement( 'span' );
+        theCheckMark.className = 'dashicons dashicons-saved';
+        theButton.parentElement.appendChild( theCheckMark );
+        theButton.style.display = 'none';
 
         setTimeout( function() {
-            theButton.show();
-            theButton.next( 'span' ).remove();
+            theButton.parentElement.removeChild( theCheckMark );
+            theButton.style.display = 'block';
         }, 2000 );
     } );
-
 } );
