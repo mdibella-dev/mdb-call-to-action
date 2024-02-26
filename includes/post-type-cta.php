@@ -26,12 +26,12 @@ function cta__register_post_type() {
     $labels = [
         'name'          => __( 'Call to Actions', 'mdb-call-to-action' ),
         'singular_name' => __( 'Call to Action', 'mdb-call-to-action' ),
-        'menu_name'     => __( 'Call to Action (CTA)', 'mdb-call-to-action' ),
-        'all_items'     => __( 'All Call to Actions', 'mdb-call-to-action' ),
+        'menu_name'     => __( 'CTA', 'mdb-call-to-action' ),
+        'all_items'     => __( 'All CTAs', 'mdb-call-to-action' ),
         'add_new'       => __( 'Add new', 'mdb-call-to-action' ),
         'add_new_item'  => __( 'Add new', 'mdb-call-to-action' ),
-        'edit_item'     => __( 'Edit Call to Action', 'mdb-call-to-action' ),
-        'search_items'  => __( 'Search Call to Actions', 'mdb-call-to-action' ),
+        'edit_item'     => __( 'Edit CTA', 'mdb-call-to-action' ),
+        'search_items'  => __( 'Search CTAs', 'mdb-call-to-action' ),
     ];
 
     $args = [

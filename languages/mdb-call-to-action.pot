@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2023-08-27 20:58+0200\n"
+"POT-Creation-Date: 2024-02-26 12:02+0100\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -22,30 +22,46 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/api.php:26
+#: includes/api.php:27
 msgid "This is an expressive headline"
 msgstr ""
 
-#: includes/api.php:27
+#: includes/api.php:28
 msgid ""
 "This text should inform the reader why they should follow the call-to-"
 "action"
 msgstr ""
 
-#: includes/api.php:28
+#: includes/api.php:29
 msgid "Click here!"
 msgstr ""
 
 #. Author URI of the plugin/theme
-#: includes/api.php:29
+#: includes/api.php:30
 msgid "https://www.marcodibella.de"
 msgstr ""
 
-#: includes/api.php:32
+#: includes/api.php:33
 msgid "This text is a short description of the image"
 msgstr ""
 
-#: includes/metabox.php:26 includes/post-types/post-type-cta.php:28
+#: includes/classes/class-admin-post-list-cta.php:47
+msgid "ID"
+msgstr ""
+
+#: includes/classes/class-admin-post-list-cta.php:49 includes/metabox.php:82
+msgid "Link"
+msgstr ""
+
+#: includes/classes/class-admin-post-list-cta.php:50
+msgid "Shortcode"
+msgstr ""
+
+#: includes/classes/class-admin-post-list-cta.php:89
+msgid "Copy"
+msgstr ""
+
+#: includes/metabox.php:26 includes/post-type-cta.php:28
 msgid "Call to Action"
 msgstr ""
 
@@ -69,86 +85,68 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: includes/metabox.php:76 includes/metabox.php:146
+#: includes/metabox.php:76 includes/metabox.php:143
 msgid "We recommend that you limit the text to 50 characters."
-msgstr ""
-
-#: includes/metabox.php:82 includes/post-types/post-type-cta.php:91
-msgid "Link"
 msgstr ""
 
 #: includes/metabox.php:86
 msgid "The link to which the call-to-action should point."
 msgstr ""
 
-#: includes/metabox.php:94
+#: includes/metabox.php:92
 msgid "Background color"
 msgstr ""
 
-#: includes/metabox.php:103
+#: includes/metabox.php:101
 msgid "Text color"
 msgstr ""
 
-#: includes/metabox.php:114
+#: includes/metabox.php:110
 msgid "Image"
 msgstr ""
 
-#: includes/metabox.php:129
+#: includes/metabox.php:125
 msgid "Replace image"
 msgstr ""
 
-#: includes/metabox.php:130
+#: includes/metabox.php:126
 msgid "Remove image"
 msgstr ""
 
-#: includes/metabox.php:133
+#: includes/metabox.php:130
 msgid "Add image"
 msgstr ""
 
-#: includes/metabox.php:136
+#: includes/metabox.php:133
 msgid "Note: Images are only displayed from a screen resolution > 800 px."
 msgstr ""
 
-#: includes/metabox.php:142
+#: includes/metabox.php:139
 msgid "ALT text"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:27
-#: includes/post-types/post-type-cta.php:38
+#: includes/post-type-cta.php:27 includes/post-type-cta.php:38
 msgid "Call to Actions"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:29
-msgid "Call to Action (CTA)"
+#: includes/post-type-cta.php:29
+msgid "CTA"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:30
-msgid "All Call to Actions"
+#: includes/post-type-cta.php:30
+msgid "All CTAs"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:31
-#: includes/post-types/post-type-cta.php:32
+#: includes/post-type-cta.php:31 includes/post-type-cta.php:32
 msgid "Add new"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:33
-msgid "Edit Call to Action"
+#: includes/post-type-cta.php:33
+msgid "Edit CTA"
 msgstr ""
 
-#: includes/post-types/post-type-cta.php:34
-msgid "Search Call to Actions"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:90
-msgid "ID"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:92
-msgid "Shortcode"
-msgstr ""
-
-#: includes/post-types/post-type-cta.php:139
-msgid "Copy"
+#: includes/post-type-cta.php:34
+msgid "Search CTAs"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
