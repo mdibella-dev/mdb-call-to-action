@@ -10,7 +10,7 @@ The actual retrieval of the CTA is realized via a shortcode.
 [Marco Di Bella ](https://github.com/mdibella-dev)
 
 ### Tags
-custom-post-types, shortcodes, translation-ready, wordpress, call-to-action
+custom-post-types, shortcodes, translation-ready, wordpress, call-to-action, javascript
 
 ### Requires at least
 
