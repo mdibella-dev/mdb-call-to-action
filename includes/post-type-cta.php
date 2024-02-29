@@ -56,7 +56,7 @@ function cta__register_post_type() {
             'slug'       => 'cta',
             'with_front' => true
         ],
-        'query_var'               => true,
+        'query_var'               => false,
         'menu_position'           => 10,
         'menu_icon'               => 'dashicons-align-center',
         'supports'                => [
@@ -70,3 +70,22 @@ function cta__register_post_type() {
 }
 
 add_action( 'init', __NAMESPACE__ . '\cta__register_post_type' );
+
+
+
+/**
+ * Removes the "view" action from the list of row actions.
+ *
+ * @since 1.0.0
+ */
+
+function cta__remove_view_action( $actions, $post ) {
+
+    if ( 'cta' == $post->post_type ) {
+        unset( $actions['view'] );
+    }
+
+    return $actions;
+}
+
+add_filter( 'post_row_actions', __NAMESPACE__ . '\cta__remove_view_action', 10, 2 );
