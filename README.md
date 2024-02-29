@@ -28,6 +28,7 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action, jav
 
 * Improve: Remove jQuery dependancy from post-type.js
 * Improve: Minor changes in EN/DE translation
+* Improve: Improve the feedback to the user when copying a CTA code to the clipboard
 * Bugfix: Prevent the rendering of CTA if the content is empty
 
 
