@@ -4,6 +4,10 @@ _New / Improve / Bugfix_
 
 <br>
 
+### Latest changes to the main branch
+
+<br>
+
 ### 2.1.4
 Released: 29-02-2024
 

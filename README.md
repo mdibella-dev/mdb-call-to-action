@@ -24,11 +24,6 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action, jav
 
 ## Changelog
 
-### Latest changes to the main branch
-
-
-### Previous changes
-
 See [CHANGELOG.md](https://github.com/mdibella-dev/mdb-call-to-action/blob/main/CHANGELOG.md).
 
 <br>
