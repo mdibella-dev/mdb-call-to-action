@@ -68,6 +68,7 @@ function plugin_backend_scripts() {
 
     wp_enqueue_script(
         'mdb-cta-backend-script',
+        //PLUGIN_URL . 'assets/src/js/post-type.js', // dev purpose
         PLUGIN_URL . 'assets/build/js/post-type.min.js',
         [],
         PLUGIN_VERSION,

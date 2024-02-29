@@ -19,21 +19,27 @@
 
     td.column-shortcode {
         display: flex;
+        align-items: center;
         gap: 1rem;
 
         code {
             white-space: nowrap;
-        }
-
-        * {
-            height: 28px !important;
             display: flex;
-            align-items: center;
         }
 
-        span {
-            color: #27ae60 ; // green
+        & > * {
+            height: 28px !important;
+            align-items: center;
         }
     }
 
+}
+
+
+.message-copied-cta-to-clipboard {
+    display: none;
+
+    span {
+        color: #27ae60; // green
+    }
 }

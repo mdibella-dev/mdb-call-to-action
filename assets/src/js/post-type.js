@@ -1,22 +1,20 @@
-document.querySelectorAll( '.copyCTAToClipboard' ).forEach( singleButton => {
+document.querySelectorAll( '.button-copy-cta-to-clipboard' ).forEach( singleButton => {
 
     singleButton.addEventListener( 'click', function( e ) {
 
         e.preventDefault();
 
-        const theButton = this;
-        var   theCode   = theButton.previousElementSibling.textContent;
+        const theButton  = this;
+        var   theCode    = theButton.previousElementSibling.textContent;
+        const theMessage = theButton.nextElementSibling;
 
         navigator.clipboard.writeText( theCode );
 
-        // Creates a checkmark symbol next to the button
-        const theCheckMark = document.createElement( 'span' );
-        theCheckMark.className = 'dashicons dashicons-saved';
-        theButton.parentElement.appendChild( theCheckMark );
+        theMessage.style.display = 'flex';
         theButton.style.display = 'none';
 
         setTimeout( function() {
-            theButton.parentElement.removeChild( theCheckMark );
+            theMessage.style.display = 'none';
             theButton.style.display = 'block';
         }, 2000 );
     } );

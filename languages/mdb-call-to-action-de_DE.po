@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2024-02-26 12:02+0100\n"
-"PO-Revision-Date: 2024-02-26 12:03+0100\n"
+"POT-Creation-Date: 2024-02-29 12:18+0100\n"
+"PO-Revision-Date: 2024-02-29 12:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -61,6 +61,10 @@ msgstr "Shortcode"
 #: includes/classes/class-admin-post-list-cta.php:89
 msgid "Copy"
 msgstr "Kopieren"
+
+#: includes/classes/class-admin-post-list-cta.php:90
+msgid "Copied"
+msgstr "Kopiert"
 
 #: includes/metabox.php:26 includes/post-type-cta.php:28
 msgid "Call to Action"

@@ -86,7 +86,8 @@ class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
                     '<code>[cta id="%1$s"]</code>',
                     esc_attr( $post_id ),
                 );
-                echo '<button class="button button-secondary copyCTAToClipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
+                echo '<button class="button button-secondary button-copy-cta-to-clipboard">' . __( 'Copy', 'mdb-call-to-action' ) . '</button>';
+                echo '<span class="message-copied-cta-to-clipboard"><span class="dashicons dashicons-saved"></span><span>' . __( 'Copied', 'mdb-call-to-action' ) . '</span></span>';
                 break;
         }
     }
