@@ -4,6 +4,16 @@ _New / Improve / Bugfix_
 
 <br>
 
+### 2.1.4
+Released: 29-02-2024
+
+- Improve: Remove jQuery dependancy from post-type.js
+- Improve: Minor changes in EN/DE translation
+- Improve: Improve the feedback to the user when copying a CTA code to the clipboard
+- Improve: Remove the "view" action from the list of row actions
+- Bugfix: Prevent the rendering of CTA if the content is empty
+
+
 ### 2.1
 Released: 10-09-2023
 
