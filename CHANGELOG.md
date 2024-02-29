@@ -6,6 +6,8 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
+None
+
 <br>
 
 ### 2.1.4
