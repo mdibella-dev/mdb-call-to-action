@@ -140,7 +140,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
             );
         }
 
-        
+
         // Render the CTA box
         ?>
         <aside class="cta-box" <?php echo $style; ?>>
@@ -181,7 +181,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     if ( isset( $params['button-text'] ) ) {
                     ?>
                         <div class="cta-button">
-                            <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank"><?php echo $params['button-text']; ?></a>
+                            <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank" rel="nofollow noopener"><?php echo $params['button-text']; ?></a>
                         </div>
                     <?php
                     }
