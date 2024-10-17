@@ -181,7 +181,7 @@ class Shortcode_CTA extends \wordpress_helper\Shortcode {
                     if ( isset( $params['button-text'] ) ) {
                     ?>
                         <div class="cta-button">
-                            <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank" rel="nofollow noopener"><?php echo $params['button-text']; ?></a>
+                            <a href="<?php echo ( isset( $params['link'] )? $params['link'] : '' ); ?>" target="_blank" rel="noopener"><?php echo $params['button-text']; ?></a>
                         </div>
                     <?php
                     }
