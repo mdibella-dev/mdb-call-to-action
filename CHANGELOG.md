@@ -10,6 +10,12 @@ None
 
 <br>
 
+### 2.1.5
+Released: 16-05-2025
+
+- Improve: Remove BeyondWords Meta Boxes
+
+
 ### 2.1.4
 Released: 29-02-2024
 
