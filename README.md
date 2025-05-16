@@ -18,7 +18,7 @@ custom-post-types, shortcodes, translation-ready, wordpress, call-to-action, jav
 
 ### Tested up to
 
-- WordPress 6.4
+- WordPress 6.8
 
 <br>
 
