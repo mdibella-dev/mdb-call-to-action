@@ -37,10 +37,13 @@ add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
  */
 
 function plugin_activation() {
+
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
+
     // Do something!
 }
-
-register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
 
 
 
@@ -51,10 +54,13 @@ register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
  */
 
 function plugin_deactivation() {
+
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
+
     // Do something!
 }
-
-register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
 
 
 
@@ -65,9 +71,12 @@ register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
  */
 
 function plugin_uninstall() {
+
+    if ( ! current_user_can( 'delete_plugins' ) ) {
+        return;
+    }
+
     // Do something!
     // Delete options!
     // Delete custom tables!
 }
-
-register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );

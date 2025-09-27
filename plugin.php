@@ -44,3 +44,11 @@ require_once PLUGIN_DIR . 'includes/post-type-cta.php';
 require_once PLUGIN_DIR . 'includes/metabox.php';
 require_once PLUGIN_DIR . 'includes/backend.php';
 require_once PLUGIN_DIR . 'includes/setup.php';
+
+
+
+/** Add hooks */
+
+register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
+register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
