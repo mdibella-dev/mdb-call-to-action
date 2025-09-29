@@ -131,8 +131,7 @@ if ( ! class_exists( __NAMESPACE__ . '\Shortcode' ) ) {
         protected function set_atts( $atts ) {
             if ( ( true == is_array( $atts ) ) and ( 0 != count( $atts ) ) ) {
                 $this->atts = array_merge( $this->get_default_atts(), $atts );
-            }
-            else {
+            } else {
                 $this->atts = $this->get_default_atts();
             }
         }
