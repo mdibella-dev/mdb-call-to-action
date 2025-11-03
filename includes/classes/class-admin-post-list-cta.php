@@ -3,10 +3,10 @@
  * Class Admin_Post_List_CTA
  *
  * @author  Marco Di Bella
- * @package cm-theme-core
+ * @package mdb-call-to-action
  */
 
-namespace mdb_call_to_action;
+namespace MDB_Call_to_Action\Classes;
 
 
 /** Prevent direct access */
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 2.1.0
  */
 
-class Admin_Post_List_CTA extends \wordpress_helper\Admin_Post_List {
+class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
 
     /**
      * The post type.

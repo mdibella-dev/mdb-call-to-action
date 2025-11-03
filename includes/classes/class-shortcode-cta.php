@@ -6,7 +6,7 @@
  * @package mdb-call-to-action
  */
 
-namespace mdb_call_to_action;
+namespace MDB_Call_to_Action\Classes;
 
 
 
@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) or exit;
  * - id     The post_id of the desired CTA
  */
 
-class Shortcode_CTA extends \wordpress_helper\Shortcode {
+class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
     /**
      * The shortcode tag.

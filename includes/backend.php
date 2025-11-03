@@ -6,7 +6,7 @@
  * @package mdb-call-to-action
  */
 
-namespace mdb_call_to_action;
+namespace MDB_Call_to_Action;
 
 
 /** Prevent direct access */

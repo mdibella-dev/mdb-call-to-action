@@ -14,7 +14,7 @@
  * @package mdb-call-to-action
  */
 
-namespace mdb_call_to_action;
+namespace MDB_Call_to_Action;
 
 
 /** Prevent direct access */
@@ -35,6 +35,8 @@ define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 
 /** Include files */
+
+require_once PLUGIN_DIR . 'vendor/autoload.php';
 
 require_once PLUGIN_DIR . 'includes/classes/index.php';
 require_once PLUGIN_DIR . 'includes/integrations/index.php';
