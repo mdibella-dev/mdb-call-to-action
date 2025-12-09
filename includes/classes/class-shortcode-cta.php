@@ -6,7 +6,7 @@
  * @package mdb-call-to-action
  */
 
-namespace MDB_Call_to_Action\Classes;
+namespace MDB_Call_to_Action;
 
 
 
