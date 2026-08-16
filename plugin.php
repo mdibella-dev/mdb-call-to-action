@@ -35,13 +35,10 @@ define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 require_once 'vendor/autoload.php';
 
-require_once 'includes/classes/index.php';
+require_once 'includes/core/index.php';
+require_once 'includes/backend/index.php';
+require_once 'includes/shortcodes/index.php';
 require_once 'includes/third-party/index.php';
-
-require_once 'includes/api.php';
-require_once 'includes/post-type-cta.php';
-require_once 'includes/metabox.php';
-require_once 'includes/backend.php';
 
 
 
@@ -51,7 +48,6 @@ register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
 register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
 register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
 add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
-
 
 
 
