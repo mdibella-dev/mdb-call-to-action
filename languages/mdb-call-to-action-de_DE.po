@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2024-02-29 12:18+0100\n"
-"PO-Revision-Date: 2024-02-29 12:18+0100\n"
+"POT-Creation-Date: 2026-08-16 13:41+0200\n"
+"PO-Revision-Date: 2026-08-16 13:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -10,150 +10,159 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Domain: mdb-call-to-action\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/api.php:27
+#: includes/backend/backend-admin-pages.php:47
+#, php-format
+msgid "<strong>Call to Action</strong> %1$s | Made by %2$s"
+msgstr "<strong>Call to Action</strong> %1$s | Von  %2$s"
+
+#: includes/backend/backend-metabox.php:26
+#: includes/core/register/post-types/post-type-cta.php:28
+msgid "Call to Action"
+msgstr "Call-to-Action"
+
+#: includes/backend/backend-metabox.php:52
+msgid "Headline"
+msgstr "Überschrift"
+
+#: includes/backend/backend-metabox.php:56
+msgid "We recommend that you limit the headline to 100 characters."
+msgstr "Wir empfehlen, die Überschrift auf 100 Zeichen zu beschränken."
+
+#: includes/backend/backend-metabox.php:62
+msgid "Text"
+msgstr "Text"
+
+#: includes/backend/backend-metabox.php:66
+msgid "We recommend that you limit the text to 160 characters."
+msgstr "Wir empfehlen, den Text auf 160 Zeichen zu beschränken."
+
+#: includes/backend/backend-metabox.php:72
+msgid "Button"
+msgstr "Schaltfläche"
+
+#: includes/backend/backend-metabox.php:76
+#: includes/backend/backend-metabox.php:143
+msgid "We recommend that you limit the text to 50 characters."
+msgstr "Wir empfehlen, den Text auf 50 Zeichen zu beschränken."
+
+#: includes/backend/backend-metabox.php:82
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:49
+msgid "Link"
+msgstr "Link"
+
+#: includes/backend/backend-metabox.php:86
+msgid "The link to which the call-to-action should point."
+msgstr "Der Link, auf den der Call-to-Action verweisen soll."
+
+#: includes/backend/backend-metabox.php:92
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: includes/backend/backend-metabox.php:101
+msgid "Text color"
+msgstr "Textfarbe"
+
+#: includes/backend/backend-metabox.php:110
+msgid "Image"
+msgstr "Bild"
+
+#: includes/backend/backend-metabox.php:125
+msgid "Replace image"
+msgstr "Bild ersetzen"
+
+#: includes/backend/backend-metabox.php:126
+msgid "Remove image"
+msgstr "Bild entfernen"
+
+#: includes/backend/backend-metabox.php:130
+msgid "Add image"
+msgstr "Bild hinzufügen"
+
+#: includes/backend/backend-metabox.php:133
+msgid "Note: Images are only displayed from a screen resolution > 800 px."
+msgstr ""
+"Hinweis: Bilder werden erst ab einer Bildschirmauflösung > 800 px angezeigt."
+
+#: includes/backend/backend-metabox.php:139
+msgid "ALT text"
+msgstr "ALT-Text"
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:47
+msgid "ID"
+msgstr "ID"
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:50
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:89
+msgid "Copy"
+msgstr "Kopieren"
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:90
+msgid "Copied"
+msgstr "Kopiert"
+
+#: includes/core/api/api-params.php:27
 msgid "This is an expressive headline"
 msgstr "Dies ist eine ausdrucksstarke Überschrift"
 
-#: includes/api.php:28
+#: includes/core/api/api-params.php:28
 msgid ""
 "This text should inform the reader why they should follow the call-to-action"
 msgstr ""
 "Dieser Text soll den Nutzer darüber informieren, warum er dem Call-to-Action "
 "folgen sollte"
 
-#: includes/api.php:29
+#: includes/core/api/api-params.php:29
 msgid "Click here!"
 msgstr "Klicke hier!"
 
 #. Author URI of the plugin/theme
-#: includes/api.php:30
+#: includes/core/api/api-params.php:30
 msgid "https://www.marcodibella.de"
 msgstr "https://www.marcodibella.de"
 
-#: includes/api.php:33
+#: includes/core/api/api-params.php:33
 msgid "This text is a short description of the image"
 msgstr "Dieser Text ist eine Kurzbeschreibung des Bildes"
 
-#: includes/classes/class-admin-post-list-cta.php:47
-msgid "ID"
-msgstr "ID"
-
-#: includes/classes/class-admin-post-list-cta.php:49 includes/metabox.php:82
-msgid "Link"
-msgstr "Link"
-
-#: includes/classes/class-admin-post-list-cta.php:50
-msgid "Shortcode"
-msgstr "Shortcode"
-
-#: includes/classes/class-admin-post-list-cta.php:89
-msgid "Copy"
-msgstr "Kopieren"
-
-#: includes/classes/class-admin-post-list-cta.php:90
-msgid "Copied"
-msgstr "Kopiert"
-
-#: includes/metabox.php:26 includes/post-type-cta.php:28
-msgid "Call to Action"
-msgstr "Call-to-Action"
-
-#: includes/metabox.php:52
-msgid "Headline"
-msgstr "Überschrift"
-
-#: includes/metabox.php:56
-msgid "We recommend that you limit the headline to 100 characters."
-msgstr "Wir empfehlen, die Überschrift auf 100 Zeichen zu beschränken."
-
-#: includes/metabox.php:62
-msgid "Text"
-msgstr "Text"
-
-#: includes/metabox.php:66
-msgid "We recommend that you limit the text to 160 characters."
-msgstr "Wir empfehlen, den Text auf 160 Zeichen zu beschränken."
-
-#: includes/metabox.php:72
-msgid "Button"
-msgstr "Schaltfläche"
-
-#: includes/metabox.php:76 includes/metabox.php:143
-msgid "We recommend that you limit the text to 50 characters."
-msgstr "Wir empfehlen, den Text auf 50 Zeichen zu beschränken."
-
-#: includes/metabox.php:86
-msgid "The link to which the call-to-action should point."
-msgstr "Der Link, auf den der Call-to-Action verweisen soll."
-
-#: includes/metabox.php:92
-msgid "Background color"
-msgstr "Hintergrundfarbe"
-
-#: includes/metabox.php:101
-msgid "Text color"
-msgstr "Textfarbe"
-
-#: includes/metabox.php:110
-msgid "Image"
-msgstr "Bild"
-
-#: includes/metabox.php:125
-msgid "Replace image"
-msgstr "Bild ersetzen"
-
-#: includes/metabox.php:126
-msgid "Remove image"
-msgstr "Bild entfernen"
-
-#: includes/metabox.php:130
-msgid "Add image"
-msgstr "Bild hinzufügen"
-
-#: includes/metabox.php:133
-msgid "Note: Images are only displayed from a screen resolution > 800 px."
-msgstr ""
-"Hinweis: Bilder werden erst ab einer Bildschirmauflösung > 800 px angezeigt."
-
-#: includes/metabox.php:139
-msgid "ALT text"
-msgstr "ALT-Text"
-
-#: includes/post-type-cta.php:27 includes/post-type-cta.php:38
+#: includes/core/register/post-types/post-type-cta.php:27
+#: includes/core/register/post-types/post-type-cta.php:38
 msgid "Call to Actions"
 msgstr "Call-to-Actions"
 
-#: includes/post-type-cta.php:29
+#: includes/core/register/post-types/post-type-cta.php:29
 msgid "CTA"
 msgstr "CTA"
 
-#: includes/post-type-cta.php:30
+#: includes/core/register/post-types/post-type-cta.php:30
 msgid "All CTAs"
-msgstr "Alle CTAs"
+msgstr "Alle CTA"
 
-#: includes/post-type-cta.php:31 includes/post-type-cta.php:32
+#: includes/core/register/post-types/post-type-cta.php:31
+#: includes/core/register/post-types/post-type-cta.php:32
 msgid "Add new"
 msgstr "Neu hinzufügen"
 
-#: includes/post-type-cta.php:33
+#: includes/core/register/post-types/post-type-cta.php:33
 msgid "Edit CTA"
 msgstr "CTA bearbeiten"
 
-#: includes/post-type-cta.php:34
+#: includes/core/register/post-types/post-type-cta.php:34
 msgid "Search CTAs"
-msgstr "CTAs durchsuchen"
+msgstr "CTA durchsuchen"
 
 #. Plugin Name of the plugin/theme
 msgid "Marco Di Bella &mdash; Call to Action (CTA)"

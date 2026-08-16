@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Call to Action\n"
-"POT-Creation-Date: 2024-02-29 12:18+0100\n"
+"POT-Creation-Date: 2026-08-16 13:41+0200\n"
 "PO-Revision-Date: 2023-02-02 16:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,146 +10,155 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Domain: mdb-call-to-action\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/api.php:27
+#: includes/backend/backend-admin-pages.php:47
+#, php-format
+msgid "<strong>Call to Action</strong> %1$s | Made by %2$s"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:26
+#: includes/core/register/post-types/post-type-cta.php:28
+msgid "Call to Action"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:52
+msgid "Headline"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:56
+msgid "We recommend that you limit the headline to 100 characters."
+msgstr ""
+
+#: includes/backend/backend-metabox.php:62
+msgid "Text"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:66
+msgid "We recommend that you limit the text to 160 characters."
+msgstr ""
+
+#: includes/backend/backend-metabox.php:72
+msgid "Button"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:76
+#: includes/backend/backend-metabox.php:143
+msgid "We recommend that you limit the text to 50 characters."
+msgstr ""
+
+#: includes/backend/backend-metabox.php:82
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:49
+msgid "Link"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:86
+msgid "The link to which the call-to-action should point."
+msgstr ""
+
+#: includes/backend/backend-metabox.php:92
+msgid "Background color"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:101
+msgid "Text color"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:110
+msgid "Image"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:125
+msgid "Replace image"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:126
+msgid "Remove image"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:130
+msgid "Add image"
+msgstr ""
+
+#: includes/backend/backend-metabox.php:133
+msgid "Note: Images are only displayed from a screen resolution > 800 px."
+msgstr ""
+
+#: includes/backend/backend-metabox.php:139
+msgid "ALT text"
+msgstr ""
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:47
+msgid "ID"
+msgstr ""
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:50
+msgid "Shortcode"
+msgstr ""
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:89
+msgid "Copy"
+msgstr ""
+
+#: includes/backend/class-admin-post-lists/class-admin-post-list-cta.php:90
+msgid "Copied"
+msgstr ""
+
+#: includes/core/api/api-params.php:27
 msgid "This is an expressive headline"
 msgstr ""
 
-#: includes/api.php:28
+#: includes/core/api/api-params.php:28
 msgid ""
 "This text should inform the reader why they should follow the call-to-"
 "action"
 msgstr ""
 
-#: includes/api.php:29
+#: includes/core/api/api-params.php:29
 msgid "Click here!"
 msgstr ""
 
 #. Author URI of the plugin/theme
-#: includes/api.php:30
+#: includes/core/api/api-params.php:30
 msgid "https://www.marcodibella.de"
 msgstr ""
 
-#: includes/api.php:33
+#: includes/core/api/api-params.php:33
 msgid "This text is a short description of the image"
 msgstr ""
 
-#: includes/classes/class-admin-post-list-cta.php:47
-msgid "ID"
-msgstr ""
-
-#: includes/classes/class-admin-post-list-cta.php:49 includes/metabox.php:82
-msgid "Link"
-msgstr ""
-
-#: includes/classes/class-admin-post-list-cta.php:50
-msgid "Shortcode"
-msgstr ""
-
-#: includes/classes/class-admin-post-list-cta.php:89
-msgid "Copy"
-msgstr ""
-
-#: includes/classes/class-admin-post-list-cta.php:90
-msgid "Copied"
-msgstr ""
-
-#: includes/metabox.php:26 includes/post-type-cta.php:28
-msgid "Call to Action"
-msgstr ""
-
-#: includes/metabox.php:52
-msgid "Headline"
-msgstr ""
-
-#: includes/metabox.php:56
-msgid "We recommend that you limit the headline to 100 characters."
-msgstr ""
-
-#: includes/metabox.php:62
-msgid "Text"
-msgstr ""
-
-#: includes/metabox.php:66
-msgid "We recommend that you limit the text to 160 characters."
-msgstr ""
-
-#: includes/metabox.php:72
-msgid "Button"
-msgstr ""
-
-#: includes/metabox.php:76 includes/metabox.php:143
-msgid "We recommend that you limit the text to 50 characters."
-msgstr ""
-
-#: includes/metabox.php:86
-msgid "The link to which the call-to-action should point."
-msgstr ""
-
-#: includes/metabox.php:92
-msgid "Background color"
-msgstr ""
-
-#: includes/metabox.php:101
-msgid "Text color"
-msgstr ""
-
-#: includes/metabox.php:110
-msgid "Image"
-msgstr ""
-
-#: includes/metabox.php:125
-msgid "Replace image"
-msgstr ""
-
-#: includes/metabox.php:126
-msgid "Remove image"
-msgstr ""
-
-#: includes/metabox.php:130
-msgid "Add image"
-msgstr ""
-
-#: includes/metabox.php:133
-msgid "Note: Images are only displayed from a screen resolution > 800 px."
-msgstr ""
-
-#: includes/metabox.php:139
-msgid "ALT text"
-msgstr ""
-
-#: includes/post-type-cta.php:27 includes/post-type-cta.php:38
+#: includes/core/register/post-types/post-type-cta.php:27
+#: includes/core/register/post-types/post-type-cta.php:38
 msgid "Call to Actions"
 msgstr ""
 
-#: includes/post-type-cta.php:29
+#: includes/core/register/post-types/post-type-cta.php:29
 msgid "CTA"
 msgstr ""
 
-#: includes/post-type-cta.php:30
+#: includes/core/register/post-types/post-type-cta.php:30
 msgid "All CTAs"
 msgstr ""
 
-#: includes/post-type-cta.php:31 includes/post-type-cta.php:32
+#: includes/core/register/post-types/post-type-cta.php:31
+#: includes/core/register/post-types/post-type-cta.php:32
 msgid "Add new"
 msgstr ""
 
-#: includes/post-type-cta.php:33
+#: includes/core/register/post-types/post-type-cta.php:33
 msgid "Edit CTA"
 msgstr ""
 
-#: includes/post-type-cta.php:34
+#: includes/core/register/post-types/post-type-cta.php:34
 msgid "Search CTAs"
 msgstr ""
 
