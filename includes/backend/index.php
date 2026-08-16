@@ -10,4 +10,4 @@ require_once 'backend-admin-pages.php';
 
 
 // Admin Post Lists Classes
-require_once 'class-admin-post-lists/class-shortcode-cta.php' ;
+require_once 'class-admin-post-lists/class-admin-posts-list-cta.php' ;
