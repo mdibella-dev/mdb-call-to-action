@@ -6,7 +6,7 @@
  * @package mdb-call-to-action
  */
 
-namespace MDB_Call_to_Action\Integrations;
+namespace MDB_Call_to_Action\Third-Party;
 
 
 /** Prevent direct access */

@@ -36,16 +36,15 @@ define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 /** Include files */
 
-require_once PLUGIN_DIR . 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
-require_once PLUGIN_DIR . 'includes/classes/index.php';
-require_once PLUGIN_DIR . 'includes/integrations/index.php';
+require_once 'includes/classes/index.php';
+require_once 'includes/third-party/index.php';
 
-require_once PLUGIN_DIR . 'includes/api.php';
-require_once PLUGIN_DIR . 'includes/post-type-cta.php';
-require_once PLUGIN_DIR . 'includes/metabox.php';
-require_once PLUGIN_DIR . 'includes/backend.php';
-require_once PLUGIN_DIR . 'includes/setup.php';
+require_once 'includes/api.php';
+require_once 'includes/post-type-cta.php';
+require_once 'includes/metabox.php';
+require_once 'includes/backend.php';
 
 
 
@@ -54,3 +53,71 @@ require_once PLUGIN_DIR . 'includes/setup.php';
 register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
 register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
 register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
+add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
+
+
+
+
+/**
+ * The init function for the plugin.
+ *
+ * @since 1.0.0
+ */
+
+function plugin_init() {
+    // Load text domain, use relative path to the plugin's language folder
+    load_plugin_textdomain( 'mdb-call-to-action', false, plugin_basename( __FILE__ ) . '/languages' );
+}
+
+
+
+/**
+ * The activation function for the plugin.
+ *
+ * @since 1.0.0
+ */
+
+function plugin_activation() {
+
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
+
+    // Do something!
+}
+
+
+
+/**
+ * The deactivation function for the plugin.
+ *
+ * @since 1.0.0
+ */
+
+function plugin_deactivation() {
+
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
+
+    // Do something!
+}
+
+
+
+/**
+ * The uninstall function for the plugin.
+ *
+ * @since 1.0.0
+ */
+
+function plugin_uninstall() {
+
+    if ( ! current_user_can( 'delete_plugins' ) ) {
+        return;
+    }
+
+    // Do something!
+    // Delete options!
+    // Delete custom tables!
+}
