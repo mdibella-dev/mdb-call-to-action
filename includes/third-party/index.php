@@ -6,5 +6,5 @@ defined( 'ABSPATH' ) or exit;
 
 
 // WordPress helper classes
-require_once 'rankmath.php';
+require_once 'rank-math.php';
 require_once 'beyondwords.php';
