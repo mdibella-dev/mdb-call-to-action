@@ -26,9 +26,6 @@ defined( 'ABSPATH' ) or exit;
 /** Variables and definitions */
 
 define( __NAMESPACE__ . '\PLUGIN_VERSION', '2.1.5' );
-define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-
 
 define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
