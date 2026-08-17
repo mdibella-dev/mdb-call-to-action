@@ -57,9 +57,12 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
     function register_styles_and_scripts() {
 
+        $parts       = explode( '/', plugin_basename( __FILE__ ) );
+        $plugin_base = $parts[0];
+
         wp_register_style(
             'mdb-cta-style',
-            PLUGIN_URL . 'assets/build/css/frontend.min.css',
+            esc_url( plugins_url( $plugin_base . '/assets/build/css/frontend.min.css' ) ),
             [],
             PLUGIN_VERSION
         );
