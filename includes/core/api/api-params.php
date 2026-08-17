@@ -1,11 +1,4 @@
 <?php
-/**
- * API functions.
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
 namespace MDB_Call_to_Action;
 
 

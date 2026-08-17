@@ -23,7 +23,6 @@ defined( 'ABSPATH' ) or exit;
 /** Variables and definitions */
 
 define( __NAMESPACE__ . '\PLUGIN_VERSION', '3.0.0' );
-
 define( __NAMESPACE__ . '\CTA_DATA_METAKEY', 'cta_data' );
 
 

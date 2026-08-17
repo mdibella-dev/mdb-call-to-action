@@ -1,11 +1,4 @@
 <?php
-/**
- * Shortcode [cta]
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
 namespace MDB_Call_to_Action;
 
 
@@ -17,7 +10,8 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Generates a call-to-action button.
+ * Shortcode [cta],
+ * generates a call-to-action button.
  *
  * @since 2.0.0
  *

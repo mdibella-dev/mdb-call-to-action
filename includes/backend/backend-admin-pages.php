@@ -1,8 +1,5 @@
 <?php
-
 namespace MDB_Call_to_Action;
-
-//use \MDB_Call_to_Action as Core;
 
 
 /** Prevent direct access */

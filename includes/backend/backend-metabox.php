@@ -1,11 +1,4 @@
 <?php
-/**
- * Functions to show the CTA Metabox.
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
 namespace MDB_Call_to_Action;
 
 

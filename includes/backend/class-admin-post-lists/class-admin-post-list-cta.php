@@ -1,12 +1,5 @@
 <?php
-/**
- * Class Admin_Post_List_CTA
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
-namespace MDB_Call_to_Action\Classes;
+namespace MDB_Call_to_Action\Backend;
 
 
 /** Prevent direct access */

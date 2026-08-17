@@ -1,12 +1,5 @@
 <?php
-/**
- * Post type 'cta'.
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
-namespace MDB_Call_to_Action\CTA;
+namespace MDB_Call_to_Action\Core\Post_Types\CTA;
 
 
 /** Prevent direct access */
@@ -21,17 +14,17 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function cta__register_post_type() {
+function register() {
 
     $labels = [
         'name'          => __( 'Call to Actions', 'mdb-call-to-action' ),
         'singular_name' => __( 'Call to Action', 'mdb-call-to-action' ),
         'menu_name'     => __( 'CTA', 'mdb-call-to-action' ),
-        'all_items'     => __( 'All CTAs', 'mdb-call-to-action' ),
+        'all_items'     => __( 'All CTA', 'mdb-call-to-action' ),
         'add_new'       => __( 'Add new', 'mdb-call-to-action' ),
         'add_new_item'  => __( 'Add new', 'mdb-call-to-action' ),
         'edit_item'     => __( 'Edit CTA', 'mdb-call-to-action' ),
-        'search_items'  => __( 'Search CTAs', 'mdb-call-to-action' ),
+        'search_items'  => __( 'Search CTA', 'mdb-call-to-action' ),
     ];
 
     $args = [
@@ -69,7 +62,7 @@ function cta__register_post_type() {
     register_post_type( 'cta', $args );
 }
 
-add_action( 'init', __NAMESPACE__ . '\cta__register_post_type' );
+add_action( 'init', __NAMESPACE__ . '\register' );
 
 
 

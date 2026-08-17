@@ -1,11 +1,4 @@
 <?php
-/**
- * Rank Math Integration.
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
- */
-
 namespace MDB_Call_to_Action\Third_Party;
 
 
@@ -16,11 +9,16 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
+ * Plugin Rank Math
  * Filter to exclude post types from Analytics Index.
  *
  * @see https://rankmath.com/kb/filters-hooks-api-developer/
  *
  * @since 2.1.0
+ *
+ * @param array $post_types List of post types
+ *
+ * @return array
  */
 
 add_filter( 'rank_math/analytics/post_types', function( $post_types = [] ) {
