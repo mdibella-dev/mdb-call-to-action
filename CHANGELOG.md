@@ -6,7 +6,8 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
-None
+- Remove file level doc blocks
+- Change project folder structure
 
 <br>
 
