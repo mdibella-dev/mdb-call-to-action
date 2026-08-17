@@ -1,6 +1,8 @@
 <?php
 namespace MDB_Call_to_Action\Backend;
 
+use function MDB_Call_to_Action\API\get_params;
+
 
 /** Prevent direct access */
 

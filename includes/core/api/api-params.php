@@ -1,5 +1,7 @@
 <?php
-namespace MDB_Call_to_Action;
+namespace MDB_Call_to_Action\API;
+
+use MDB_Call_to_Action as Core;
 
 
 /** Prevent direct access */
@@ -39,7 +41,7 @@ function get_default_params() {
 function get_params( $post_id ) {
 
     $data   = [];
-    $stored = get_post_meta( $post_id, CTA_DATA_METAKEY, true );
+    $stored = get_post_meta( $post_id, Core\CTA_DATA_METAKEY, true );
 
     if ( is_array( $stored ) and ( 0 !== count( $stored ) ) ) {
         $data = $stored;
