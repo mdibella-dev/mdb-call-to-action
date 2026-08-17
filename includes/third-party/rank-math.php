@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) or exit;
  * Filter to exclude post types from Analytics Index.
  *
  * @see https://rankmath.com/kb/filters-hooks-api-developer/
+ *
+ * @since 2.1.0
  */
 
 add_filter( 'rank_math/analytics/post_types', function( $post_types = [] ) {

@@ -16,12 +16,12 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Remove Meta Boxes
+ * Remove Beyond Words Panels from post type 'cta'
+ *
+ * @since 2.1.5
  */
 
-
 add_action( 'do_meta_boxes', function() {
-    // Remove panels from post-type cta
     remove_meta_box( 'beyondwords', 'cta', 'side' );
     remove_meta_box( 'beyondwords__inspect', 'cta', 'advanced' );
 } );
