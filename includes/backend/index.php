@@ -9,5 +9,5 @@ require_once 'backend-scripts.php';
 require_once 'backend-admin-pages.php';
 
 
-// Admin Post Lists Classes
-require_once 'class-admin-post-lists/class-admin-posts-list-cta.php' ;
+// Admin Post List Classes
+require_once 'class-admin-post-lists/class-admin-post-list-cta.php';
