@@ -9,9 +9,6 @@
  * Version:         2.1.5
  * Text Domain:     mdb-call-to-action
  * Domain Path:     /languages
- *
- * @author  Marco Di Bella
- * @package mdb-call-to-action
  */
 
 namespace MDB_Call_to_Action;
