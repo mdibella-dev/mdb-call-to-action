@@ -15,6 +15,8 @@ defined( 'ABSPATH' ) or exit;
  */
 
 function plugin_backend_scripts() {
+    $parts       = explode( '/', plugin_basename( __FILE__ ) );
+    $plugin_base = $parts[0];
 
     /**
      * metabox related scripts and styles
@@ -32,14 +34,14 @@ function plugin_backend_scripts() {
     // The metabox scripts & styles
     wp_enqueue_style(
         'mdb-cta-metabox-style',
-        PLUGIN_URL . 'assets/build/css/metabox.min.css',
+        esc_url( plugins_url( $plugin_base . '/assets/build/css/metabox.min.css' ) ),
         [],
         PLUGIN_VERSION
     );
 
     wp_enqueue_script(
         'mdb-cta-metabox-script',
-        PLUGIN_URL . 'assets/build/js/metabox.min.js',
+        esc_url( plugins_url( $plugin_base . '/assets/build/js/metabox.min.js' ) ),
         [
             'jquery'
         ],
@@ -54,15 +56,14 @@ function plugin_backend_scripts() {
 
     wp_enqueue_style(
         'mdb-cta-backend-style',
-        PLUGIN_URL . 'assets/build/css/post-type.min.css',
+        esc_url( plugins_url( $plugin_base . '/assets/build/css/post-type.min.css' ) ),
         [],
         PLUGIN_VERSION
     );
 
     wp_enqueue_script(
         'mdb-cta-backend-script',
-        //PLUGIN_URL . 'assets/src/js/post-type.js', // dev purpose
-        PLUGIN_URL . 'assets/build/js/post-type.min.js',
+        esc_url( plugins_url( $plugin_base . '/assets/build/js/post-type.min.js' ) ),
         [],
         PLUGIN_VERSION,
         true
