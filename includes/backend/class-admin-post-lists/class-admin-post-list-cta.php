@@ -87,5 +87,4 @@ class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
 
 }
 
-
 new Admin_Post_List_CTA();
