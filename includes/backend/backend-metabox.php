@@ -1,6 +1,9 @@
 <?php
 namespace MDB_Call_to_Action;
 
+use function MDB_Call_to_Action\API\get_params;
+use function MDB_Call_to_Action\API\get_default_params;
+
 
 /** Prevent direct access */
 
