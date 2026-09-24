@@ -54,7 +54,6 @@ class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
      *
      * @return  void
      */
-
     public function manage_custom_column( $column_name, $post_id ) {
 
         $params = get_params( $post_id );
