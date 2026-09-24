@@ -14,6 +14,8 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Registers the CTA metabox.
  *
+ * @since   2.0.0
+ *
  * @param   void
  *
  * @return  void
@@ -35,6 +37,8 @@ add_action( 'add_meta_boxes', __NAMESPACE__ . '\register_metabox' );
 
 /**
  * Displays the CTA metabox.
+ *
+ * @since   2.0.0
  *
  * @param   $post
  *
@@ -153,6 +157,8 @@ function render_metabox( $post ) {
 
 /**
  * Saves the CTA metabox.
+ *
+ * @since   2.0.0
  *
  * @param   $post_id
  *
