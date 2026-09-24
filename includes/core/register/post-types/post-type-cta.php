@@ -2,8 +2,8 @@
 namespace MDB_Call_to_Action\Core\Post_Types\CTA;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
@@ -11,9 +11,12 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Performs the registration of the post type 'cta'.
  *
- * @since 1.0.0
+ * @since   1.0.0
+ *
+ * @param   void
+ *
+ * @return  void
  */
-
 function register() {
 
     $labels = [
@@ -70,8 +73,12 @@ add_action( 'init', __NAMESPACE__ . '\register' );
  * Removes the "view" action from the list of row actions.
  *
  * @since 1.0.0
+ *
+ * @param   array $actions
+ * @param   $post
+ *
+ * @return  array
  */
-
 function cta__remove_view_action( $actions, $post ) {
 
     if ( 'cta' == $post->post_type ) {

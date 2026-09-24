@@ -2,8 +2,8 @@
 namespace MDB_Call_to_Action;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
@@ -11,25 +11,27 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Load the backend scripts and styles.
  *
- * @since 1.1.0
+ * @since   1.1.0
+ *
+ * @param   void
+ *
+ * @return  void
  */
-
 function plugin_backend_scripts() {
     $parts       = explode( '/', plugin_basename( __FILE__ ) );
     $plugin_base = $parts[0];
+
 
     /**
      * metabox related scripts and styles
      */
 
-     // From WordPress: Adds scripts & styles to use media JS APIs
+    // From WordPress: Adds scripts & styles to use media JS APIs
     wp_enqueue_media();
-
 
     // From WordPress: Add color picker
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script( 'wp-color-picker' );
-
 
     // The metabox scripts & styles
     wp_enqueue_style(
@@ -53,7 +55,6 @@ function plugin_backend_scripts() {
     /**
      * post-type related scripts and styles
      */
-
     wp_enqueue_style(
         'mdb-cta-backend-style',
         esc_url( plugins_url( $plugin_base . '/assets/build/css/post-type.min.css' ) ),

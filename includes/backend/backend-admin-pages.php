@@ -2,18 +2,21 @@
 namespace MDB_Call_to_Action;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
 
 /**
- * Prepares the admin pages
+ * Prepares the admin pages.
  *
- * @since 3.0.0
+ * @since   3.0.0
+ *
+ * @param   $screen
+ *
+ * @return  void
  */
-
 function current_screen( $screen ) {
 
     $post_types = [
@@ -31,11 +34,14 @@ add_action( 'current_screen', __NAMESPACE__ . '\current_screen' );
 
 
 /**
- * Shows plugin name, version and credits in the footer
+ * Shows plugin name, version and credits in the footer.
  *
- * @since 3.0.0
+ * @since   3.0.0
+ *
+ * @param   void
+ *
+ * @return  void
  */
-
 function admin_footer_text() {
     return sprintf(
         __( '<strong>Call to Action</strong> %1$s | Made by %2$s', 'congressomat' ),
@@ -45,14 +51,19 @@ function admin_footer_text() {
 }
 
 
+
 /**
  * Remove months dropdown
  *
- * @since 3.0.0
- *
  * @see https://developer.wordpress.org/reference/hooks/disable_months_dropdown/
+ *
+ * @since   3.0.0
+ *
+ * @param   bool $disable
+ * @param   $type
+ *
+ * @return  bool
  */
-
 function disable_months_dropdown( $disable, $type ) {
    $post_types = [
          'cta'
@@ -72,11 +83,15 @@ add_filter( 'disable_months_dropdown', __NAMESPACE__ . '\disable_months_dropdown
 /**
 * Remove view link in row actions
 *
-* @since 3.0.0
-*
 * @see https://developer.wordpress.org/reference/hooks/post_row_actions/
+*
+* @since    3.0.0
+*
+* @param    array $actions
+* @param    $post
+*
+* @return   array
 */
-
 function modify_list_row_actions( $actions, $post ) {
    $post_types = [
        'cta'

@@ -1,10 +1,9 @@
 <?php
 /** Prevent direct access */
-
 defined( 'ABSPATH' ) or exit;
 
 
 
-// WordPress helper classes
+/** Include files */
 require_once 'rank-math.php';
 require_once 'beyondwords.php';

@@ -4,19 +4,19 @@ namespace MDB_Call_to_Action\API;
 use MDB_Call_to_Action as Core;
 
 
+
 /** Prevent direct access */
-
 defined( 'ABSPATH' ) or exit;
-
 
 
 
 /**
  * Returns a default set of CTA parameters.
  *
- * @return array The array with default parameters
+ * @param   void
+ *
+ * @return  array The array with default parameters
  */
-
 function get_default_params() {
     return [
         'headline'         => __( 'This is an expressive headline', 'mdb-call-to-action' ),
@@ -35,7 +35,9 @@ function get_default_params() {
  * Returns the set of CTA parameters stored in the post metadata by the key CTA_DATA_METAKEY.
  * Replacement for api_get_cta_params().
  *
- * @return array The array with CTA parameters
+ * @param   $post_id
+ *
+ * @return  array The array with CTA parameters
  */
 
 function get_params( $post_id ) {
@@ -48,5 +50,4 @@ function get_params( $post_id ) {
     }
 
     return $data;
-
 }

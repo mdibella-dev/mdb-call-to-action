@@ -2,8 +2,8 @@
 namespace MDB_Call_to_Action\Third_Party;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
@@ -12,15 +12,14 @@ defined( 'ABSPATH' ) or exit;
  * Plugin Rank Math
  * Filter to exclude post types from Analytics Index.
  *
- * @see https://rankmath.com/kb/filters-hooks-api-developer/
+ * @see     https://rankmath.com/kb/filters-hooks-api-developer/
  *
- * @since 2.1.0
+ * @since   2.1.0
  *
- * @param array $post_types List of post types
+ * @param   array $post_types List of post types
  *
- * @return array
+ * @return  array
  */
-
 add_filter( 'rank_math/analytics/post_types', function( $post_types = [] ) {
     $excludes = [
         'cta',

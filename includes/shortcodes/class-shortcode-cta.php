@@ -1,4 +1,13 @@
 <?php
+/**
+ * Shortcode [cta],
+ * generates a call-to-action button.
+ *
+ * The attributes (parameters) of the shorcode:
+ *
+ * - id     The post_id of the desired CTA
+ */
+
 namespace MDB_Call_to_Action;
 
 
@@ -9,33 +18,22 @@ defined( 'ABSPATH' ) or exit;
 
 
 
-/**
- * Shortcode [cta],
- * generates a call-to-action button.
- *
- * @since 2.0.0
- *
- * The attributes (parameters) of the shorcode:
- *
- * - id     The post_id of the desired CTA
- */
-
 class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
     /**
      * The shortcode tag.
      *
-     * @var string
+     * @var     string
      */
-
     protected $tag = 'cta';
 
 
 
     /**
      * Constructor: Adds the shortcode to the WordPress ecosystem.
+     *
+     * @since   2.0.0
      */
-
     function __construct() {
         if ( ! empty( $this->tag ) ) {
             add_shortcode( $this->tag, [$this, 'callback'] );
@@ -47,8 +45,13 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
     /**
      * Registers the frontend stylesheet for the shortcode.
+     *
+     * @since   2.0.0
+     *
+     * @param   void
+     *
+     * @return  void
      */
-
     function register_styles_and_scripts() {
         $parts       = explode( '/', plugin_basename( __FILE__ ) );
         $plugin_base = $parts[0];
@@ -66,9 +69,12 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
     /**
      * Gets the The default attributes of this shortcode.
      *
-     * @return array The default attributes
+     * @since   2.0.0
+     *
+     * @param   void
+     *
+     * @return  array The default attributes.
      */
-
     protected function get_default_atts() {
         return [
             'id' => ''
@@ -78,13 +84,15 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
 
     /**
-     * Gets the selected set.
+     * Gets the id.
      *
-     * @return int The setlist number.
+     * @since   2.0.0
      *
+     * @param   void
+     *
+     * @return  int
      */
-
-     protected function get_id() {
+    protected function get_id() {
         return (int) $this->atts['id'];
     }
 
@@ -93,9 +101,12 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
     /**
      * Prepares the shortcode (the shortcode logic).
      *
-     * @return bool true|false The outcome of the preparation process
+     * @since   2.0.0
+     *
+     * @param   void
+     *
+     * @return  bool true|false The outcome of the preparation process.
      */
-
     public function prepare() {
         $ready = false;
 
@@ -112,8 +123,13 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
 
     /**
      * Renders the shortcode (the shortcode output).
+     *
+     * @since   2.0.0
+     *
+     * @param   void
+     *
+     * @return  void
      */
-
     public function render() {
 
         $params = get_params( $this->get_id() );
@@ -123,7 +139,6 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
         if ( ! isset( $params['headline'] ) and ! isset( $params['summary'] ) and ! isset( $params['button-text'] ) ) {
             return;
         }
-
 
         // Go on, modify styling if necessary
         wp_enqueue_style( 'mdb-cta-style' );
@@ -135,7 +150,6 @@ class Shortcode_CTA extends \WordPress_Helper\Shortcode {
                 $params['text-color']
             );
         }
-
 
         // Render the CTA box
         ?>

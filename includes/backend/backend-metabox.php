@@ -5,16 +5,19 @@ use function MDB_Call_to_Action\API\get_params;
 use function MDB_Call_to_Action\API\get_default_params;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
 
 /**
  * Registers the CTA metabox.
+ *
+ * @param   void
+ *
+ * @return  void
  */
-
 function register_metabox() {
 
     add_meta_box(
@@ -32,8 +35,11 @@ add_action( 'add_meta_boxes', __NAMESPACE__ . '\register_metabox' );
 
 /**
  * Displays the CTA metabox.
+ *
+ * @param   $post
+ *
+ * @return  void
  */
-
 function render_metabox( $post ) {
 
     $params = get_params( $post->ID );
@@ -147,12 +153,14 @@ function render_metabox( $post ) {
 
 /**
  * Saves the CTA metabox.
+ *
+ * @param   $post_id
+ *
+ * @return  void
  */
-
 function save_metabox( $post_id ) {
 
     $params = [];
-
 
     // Detect and copy all posted params
     $keys = [
@@ -171,7 +179,6 @@ function save_metabox( $post_id ) {
             $params[$param_key] = $_POST[$post_key];
         }
     }
-
 
     // Store params
     if ( 0 !== count( $params ) ) {

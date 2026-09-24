@@ -4,26 +4,19 @@ namespace MDB_Call_to_Action\Backend;
 use function MDB_Call_to_Action\API\get_params;
 
 
-/** Prevent direct access */
 
+/** Prevent direct access */
 defined( 'ABSPATH' ) or exit;
 
 
-
-/**
- * A class for the implementation of the admin post list for post type "cta".
- *
- * @since 2.1.0
- */
 
 class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
 
     /**
      * The post type.
      *
-     * @var string
+     * @var     string
      */
-
     protected $post_type = 'cta';
 
 
@@ -31,11 +24,12 @@ class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
     /**
      * Determines the columns of the admin post list.
      *
-     * @param array $default The defaults for columns
+     * @since   2.1.0
      *
-     * @return $array An associative array describing the columns to use
+     * @param   array $default The defaults for columns.
+     *
+     * @return  array An associative array describing the columns to use.
      */
-
     public function manage_columns( $default ) {
 
         $columns['cb']        = $default['cb'];
@@ -53,8 +47,12 @@ class Admin_Post_List_CTA extends \WordPress_Helper\Admin_Post_List {
     /**
      * Generates the column output.
      *
-     * @param string $column_name Designation of the column to be output
-     * @param int    $post_id     ID of the post (aka record) to be output
+     * @since   2.1.0
+     *
+     * @param   string $column_name Designation of the column to be output.
+     * @param   int    $post_id     ID of the post (aka record) to be output.
+     *
+     * @return  void
      */
 
     public function manage_custom_column( $column_name, $post_id ) {
