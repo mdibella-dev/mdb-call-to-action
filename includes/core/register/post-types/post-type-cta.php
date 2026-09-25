@@ -74,8 +74,8 @@ add_action( 'init', __NAMESPACE__ . '\register' );
  *
  * @since 1.0.0
  *
- * @param   array $actions
- * @param   $post
+ * @param   array $actions An array of row action links. Defaults are 'Edit', ‘Quick Edit’, 'Restore', 'Trash', ‘Delete Permanently’, 'Preview' and 'View'.
+ * @param   WP_Post $post  The post object.
  *
  * @return  array
  */

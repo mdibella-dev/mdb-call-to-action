@@ -21,15 +21,14 @@ function plugin_backend_scripts() {
     $parts       = explode( '/', plugin_basename( __FILE__ ) );
     $plugin_base = $parts[0];
 
-
     /**
-     * metabox related scripts and styles
+     * Metabox related scripts and styles
      */
 
-    // From WordPress: Adds scripts & styles to use media JS APIs
+    // From WordPress
+    // - Adds scripts & styles to use media JS APIs
+    // - Adds color picker
     wp_enqueue_media();
-
-    // From WordPress: Add color picker
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script( 'wp-color-picker' );
 
@@ -51,9 +50,8 @@ function plugin_backend_scripts() {
         true
     );
 
-
     /**
-     * post-type related scripts and styles
+     * Custom post type related scripts and styles
      */
     wp_enqueue_style(
         'mdb-cta-backend-style',

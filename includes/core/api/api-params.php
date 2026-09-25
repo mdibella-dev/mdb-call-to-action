@@ -35,11 +35,10 @@ function get_default_params() {
  * Returns the set of CTA parameters stored in the post metadata by the key CTA_DATA_METAKEY.
  * Replacement for api_get_cta_params().
  *
- * @param   $post_id
+ * @param   int $post_id
  *
  * @return  array The array with CTA parameters
  */
-
 function get_params( $post_id ) {
 
     $data   = [];

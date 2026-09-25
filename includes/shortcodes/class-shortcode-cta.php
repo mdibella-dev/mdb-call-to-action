@@ -13,7 +13,6 @@ namespace MDB_Call_to_Action;
 
 
 /** Prevent direct access */
-
 defined( 'ABSPATH' ) or exit;
 
 

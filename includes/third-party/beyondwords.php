@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) or exit;
  *
  * @param   void
  *
- * @remove  void
+ * @return  void
  */
 add_action( 'do_meta_boxes', function() {
     remove_meta_box( 'beyondwords', 'cta', 'side' );
